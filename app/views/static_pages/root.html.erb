@@ -1,1 +1,11 @@
-<main id='root'></main>
+<main id='root'>
+  <% if logged_in? %>
+    <script type="text/javascript">
+      window.currentUser = {
+        "id": <%= current_user.id %>,
+        "username": "<%= current_user.username %>",
+        "first_name": "<%= current_user.first_name %>"
+      }
+    </script>
+  <% end %>
+</main>
