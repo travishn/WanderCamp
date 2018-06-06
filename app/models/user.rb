@@ -8,10 +8,10 @@
 #  username        :string           not null
 #  password_digest :string           not null
 #  zipcode         :integer          not null
+#  img_url         :string           not null
 #  session_token   :string           not null
 #  created_at      :datetime         not null
 #  updated_at      :datetime         not null
-#  img_url         :string
 #
 
 class User < ApplicationRecord
@@ -19,7 +19,7 @@ class User < ApplicationRecord
    :zipcode, :session_token, presence: true
   validates :username, :session_token, uniqueness: true
   validates :password, length: {minimum: 6}, allow_nil: true
-  before_validation :ensure_session_token
+  before_validation :ensure_session_token, :ensure_img_url
   attr_reader :password
 
   def password=(password)
@@ -33,6 +33,10 @@ class User < ApplicationRecord
 
   def ensure_session_token
     self.session_token ||= SecureRandom::urlsafe_base64
+  end
+
+  def ensure_img_url
+    self.img_url ||= './images/guest'
   end
 
   def reset_session_token!

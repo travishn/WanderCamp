@@ -30,5 +30,6 @@ export const logout = () => (dispatch) => (
 
 export const signup = (user) => (dispatch) => (
   SessionAPIUtil.requestSignup(user)
-  .then(dbUser => dispatch(receiveCurrentUser(dbUser)))
+  .then(dbUser => dispatch(receiveCurrentUser(dbUser)), 
+    err => dispatch(receiveErrors(err.responseJSON)))
 );
