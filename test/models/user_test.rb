@@ -8,10 +8,10 @@
 #  username        :string           not null
 #  password_digest :string           not null
 #  zipcode         :integer          not null
-#  img_url         :string           not null
 #  session_token   :string           not null
 #  created_at      :datetime         not null
 #  updated_at      :datetime         not null
+#  img_url         :string
 #
 
 require 'test_helper'

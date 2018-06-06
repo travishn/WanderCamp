@@ -18,17 +18,17 @@ export const receiveErrors = (errors) => ({
   errors
 });
 
-export const login = (user) => (dispatch) => {
+export const login = (user) => (dispatch) => (
   SessionAPIUtil.requestLogin(user)
-  .then((dbUser) => dispatch(receiveCurrentUser(dbUser)));
-};
+  .then((dbUser) => dispatch(receiveCurrentUser(dbUser)))
+);
 
-export const logout = () => (dispatch) => {
+export const logout = () => (dispatch) => (
   SessionAPIUtil.requestLogout()
-  .then(dispatch(logoutCurrentUser()));
-};
+  .then(dispatch(logoutCurrentUser()))
+);
 
-export const signup = (user) => (dispatch) => {
+export const signup = (user) => (dispatch) => (
   SessionAPIUtil.requestSignup(user)
-  .then((dbUser) => dispatch(receiveCurrentUser(dbUser)));
-};
+  .then(dbUser => dispatch(receiveCurrentUser(dbUser)))
+);

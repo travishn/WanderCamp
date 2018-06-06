@@ -8,15 +8,15 @@
 #  username        :string           not null
 #  password_digest :string           not null
 #  zipcode         :integer          not null
-#  img_url         :string           not null
 #  session_token   :string           not null
 #  created_at      :datetime         not null
 #  updated_at      :datetime         not null
+#  img_url         :string
 #
 
 class User < ApplicationRecord
   validates :first_name, :last_name, :username, :password_digest,
-   :zipcode, :img_url, :session_token, presence: true
+   :zipcode, :session_token, presence: true
   validates :username, :session_token, uniqueness: true
   validates :password, length: {minimum: 6}, allow_nil: true
   before_validation :ensure_session_token
