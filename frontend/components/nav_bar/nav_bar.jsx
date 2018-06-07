@@ -2,35 +2,29 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 class NavBar extends React.Component {
-  
-  handleLogin() {
-
-  }
-
   sessionOption() {
     const { currentUser, logout } = this.props;
 
     if (currentUser) {
-      return <a className='home-session' onClick={logout}>Log Out</a>;
+      return <button className='home-session' onClick={logout}>Log Out</button>;
     } else {
-      return <a className='home-session' onClick={() => this.props.openModal('login')}>Log In</a>;
+      return <button className='home-session' onClick={() => this.props.openModal('login')}>Log In</button>;
     }
-  }
-
-  handleLogout() {
-
   }
 
   render() {
     return (
-      <nav>
-        <header>
-          <Link to="/" className="header-link">
-            <h1>HipsterCamp + Logo</h1>
+      <nav className='navbar'>
+        <div className='nav-left'>
+          <Link to="/" className="header-logo">
+            <h1>WANDERCAMP</h1>
           </Link>
-        </header>
-        
-        {this.sessionOption()}
+        </div>
+
+        <div className='nav-right'>
+          {this.sessionOption()}
+        </div>
+
       </nav>
     );
   }

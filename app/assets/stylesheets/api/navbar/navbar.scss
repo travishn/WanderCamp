@@ -1,0 +1,42 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  height: 60px;
+  width: 100%;
+  border-bottom: 1px solid #ebebeb;
+  color: #333333;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  align-items: center;
+}
+
+.nav-left {
+  display: flex;
+  z-index: 1;
+}
+
+.header-logo {
+  border-right: 1px solid #ebebeb;
+  padding: 0 25px;
+  line-height: 60px;
+  
+  h1 {
+    font-weight: 550;
+    letter-spacing: 2px;
+    font-size: 19px;
+  }
+}
+.nav-right {
+  display: flex;
+  z-index: 1;
+}
+
+.home-session {
+  padding: 0 50px;
+  line-height: 60px;
+  font-size: 14px;
+  font-weight: 700;
+}
+

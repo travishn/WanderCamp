@@ -15,14 +15,15 @@ import {
 import {AuthRoute, ProtectedRoute} from '../util/route_util';
 
 const App = () => (
-  <div>
+  
+  <main className='global-main'>
+    < NavBarContainer />
     <ModalContainer />
-    <NavBarContainer />
 
     <Switch>
       <Route path="/" component={Home} />
     </Switch>
-  </div>
+  </main>
 );
 
 export default App;
