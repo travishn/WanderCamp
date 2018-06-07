@@ -3,23 +3,40 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
-.login-form-box {
+.session-form-box {
   display: flex;
   flex-direction: column;
   text-align: center;
   color: #333333;
   padding: 5px 15px 15px;
+  width: 250px;
 }
 
 .login-input {
   display: border-box;
   font-size: 14px;
   font-weight: 650;
-  padding: 20px 15px;
+  padding: 20px 13px;
   border: 1px solid #777777;
   text-align: left;
   margin-bottom: 13px;
   font-size: 14px;
+}
+
+.first-last {
+  display: flex;
+  margin: 0 auto;
+  justify-content: space-between;
+
+  input {
+    font-size: 14px;
+    font-weight: 650;
+    padding: 20px 13px;
+    border: 1px solid #777777;
+    text-align: left;
+    margin-bottom: 13px;
+    width: 35%;
+  }
 }
 
 .welcome-message {
@@ -29,15 +46,15 @@
 }
 
 .welcome-quote {
-  // color: #bcbcbc;
   color: #A1A1A1;
   font-weight: 300;
   margin-bottom: 15px;
+  font-size: 15px;
 }
 
 .session-submit {
   display: border-box;
-  padding: 20px 15px;
+  padding: 20px 13px;
   margin-bottom: 35px;
   background: #40d9ac;
   color: white;
@@ -50,10 +67,47 @@
 
 .change-form {
   font-size: 14px;
-  padding-bottom: 2px;
+  padding-bottom: 4px;
 }
 
 .form-option {
   font-size: 13px;
   font-weight: bold;
+  // -webkit-animation: fadein 0.8s;
+}
+
+.form-options-container {
+  display: flex;
+  margin: 0 auto;
+}
+
+.web-title {
+  font-weight: 550;
+  font-size: 22px;
+  padding: 8px;
+  letter-spacing: 2px;
+}
+
+.in-between {
+  font-size: 17px;
+  font-weight: bold;
+  padding-left: 4px;
+  padding-right: 2px;
+}
+
+.signup-errors {
+  font-size: 14px;
+  color: #db0f0f;
+  padding-bottom: 10px;
+  -webkit-animation: fadein 3.5s;
+}
+
+@keyframes fadein {
+  from { opacity: 0 };
+  to { opacity: 5};
+}
+
+@-webkit-keyframes fadein {
+  from { opacity: 0 }
+  to { opacity: 5 }
 }

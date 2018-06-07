@@ -34,9 +34,21 @@
 }
 
 .home-session {
-  padding: 0 50px;
+  padding: 0 50px 0px 25px;
   line-height: 60px;
   font-size: 14px;
   font-weight: 700;
+}
+
+.logged-user {
+  line-height: 60px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.inner-right-child-nav {
+  display: flex;
+  line-height: 20px;
+  flex-direction: row;
 }
 

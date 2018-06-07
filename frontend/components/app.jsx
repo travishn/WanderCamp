@@ -4,6 +4,9 @@ import LoginFormContainer from '../components/session_form/login_form_container'
 import ModalContainer from './modal/modal_container';
 import NavBarContainer from './nav_bar/nav_bar_container';
 import Home from '../components/home/home';
+import Footer from '../components/footer';
+import { ProtectedRoute } from '../util/route_util';
+
 import {
   Route,
   Redirect,
@@ -12,17 +15,18 @@ import {
   HashRouter
 } from 'react-router-dom';
 
-import {AuthRoute, ProtectedRoute} from '../util/route_util';
 
 const App = () => (
   
   <main className='global-main'>
-    < NavBarContainer />
+    <NavBarContainer />
     <ModalContainer />
 
     <Switch>
       <Route path="/" component={Home} />
     </Switch>
+
+    <Footer />
   </main>
 );
 

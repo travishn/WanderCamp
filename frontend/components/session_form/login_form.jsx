@@ -18,6 +18,11 @@ class LoginForm extends React.Component {
     this.props.login(this.state).then((payload) => this.props.closeModal());
   }
 
+  handleDemoLogin(e) {
+    e.preventDefault();
+    this.props.login({username: 'Guest', password: 'password'}).then((payload) => this.props.closeModal());
+  }
+
   componentWillUnmount() {
     this.props.clearErrors();
   }
@@ -33,7 +38,7 @@ class LoginForm extends React.Component {
   render() {
     return (
       <div className='login-form-container'>
-        <form className="login-form-box" onSubmit={(e) => this.handleSubmit(e)}>
+        <form className="session-form-box" onSubmit={(e) => this.handleSubmit(e)}>
           <h2 className="welcome-message">Welcome back!</h2>
           <p className="welcome-quote">Your next camping adventure awaits</p>
           <br/>
@@ -55,7 +60,12 @@ class LoginForm extends React.Component {
 
           {this.renderErrors('Invalid')}
           <p className="change-form">Don't have a Wandercamp account?</p>
-          <p className="form-option">{this.props.changeForm} | Demo Login</p>
+
+          <div className="form-options-container">
+            {this.props.changeForm}
+            <p className='in-between'>|</p>
+            <button className="form-option" onClick={(e) => this.handleDemoLogin(e)}>Demo Login</button>
+          </div>
         </form>
 
       </div>

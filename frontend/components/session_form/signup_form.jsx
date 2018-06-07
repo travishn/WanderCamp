@@ -10,6 +10,7 @@ class SignUpForm extends React.Component {
       password: '',
       zipcode: ''
       };
+    
   }
 
   handleSubmit(e) {
@@ -36,25 +37,29 @@ class SignUpForm extends React.Component {
 
   render() {
     return (
-      <div className="signup-form-container">
-        <h2>Welcome to HipsterCamp!</h2>
-        <form className="signup-form-box" onSubmit={(e) => this.handleSubmit(e)}>
-          <input 
-          type='text' 
-          value={this.state.first_name} 
-          placeholder='First Name' 
-          onChange={this.handleChange('first_name')}/>
-          {this.renderErrors('First')}
+      <div className="session-form-container">
+        <form className="session-form-box" onSubmit={(e) => this.handleSubmit(e)}>
+          <h2 className="web-title">WANDERCAMP</h2>
+          <p className="welcome-quote">Live life with no excuses, travel with no regret</p>
+          <div className="first-last">
+            <input 
+            type='text' 
+            value={this.state.first_name} 
+            placeholder='First Name' 
+            onChange={this.handleChange('first_name')}/>
+            {this.renderErrors('First')}
+
+            <input 
+            type='text' 
+            value={this.state.last_name} 
+            placeholder='Last Name' 
+            onChange={this.handleChange('last_name')}/>
+            {this.renderErrors('Last')}
+          </div>
 
           <input 
           type='text' 
-          value={this.state.last_name} 
-          placeholder='Last Name' 
-          onChange={this.handleChange('last_name')}/>
-          {this.renderErrors('Last')}
-
-          <input 
-          type='text' 
+          className="login-input" 
           value={this.state.username} 
           placeholder='Username' 
           onChange={this.handleChange('username')}/>
@@ -62,6 +67,7 @@ class SignUpForm extends React.Component {
           
           <input 
           type='password' 
+          className="login-input" 
           value={this.state.password} 
           placeholder='Password' 
           onChange={this.handleChange('password')}/>
@@ -69,13 +75,15 @@ class SignUpForm extends React.Component {
 
           <input 
           type='text' 
+          className="login-input" 
           value={this.state.zipcode} 
           placeholder='Zip Code' 
           onChange={this.handleChange('zipcode')}/>
           {this.renderErrors('Zipcode')}
 
           <button type="submit" className="session-submit">Join HipsterCamp</button>
-          <p className="change-form">Already have a HipsterCamp account? {this.props.changeForm}</p>
+          <p className="change-form">Already have a Wandercamp account?</p>
+          {this.props.changeForm}
         </form>
       </div>
     );
