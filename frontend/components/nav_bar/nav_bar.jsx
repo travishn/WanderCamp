@@ -7,8 +7,11 @@ class NavBar extends React.Component {
     if (currentUser) {
       return (
         <div className='right-nav-child'>
-        <h2 className='logged-user'>Welcome, {currentUser.firstName}</h2>
-        <button className='home-session' onClick={logout}>Log Out</button>
+          <div className='profile-pic'>
+            <img src={currentUser.imgUrl} />
+            <h2 className='logged-user'>Welcome, {currentUser.firstName}</h2>
+          </div>
+          <button className='home-session' onClick={logout}>Log Out</button>
         </div>
       );
     } else {

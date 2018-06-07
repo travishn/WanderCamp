@@ -10,6 +10,7 @@
   right: 0;
   z-index: 1;
   align-items: center;
+  background: white;
 }
 
 .left-nav-child {
@@ -52,3 +53,11 @@
   flex-direction: row;
 }
 
+.profile-pic {
+  display: flex;
+
+  img {
+    height: 50px;
+    width: 50px;
+  }
+}
