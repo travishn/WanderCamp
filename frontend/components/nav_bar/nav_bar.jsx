@@ -15,13 +15,13 @@ class NavBar extends React.Component {
   render() {
     return (
       <nav className='navbar'>
-        <div className='nav-left'>
+        <div className='left-nav-child'>
           <Link to="/" className="header-logo">
             <h1>WANDERCAMP</h1>
           </Link>
         </div>
 
-        <div className='nav-right'>
+        <div className='right-nav-child'>
           {this.sessionOption()}
         </div>
 

@@ -1,3 +1,59 @@
 // Place all the styles related to the api/sessions controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.login-form-box {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  color: #333333;
+  padding: 5px 15px 15px;
+}
+
+.login-input {
+  display: border-box;
+  font-size: 14px;
+  font-weight: 650;
+  padding: 20px 15px;
+  border: 1px solid #777777;
+  text-align: left;
+  margin-bottom: 13px;
+  font-size: 14px;
+}
+
+.welcome-message {
+  font-weight: 550;
+  font-size: 22px;
+  padding: 8px;
+}
+
+.welcome-quote {
+  // color: #bcbcbc;
+  color: #A1A1A1;
+  font-weight: 300;
+  margin-bottom: 15px;
+}
+
+.session-submit {
+  display: border-box;
+  padding: 20px 15px;
+  margin-bottom: 35px;
+  background: #40d9ac;
+  color: white;
+  font-size: 16px;
+}
+
+::placeholder {
+  color: #333333;
+}
+
+.change-form {
+  font-size: 14px;
+  padding-bottom: 2px;
+}
+
+.form-option {
+  font-size: 13px;
+  font-weight: bold;
+}
