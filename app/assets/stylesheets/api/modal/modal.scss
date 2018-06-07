@@ -4,6 +4,23 @@
   bottom: 0;
   right: 0;
   left: 0;
-  background: rgba(0, 0, 0, 0.7);
-  z-index: 10;
+  background: rgba(255, 255, 255, 0.5);
+  z-index: 2;
+  position: fixed;
+}
+
+.modal-child {
+  background: white;
+  height: 250px;
+  width: 360px;
+  left: 50%;
+  top: 100px;
+  padding: 20px;
+  z-index: 3;
+  position: absolute;
+  border-radius: 5px;
+  margin-left: -220px;
+  // box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+  0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }

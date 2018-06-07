@@ -14,7 +14,7 @@ class SignUpForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    this.props.signup(this.state); //can later add in .then push statement to 'redirect'
+    this.props.signup(this.state).then((payload) => this.props.closeModal());
   }
 
   
@@ -75,6 +75,7 @@ class SignUpForm extends React.Component {
           {this.renderErrors('Zipcode')}
 
           <button type="submit" className="session-submit">Join HipsterCamp</button>
+          <p className="change-form">Already have a HipsterCamp account? {this.props.changeForm}</p>
         </form>
       </div>
     );

@@ -15,18 +15,27 @@ class LoginForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    this.props.login(this.state);
+    this.props.login(this.state).then((payload) => this.props.closeModal());;
   }
 
   componentWillUnmount() {
     this.props.clearErrors();
   }
-
+  
+   renderErrors(field) {
+    return (
+      <div key={`error-${field}`} className='signup-errors'>
+          {this.props.errors.find((error) => error.includes(field))}
+        </div>
+      );
+    }
+    
   render() {
     return (
       <div className='login-form-container'>
         <form className="login-form-box" onSubmit={(e) => this.handleSubmit(e)}>
-          <p className="welcome-message">Welcome to HipsterCamp!</p>
+          <h2 className="welcome-message">Welcome Back!</h2>
+          <p className="welcome-quote">Your next camping adventure awaits.</p>
           <br/>
           <div>
             <input 
@@ -44,7 +53,9 @@ class LoginForm extends React.Component {
             onChange={this.handleChange('password')}/>
 
             <button type="submit" className="session-submit">Log In</button>
-            <p className="change-form">Live life with no excuses, travel with no regret {this.props.changeForm}</p>
+
+            {this.renderErrors('Invalid')}
+            <p className="change-form">Don't have a Hipstercamp account? {this.props.changeForm}</p>
           </div>
         </form>
 
