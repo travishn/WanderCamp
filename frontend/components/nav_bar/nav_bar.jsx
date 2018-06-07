@@ -4,11 +4,10 @@ import { Link } from 'react-router-dom';
 class NavBar extends React.Component {
   renderSessionOption() {
     const { currentUser, logout } = this.props;
-
     if (currentUser) {
       return (
         <div className='right-nav-child'>
-        <h2 className='logged-user'>{currentUser.first_name}</h2>
+        <h2 className='logged-user'>Welcome, {currentUser.firstName}</h2>
         <button className='home-session' onClick={logout}>Log Out</button>
         </div>
       );

@@ -1,11 +1,10 @@
 <main id='root'>
   <% if logged_in? %>
     <script type="text/javascript">
-      window.currentUser = {
-        "id": <%= current_user.id %>,
-        "username": "<%= current_user.username %>",
-        "first_name": "<%= current_user.first_name %>"
-      }
+      window.currentUser = <%= render(
+      "api/users/user.json.jbuilder",
+      user: current_user
+    ).html_safe %>
     </script>
   <% end %>
 </main>
