@@ -7,7 +7,8 @@
 
 .footer-container {
   display: flex;
-  background: url("/assets/main-tent-logo"), url("/assets/footer-img2");
+  background: url("https://res.cloudinary.com/emanon/image/upload/v1528417338/main-tent-logo.png"),
+  url("https://res.cloudinary.com/emanon/image/upload/v1528417335/footer-img2.png");
   background-repeat: no-repeat, repeat-x;
   background-position: bottom center;
   background-color: #412F5A;
@@ -15,7 +16,7 @@
   position: absolute;
   height: 355px;
   bottom: 0;
-  // padding-right: 400px;
+
   padding-top: 25px;
   margin-bottom: 40px;
   letter-spacing: 0.3px;

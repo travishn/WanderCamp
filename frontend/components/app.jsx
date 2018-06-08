@@ -26,6 +26,7 @@ const App = () => (
       <Route path="/" component={Home} />
     </Switch>
 
+    <Home />
     <Footer />
   </main>
 );
