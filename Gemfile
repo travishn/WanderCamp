@@ -40,6 +40,7 @@ group :development, :test do
 end
 
 gem "rails_12factor"
+gem 'annotate'
 
 group :development do
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
@@ -51,7 +52,6 @@ group :development do
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'pry-rails'
-  gem 'annotate'
   gem 'bcrypt'
   gem 'jquery-rails'
 end
