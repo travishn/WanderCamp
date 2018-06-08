@@ -16,3 +16,4 @@ demo_user = User.create({
   img_url: "https://res.cloudinary.com/emanon/image/upload/v1528435548/russel.png"
  })
 
+Listing.destroy_all

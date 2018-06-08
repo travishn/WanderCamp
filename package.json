@@ -1,5 +1,5 @@
 {
-  "name": "hipster_camp",
+  "name": "wander_camp",
   "private": true,
   "dependencies": {
     "babel-core": "^6.26.3",

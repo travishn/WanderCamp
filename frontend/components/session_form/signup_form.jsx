@@ -81,7 +81,7 @@ class SignUpForm extends React.Component {
           onChange={this.handleChange('zipcode')}/>
           {this.renderErrors('Zipcode')}
 
-          <button type="submit" className="session-submit">Join HipsterCamp</button>
+          <button type="submit" className="session-submit">Join WanderCamp</button>
           <p className="change-form">Already have a Wandercamp account?</p>
           {this.props.changeForm}
         </form>

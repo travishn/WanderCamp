@@ -22,6 +22,11 @@ class User < ApplicationRecord
   before_validation :ensure_session_token, :ensure_img_url
   attr_reader :password
 
+  has_many :bookings,
+    primary_key: :id,
+    foreign_key: :booking_id,
+    class_name: :Booking
+
   def password=(password)
     @password = password
     self.password_digest = BCrypt::Password.create(password)
