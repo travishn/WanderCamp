@@ -8,3 +8,4 @@ class CreateListingPhotos < ActiveRecord::Migration[5.2]
     add_index :listing_photos, :listing_id
   end
 end
+  
