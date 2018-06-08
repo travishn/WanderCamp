@@ -13,15 +13,16 @@
 #  terrain             :string           not null
 #  price               :integer          not null
 #  capacity            :integer          not null
-#  type                :string           not null
 #  created_at          :datetime         not null
 #  updated_at          :datetime         not null
+#  category            :string           not null
 #
 
 class Listing < ApplicationRecord
   validates :host_id, :title, :description, :check_in, :check_out, :cancellation_policy,
-    :pets_allowed, :terrain, :price, :capacity, :type, presence: true
-  before_validation :ensure_cancellation_policy, :ensure_type, :ensure_check_in_time,
+    :terrain, :price, :capacity, :category, presence: true
+  validates :pets_allowed, inclusion: { in: [true, false] }
+  before_validation :ensure_cancellation_policy, :ensure_category, :ensure_check_in_time,
     :ensure_check_out_time, :ensure_capacity
 
   belongs_to :host,
@@ -65,8 +66,8 @@ class Listing < ApplicationRecord
     self.cancellation_policy ||= "Flexible"
   end
 
-  def ensure_type
-    self.type ||= "camping"
+  def ensure_category
+    self.category ||= "camping"
   end
 
   def ensure_capacity

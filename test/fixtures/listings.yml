@@ -13,9 +13,9 @@
 #  terrain             :string           not null
 #  price               :integer          not null
 #  capacity            :integer          not null
-#  type                :string           not null
 #  created_at          :datetime         not null
 #  updated_at          :datetime         not null
+#  category            :string           not null
 #
 
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html

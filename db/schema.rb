@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_06_08_180733) do
+ActiveRecord::Schema.define(version: 2018_06_08_190326) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -32,9 +32,9 @@ ActiveRecord::Schema.define(version: 2018_06_08_180733) do
     t.string "terrain", null: false
     t.integer "price", null: false
     t.integer "capacity", null: false
-    t.string "type", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "category", null: false
     t.index ["check_in"], name: "index_listings_on_check_in"
     t.index ["check_out"], name: "index_listings_on_check_out"
     t.index ["host_id"], name: "index_listings_on_host_id"

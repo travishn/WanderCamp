@@ -92,9 +92,32 @@ casita = Listing.create({
   The two block long downtown area offers restaurants, market, shopping and sightseeing at the Big Foot Museum 
   and Henry Cowell State Park with miles of single track running and mountain biking trails.',
   pets_allowed: false,
-  terrain: 'Forest',
+  terrain: 'Mountain',
   price: 150
 })
+
+ListingPhoto.destroy_all
+ListingPhoto.create({
+  listing_id: starry.id,
+  img_url: "http://res.cloudinary.com/emanon/image/upload/c_scale,h_480,w_720/v1528483203/rico-larroque-528914-unsplash.jpg"
+})
+
+ListingPhoto.create({
+  listing_id: ocean_view.id,
+  img_url: "http://res.cloudinary.com/emanon/image/upload/ar_16:9,c_fill,e_sharpen,g_auto,w_720/v1528489179/photo-1465865523598-a834aac5d3fa.jpg"
+})
+
+ListingPhoto.create({
+  listing_id: crystal.id,
+  img_url: "http://res.cloudinary.com/emanon/image/upload/c_scale,h_480,w_720/v1528483745/eyaifnjbn1cwphxlad8j.jpg"
+})
+
+ListingPhoto.create({
+  listing_id: casita.id,
+  img_url: "http://res.cloudinary.com/emanon/image/upload/c_scale,h_480,w_720/v1528489573/photo-1484960055659-a39d25adcb3c.jpg"
+})
+
+
 
 
 

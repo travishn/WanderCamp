@@ -13,9 +13,9 @@
 #  terrain             :string           not null
 #  price               :integer          not null
 #  capacity            :integer          not null
-#  type                :string           not null
 #  created_at          :datetime         not null
 #  updated_at          :datetime         not null
+#  category            :string           not null
 #
 
 require 'test_helper'
