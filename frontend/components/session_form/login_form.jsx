@@ -20,7 +20,7 @@ class LoginForm extends React.Component {
 
   handleDemoLogin(e) {
     e.preventDefault();
-    this.props.login({username: 'Guest', password: 'password'}).then((payload) => this.props.closeModal());
+    this.props.login({username: 'RusselTheExplorer', password: 'badgecollector'}).then((payload) => this.props.closeModal());
   }
 
   componentWillUnmount() {
