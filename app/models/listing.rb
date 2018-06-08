@@ -22,17 +22,21 @@ class Listing < ApplicationRecord
   validates :host_id, :title, :description, :check_in, :check_out, :cancellation_policy,
     :pets_allowed, :terrain, :price, :capacity, :type, presence: true
   before_validation :ensure_cancellation_policy, :ensure_type, :ensure_check_in_time,
-    :ensure_check_out_time
+    :ensure_check_out_time, :ensure_capacity
 
   belongs_to :host,
     primary_key: :id,
     foreign_key: :host_id,
     class_name: :User
     
+  has_many :listing_activities,
+    primary_key: :id,
+    foreign_key: :listing_id,
+    class_name: :ListingActivity
+
   has_many :activities,
-  primary_key: :id,
-  foreign_key: :listing_id,
-  class_name: :ListingActivity
+    through: :listing_activities,
+    source: :activity
   
   has_many :photos,
   primary_key: :id,
@@ -50,11 +54,11 @@ class Listing < ApplicationRecord
     class_name: :Booking
 
   def ensure_check_in_time
-    self.check_in_time ||= "After 3PM"
+    self.check_in ||= "After 3PM"
   end
 
   def ensure_check_out_time
-    self.check_out_time ||= "Before 11AM"
+    self.check_out ||= "Before 11AM"
   end
 
   def ensure_cancellation_policy
@@ -63,5 +67,9 @@ class Listing < ApplicationRecord
 
   def ensure_type
     self.type ||= "camping"
+  end
+
+  def ensure_capacity
+    self.capacity ||= 4
   end
 end
