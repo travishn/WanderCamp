@@ -5,15 +5,27 @@ class NavBar extends React.Component {
   renderSessionOption() {
     const { currentUser, logout } = this.props;
     if (currentUser) {
-      return (
-        <div className='right-nav-child'>
-          <div className='profile-pic'>
-            <img src={currentUser.imgUrl} />
-            <h2 className='logged-user'>Welcome, {currentUser.firstName}</h2>
+      if (currentUser.imgUrl === "https://res.cloudinary.com/emanon/image/upload/v1528437705/guest.png") {
+        return (
+          <div className='right-nav-child'>
+            <div className='profile-pic'>
+              <img className="default-pic" src={currentUser.imgUrl} />
+              <h2 className='logged-user'>Welcome, {currentUser.firstName}</h2>
+            </div>
+            <button className='home-session' onClick={logout}>Log Out</button>
           </div>
-          <button className='home-session' onClick={logout}>Log Out</button>
-        </div>
-      );
+        );
+      } else {
+        return (
+          <div className='right-nav-child'>
+            <div className='profile-pic'>
+              <img className="assigned-pic" src={currentUser.imgUrl} />
+              <h2 className='logged-user'>Welcome, {currentUser.firstName}</h2>
+            </div>
+            <button className='home-session' onClick={logout}>Log Out</button>
+          </div>
+        );
+      }
     } else {
       return (
         <div className='right-nav-child'>

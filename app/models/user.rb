@@ -36,8 +36,9 @@ class User < ApplicationRecord
   end
 
   def ensure_img_url
-    self.img_url ||= 'https://i.imgur.com/0mIFV1U.png'
+    # self.img_url ||= 'https://i.imgur.com/0mIFV1U.png'
     # credit:http://www.myrunningcostumes.com/costumes/russell
+    self.img_url ||= "https://res.cloudinary.com/emanon/image/upload/v1528437705/guest.png"
   end
 
   def reset_session_token!

@@ -56,8 +56,17 @@
 .profile-pic {
   display: flex;
 
-  img {
+  .default-pic {
+    height: 32px;
+    width: 32px;
+    padding-top: 8%;
+    margin-right: 6px;
+  }
+  
+  .assigned-pic {
     height: 50px;
     width: 50px;
+    padding-top: 3%;
+    margin-right: 2px;
   }
 }
