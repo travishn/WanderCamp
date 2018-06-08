@@ -3,6 +3,7 @@ import SignUpFormContainer from '../components/session_form/signup_form_containe
 import LoginFormContainer from '../components/session_form/login_form_container';
 import ModalContainer from './modal/modal_container';
 import NavBarContainer from './nav_bar/nav_bar_container';
+import ListingsIndexContainer from './listings/listings_index_container';
 import Home from '../components/home/home';
 import Footer from '../components/footer';
 import { ProtectedRoute } from '../util/route_util';
@@ -23,7 +24,8 @@ const App = () => (
     <ModalContainer />
 
     <Switch>
-      <Route path="/" component={Home} />
+      <Route exact path="/discover" component={ ListingsIndexContainer } />
+      <Route path="/" component={ Home } />
     </Switch>
 
     <Home />
