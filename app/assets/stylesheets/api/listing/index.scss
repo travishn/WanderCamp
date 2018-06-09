@@ -1,0 +1,30 @@
+.listing-index {
+  width: 720px;
+  -webkit-flex-grow: 1;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  flex-grow: 1;
+  overflow-y: auto;
+  line-height: 1.42;
+  color: #333333;
+  box-sizing: border-box;
+  height: 100%;
+  padding-top: 3%;
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+.discover-container {
+  display: flex;
+  // width: 100vw;
+  height: 92vh;
+  justify-content: flex-end;
+  position: relative;
+  padding-top: 70px;
+  padding-bottom: 100px;
+
+  .listing-filter {
+    overflow-y: auto;
+    width: 194px;
+  }
+}
