@@ -2,24 +2,24 @@ import * as ListingAPIUtil from '../util/listing_api_util';
 export const RECEIVE_LISTINGS = 'RECEIVE_LISTINGS';
 export const RECEIVE_LISTING = 'RECEIVE_LISTING';
 
-export const receiveListings = (listings) => ({
+export const receiveListings = (payload) => ({
   type: RECEIVE_LISTINGS,
-  listings
+  payload
 });
 
-export const receiveListing = (listing) => ({
+export const receiveListing = (payload) => ({
   type: RECEIVE_LISTING,
-  listing
+  payload
 });
 
 export const fetchListings = () => (dispatch) => (
   ListingAPIUtil.fetchListings()
-  .then( listings => dispatch(receiveListings(listings)))
+  .then( payload => dispatch(receiveListings(payload)))
 );
 
 export const fetchListing = (id) => (dispatch) => (
   ListingAPIUtil.fetchListing(id)
-  .then( listing => dispatch(receiveListing(listing)))
+  .then( payload => dispatch(receiveListing(payload)))
 );
 
 

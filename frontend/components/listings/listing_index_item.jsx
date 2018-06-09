@@ -1,11 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const ListingsIndexItem = ({ listing }) => (
+const ListingsIndexItem = ({ listing, photos }) => {
+  return (
     <li className="listing-index-item">
-      <Link to={`/listing/${listing.id}`}>
-        <img src={listing.photoIds} alt={listing.name} />
-      </Link>
+      <img src={photos[listing.id][0]} alt={listing.name} />
 
       <div className="listing-index-title">
         {listing.title}
@@ -16,6 +15,7 @@ const ListingsIndexItem = ({ listing }) => (
         <span className="trailing-dots">...</span>
       </div>
     </li>
-);
+  );
+};
 
 export default ListingsIndexItem;

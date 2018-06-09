@@ -7,15 +7,20 @@ class ListingsIndex extends React.Component {
   }
 
   renderListings() {
-    const { listings } = this.props;
-
-    return (
-      <ul className="listing-index-container">
-        {listings.map(
-          listing => <ListingsIndexItem key={listing.id} listing={listing} />
-        )}
-      </ul>
-    );
+    const { listings, photos } = this.props;
+    
+    if (photos === {}) {
+      return null;
+    } else {
+        return (
+          <ul className="listing-index-container">
+            {listings.map(
+              listing => <ListingsIndexItem key={listing.id} 
+                photos={photos} listing={listing} />
+            )}
+          </ul>
+        );
+    }
   }
 
   render() {
