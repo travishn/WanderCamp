@@ -13,3 +13,10 @@ json.listingPhotos do
     end
   end
 end
+
+json.users do
+  json.set! @listing.host.id do
+    json.extract! @listing.host, :id, :username, :first_name,
+      :last_name, :img_url
+  end
+end
