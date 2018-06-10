@@ -1,1 +1,2 @@
-json.extract! @booking, :id, :listing_id, :guest_id, :start_date, :end_date, :num_guests
+json.key_format! camelize: :lower
+json.partial! '/api/bookings/booking', booking: @booking

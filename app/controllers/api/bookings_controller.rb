@@ -1,7 +1,12 @@
 class Api::BookingsController < ApplicationController
   def index
-    @bookings = Booking.all
-    render :index
+    @user = User.find(params[:userId])
+    if @user
+       @bookings = @user.bookings.order(:start_date)
+       render :index
+    else
+      render json: ["User not found"], status: 404
+    end
   end
 
   def create
