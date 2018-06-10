@@ -23,6 +23,7 @@ class Listing extends React.Component {
       return (
         <main className="listing-container">
           <section className="listing-photos">
+            <p>PHOTOS GO HERE</p>
           </section>
 
           <section className="listing-box">
@@ -51,8 +52,7 @@ class Listing extends React.Component {
                   <p>Details</p>
                 </div>
 
-                <div className="detail-specifics">
-                  <ul>
+                <ul className="detail-specifics">
                     <li>
                       <strong>Check in: </strong>
                       <span>{listing.checkIn}</span>
@@ -84,20 +84,48 @@ class Listing extends React.Component {
                     </li>
 
                   </ul>
-                </div>
               </div>
 
               <div className="listing-activities">
+                <div className="category-title">
+                  <p>Activities</p>
+                </div>
+
+                <ul className="detail-specifics">
+                  <li>
+                    <img src="https://res.cloudinary.com/emanon/image/upload/c_thumb,w_200,g_face/v1528620798/man-in-hike.png" />
+                    <span>Hiking</span>
+                  </li>
+
+                  <li>
+                    <img src="https://res.cloudinary.com/emanon/image/upload/v1528621558/swimming-silhouette.png"/>
+                    <span>Swimming</span>
+                  </li>
+
+                  <li>
+                    <img src="https://res.cloudinary.com/emanon/image/upload/v1528621942/eagle.png" />
+                    <span>Wildlife Watching</span>
+                  </li>
+                  
+                  <li>
+                    <img src="https://res.cloudinary.com/emanon/image/upload/v1528621650/bicycle-rider.png" />
+                    <span>Biking</span>
+                  </li>
+
+                </ul>
               </div>
 
               <div className="listing-vibe">
+                <p>THE VIBES GO HERE</p>
               </div>
 
               <div className="listing-reviews">
+                <p>REVIEWS GO HERE</p>
               </div>
             </div>
             
             <div className="booking-form">
+              <p>BOOKING FORM GOES HERE</p>
             </div>
           </section>
         </main>
