@@ -1,0 +1,35 @@
+.home-container {
+  display: flex;
+  // justify-content: flex-end;
+  // position: relative;
+  margin-top: 98px;
+  height: 92vh;
+}
+
+.home-header {
+  display: flex;
+  align-content: space-between;
+  padding-left: 8%;
+
+  div {
+    width: 500px;
+
+    h2 {
+      padding-top: 8%;
+      font-size: 61px;
+      color: #333333;
+      font-weight: 600;
+    }
+  }
+
+  figure {
+    margin-right: 0;
+    padding-right: 0;
+    padding-left: 4.7%;
+
+    img {
+      width: 712px;
+      height: 540px;
+    }
+  }
+}

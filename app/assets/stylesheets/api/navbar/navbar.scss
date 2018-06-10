@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
   position: fixed;
-  height: 60px;
+  height: 65px;
   width: 100%;
   border-bottom: 1px solid #ebebeb;
   color: #333333;
@@ -21,12 +21,12 @@
 .header-logo {
   border-right: 1px solid #ebebeb;
   padding: 0 25px;
-  line-height: 60px;
+  line-height: 65px;
   
   h1 {
     font-weight: 550;
-    letter-spacing: 2px;
-    font-size: 19px;
+    letter-spacing: 3px;
+    font-size: 20px;
   }
 }
 .right-nav-child {
