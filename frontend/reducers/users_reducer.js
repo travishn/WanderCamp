@@ -1,4 +1,6 @@
-import { RECEIVE_CURRENT_USER, RECEIVE_ALL_USERS } from '../actions/session_actions';
+import { RECEIVE_CURRENT_USER } from '../actions/session_actions';
+import { RECEIVE_ALL_USERS } from '../actions/user_actions';
+import { RECEIVE_LISTING } from '../actions/listing_actions';
 import merge from 'lodash/merge';
 
 const usersReducer = (state = {}, action) => {
@@ -8,6 +10,8 @@ const usersReducer = (state = {}, action) => {
       return merge({}, state, {[action.currentUser.id]: action.currentUser});
     case RECEIVE_ALL_USERS:
       return action.users;
+    case RECEIVE_LISTING:
+      return action.payload.users;
     default:
       return state;
   }
