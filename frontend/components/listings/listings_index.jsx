@@ -7,23 +7,23 @@ class ListingsIndex extends React.Component {
   }
 
   render() {
-    const { listings, photos } = this.props;
+    const { listings, listingPhotos } = this.props;
 
-    if (photos === {}) {
+    if (listingPhotos === {}) {
       return null;
     } else {
       return (
-        <div className="discover-container">
+        <main className="discover-container">
           <section className="listing-filter">
             <p>FILTER GOES HERE</p>
           </section>
           <section className="listing-index">
             {listings.map(
               listing => <ListingsIndexItem key={listing.id}
-                photos={photos} listing={listing} />
+                photos={listingPhotos} listing={listing} />
             )}
           </section>
-        </div>
+        </main>
       );
     }
   }

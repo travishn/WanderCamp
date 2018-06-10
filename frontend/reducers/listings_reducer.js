@@ -5,7 +5,7 @@ const listingsReducer = (state = {}, action) => {
   Object.freeze(state);
   switch (action.type) {
     case RECEIVE_LISTING:
-      return merge({}, state, action.payload.listings);
+      return merge({}, state, action.payload.listing);
     case RECEIVE_LISTINGS:
       return action.payload.listings;
     default:

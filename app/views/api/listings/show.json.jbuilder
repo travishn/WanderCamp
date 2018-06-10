@@ -1,13 +1,15 @@
 json.key_format! camelize: :lower
 
 json.listing do
-  json.partial! '/api/listings/listing', listing: @listing
+  json.set! @listing.id do
+    json.partial! '/api/listings/listing', listing: @listing
+  end
 end
 
-json.listing listingPhotos do
+json.listingPhotos do
   @listing.photos.each do |photo|
     json.set! photo.id do
-      json.extract! photo, :img_url
+      json.extract! photo, :id, :img_url
     end
   end
 end

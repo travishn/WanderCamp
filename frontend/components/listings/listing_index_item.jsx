@@ -17,7 +17,8 @@ const ListingsIndexItem = ({ listing, photos }) => {
           </div>
 
           <div className="listing-index-description">
-            {listing.description.slice(0, 230)}
+            {/* originally had .slice(0, 230) but broke when use direct url */}
+            {listing.description} 
             <span className="trailing-dots">...</span>
           </div>
         </li>

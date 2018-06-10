@@ -1,8 +1,8 @@
 
 export const selectAllListings = (state) => Object.values(state.entities.listings);
 
-const selectListingPhotos = (state, listing) => {
-  if (listing) {
+export const selectListingPhotos = (state, listing) => {
+  if (listing.photoIds) {
     return listing.photoIds.map(id => state.entities.listingPhotos[id]['imgUrl']);
   } else {
     return [];
