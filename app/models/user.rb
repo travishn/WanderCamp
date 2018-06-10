@@ -24,7 +24,7 @@ class User < ApplicationRecord
 
   has_many :bookings,
     primary_key: :id,
-    foreign_key: :booking_id,
+    foreign_key: :guest_id,
     class_name: :Booking
 
   def password=(password)
