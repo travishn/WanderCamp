@@ -21,9 +21,11 @@ json.users do
   end
 end
 
-json.host do
-  json.set! @listing.host.id do
-    json.extract! @listing.host, :id, :username, :first_name,
-      :last_name, :img_url
-  end
-end
+# json.bookings do
+#   @listing.bookings.each do |booking|
+#     json.set! booking.id do
+#       json.extract! booking, :id, :guest_id, :listing_id, :check_in,
+#         :check_out, :num_guests, :created_at
+#     end
+#   end
+# end

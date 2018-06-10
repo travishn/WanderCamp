@@ -12,12 +12,15 @@
 
 class Booking < ApplicationRecord
   validates :listing_id, :guest_id, :start_date, :end_date, :num_guests, presence: true
-
+  before_validation :ensure_num_guests
   belongs_to :listing
 
   belongs_to :guest,
-    primary: :id,
+    primary_key: :id,
     foreign_key: :guest_id,
     class_name: :User
     
+  def ensure_num_guests
+    self.num_guests ||= 1
+  end
 end

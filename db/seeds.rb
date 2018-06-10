@@ -117,6 +117,30 @@ ListingPhoto.create({
   img_url: "http://res.cloudinary.com/emanon/image/upload/c_scale,h_480,w_720/v1528489573/photo-1484960055659-a39d25adcb3c.jpg"
 })
 
+Booking.destroy_all
+Booking.create({
+  listing_id: starry.id,
+  guest_id: demo_user.id,
+  num_guests: 4,
+  start_date: Date.new(2018, 6, 10),
+  end_date: Date.new(2018, 6, 12)
+})
+
+Booking.create({
+  listing_id: ocean_view.id,
+  guest_id: demo_user.id,
+  num_guests: 4,
+  start_date: Date.new(2018, 6, 5),
+  end_date: Date.new(2018, 6, 7)
+})
+
+Booking.create({
+  listing_id: crystal.id,
+  guest_id: demo_user.id,
+  num_guests: 4,
+  start_date: Date.new(2018, 6, 20),
+  end_date: Date.new(2018, 6, 22)
+})
 
 
 
