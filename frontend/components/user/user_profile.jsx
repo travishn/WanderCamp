@@ -2,12 +2,15 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 class UserProfile extends React.Component {
-  componentDidMount() {
-    this.props.fetchUserBookings(this.props.currentUser.id);
+  componentWillReceiveProps(nextProps) {
+    if (this.props.match.params.userId !== nextProps.match.params.userId) {
+      this.props.fetchUserBookngs(this.props.currentUser.id);
+    }
   }
 
-  componentWillUnmount() {
-    
+
+  componentDidMount() {
+    this.props.fetchUserBookings(this.props.currentUser.id);
   }
 
   deleteBooking(id) {
@@ -19,6 +22,7 @@ class UserProfile extends React.Component {
 
   renderUpcomingBookings () {
     const { bookings, listingPhotos } = this.props;
+
     const currentDate = new Date().toJSON().slice(0, 10);
     const currentDateSum = parseInt(currentDate.slice(0, 4))
       + parseInt(currentDate.slice(5, 7))
@@ -45,7 +49,7 @@ class UserProfile extends React.Component {
               return (
                 <li key={`booking-${booking.id}`} className="booking-item">
                   <div>
-                    <img src={listingPhotos[booking.listingId]["imgUrl"]} className="booking-logo" />
+                    {/* <img src={listingPhotos[booking.listingId]["imgUrl"]} className="booking-logo" /> */}
                   </div>
 
                   <div className="booking-details">

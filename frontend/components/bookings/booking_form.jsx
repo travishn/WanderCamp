@@ -18,19 +18,14 @@ class BookingForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    const { currentListing, currentUserBookings } = this.props;
+    const { currentListing, currentUserBookings, currentUser } = this.props;
     // const { currentUser } = this.props;
 
     // if (currentUser) {
       // this.setState({ guest_id: currentUser.id});
     // }
-
-    if (currentUserBookings[currentListing]) {
-      return null
-    } else {
-      this.props.createUserBooking(this.state);
-    }
-
+    this.props.createUserBooking(this.state)
+    .then(() => this.props.history.push(`/users/${currentUser.id}`));
   }
 
   handleNumChange(field) {
@@ -46,29 +41,27 @@ class BookingForm extends React.Component {
 
   renderSubmitButton() {
     const { currentUser, currentUserBookings, currentListing } = this.props;
-    const bookings = Object.values(currentUserBookings);
+    // const bookings = Object.values(currentUserBookings);
 
     if (currentUser) {
-      for (const booking of bookings) {
-        if (currentListing.id === booking.listingId) {
-          return (
-            <button
-              type="submit"
-              className="disabled-btn"
-              disabled>
-              Cancel Booking
-            </button>
-          );
-        }
-
-        return (
-          <button
-            type="submit"
-            className="direct-book-btn">
-            Direct book
-          </button>
-        );
-      }
+      // for (const booking of bookings) {
+      //   if (currentListing.id === booking.listingId) {
+      //     return (
+      //       <button
+      //         type="submit"
+      //         className="disabled-btn"
+      //         disabled>
+      //         Cancel Booking
+      //       </button>
+      //     );
+      //   }
+      return (
+        <button
+          type="submit"
+          className="direct-book-btn">
+          Direct book
+        </button>
+      );
     } else {
       return (
         <button
