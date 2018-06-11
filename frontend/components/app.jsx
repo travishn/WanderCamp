@@ -27,7 +27,7 @@ const App = () => (
 
     <Switch>
       <Route path="/listings/:listingId" component={ ListingContainer } />
-      <Route path="/users/:userId" component={ UserProfileContainer } />
+      <ProtectedRoute path="/users/:userId" component={ UserProfileContainer } />
       <Route path="/discover" component={ ListingsIndexContainer } />
       <Route path="/" component={ Home } />
     </Switch>

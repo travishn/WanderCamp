@@ -5,10 +5,12 @@ import UserProfile from './user_profile';
 export const mapStateToProps = (state) => {
   const currentUser = state.entities.users[state.session.id] || {};
   const bookings = state.entities.bookings;
+  const listingPhotos = state.entities.listingPhotos;
 
   return {
     currentUser,
-    bookings
+    bookings,
+    listingPhotos
   };
 };
 

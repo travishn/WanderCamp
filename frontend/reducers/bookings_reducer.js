@@ -9,7 +9,8 @@ const bookingsReducer = (state = {}, action) => {
   Object.freeze(state);
   switch (action.type) {
     case RECEIVE_USER_BOOKINGS:
-      return action.bookings;
+      // return action.bookings;
+      return action.payload.bookings;
     case RECEIVE_USER_BOOKING:
       return merge({}, state, {[action.booking.id]: action.booking});
     case REMOVE_USER_BOOKING:

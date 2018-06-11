@@ -4,9 +4,9 @@ export const RECEIVE_USER_BOOKING = "RECEIVE_USER_BOOKING";
 export const REMOVE_USER_BOOKING = "REMOVE_USER_BOOKING";
 export const RECEIVE_BOOKING_ERRORS = "RECEIVE_BOOKING_ERRORS";
 
-export const receiveBookings = (bookings) => ({
+export const receiveBookings = (payload) => ({
   type: RECEIVE_USER_BOOKINGS,
-  bookings
+  payload
 });
 
 export const receiveBooking = (booking) => ({
@@ -26,7 +26,7 @@ export const receiveBookingErrors = (errors) => ({
 
 export const fetchUserBookings = (userId) => dispatch => (
   BookingAPIUtil.fetchUserBookings(userId)
-  .then(bookings => dispatch(receiveBookings(bookings)),
+  .then(payload => dispatch(receiveBookings(payload)),
     err => dispatch(receiveBookingErrors(err.responseJSON)))
 );
 

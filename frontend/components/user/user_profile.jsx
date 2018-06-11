@@ -14,11 +14,12 @@ class UserProfile extends React.Component {
   }
 
   upcomingBookings () {
+    const { bookings, listingPhotos } = this.props;
     const currentDate = new Date().toJSON().slice(0, 10);
     const currentDateSum = parseInt(currentDate.slice(0, 4))
       + parseInt(currentDate.slice(5, 7))
       + parseInt(currentDate.slice(8, 10));
-    const bookingsInfo = Object.values(this.props.bookings);
+    const bookingsInfo = Object.values(bookings);
     const upcoming = [];
 
     bookingsInfo.forEach( booking => {
@@ -40,7 +41,7 @@ class UserProfile extends React.Component {
               return (
                 <li key={`booking-${booking.id}`} className="booking-item">
                   <div>
-                    <img src={booking.listing.imgUrl} className="booking-logo" />
+                    <img src={listingPhotos[booking.listingId]["imgUrl"]} className="booking-logo" />
                   </div>
 
                   <div className="booking-details">
