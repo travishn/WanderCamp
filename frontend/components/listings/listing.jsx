@@ -1,4 +1,7 @@
 import React from 'react';
+import BookingFormContainer from '../bookings/booking_form_container';
+import { fetchUserBookings } from '../../actions/booking_actions';
+import { Route } from 'react-router-dom';
 
 class Listing extends React.Component {
 
@@ -125,7 +128,9 @@ class Listing extends React.Component {
             </div>
             
             <div className="booking-form">
-              <p>BOOKING FORM GOES HERE</p>
+              <Route
+                path={`/listings/:listingId`}
+                component={BookingFormContainer} />
             </div>
           </section>
         </main>

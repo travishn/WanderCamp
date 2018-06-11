@@ -21,11 +21,11 @@ json.users do
   end
 end
 
-# json.bookings do
-#   @listing.bookings.each do |booking|
-#     json.set! booking.id do
-#       json.extract! booking, :id, :guest_id, :listing_id, :check_in,
-#         :check_out, :num_guests, :created_at
-#     end
-#   end
-# end
+json.bookings do
+  @listing.bookings.each do |booking|
+    json.set! booking.id do
+      json.extract! booking, :id, :guest_id, :listing_id, :start_date,
+        :end_date, :num_guests
+    end
+  end
+end

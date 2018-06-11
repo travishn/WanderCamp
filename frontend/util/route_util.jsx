@@ -17,7 +17,7 @@ const mapStateToProps = (state) => ({
   loggedIn: Boolean(state.session.id)
 });
 
-const mapDispatchToProps = (state) => ({
+const mapDispatchToProps = (dispatch) => ({
   openModal: (modal) => dispatch(openModal(modal))
 });
 

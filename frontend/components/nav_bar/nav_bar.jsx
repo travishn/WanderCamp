@@ -9,7 +9,9 @@ class NavBar extends React.Component {
         return (
           <div className='right-nav-child'>
             <div className='profile-pic'>
-              <img className="default-pic" src={currentUser.imgUrl} />
+              <Link className="default-pic" to={`/users/${currentUser.id}`}>
+                <img src={currentUser.imgUrl} />
+              </Link>
               <h2 className='logged-user'>Welcome, {currentUser.firstName}</h2>
             </div>
             <button className='home-session' onClick={logout}>Log Out</button>
@@ -19,7 +21,9 @@ class NavBar extends React.Component {
         return (
           <div className='right-nav-child'>
             <div className='profile-pic'>
-              <img className="assigned-pic" src={currentUser.imgUrl} />
+              <Link className="assigned-pic" to={`/users/${currentUser.id}`}>
+                <img src={currentUser.imgUrl} />
+              </Link>
               <h2 className='logged-user'>Welcome, {currentUser.firstName}</h2>
             </div>
             <button className='home-session' onClick={logout}>Log Out</button>
@@ -43,6 +47,11 @@ class NavBar extends React.Component {
         </Link>
       </div>
     );
+  }
+
+  handleLogout() {
+    const { logout } = this.props;
+    logout().then(history.push("/"));
   }
 
   render() {

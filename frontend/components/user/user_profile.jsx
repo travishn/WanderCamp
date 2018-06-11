@@ -6,6 +6,10 @@ class UserProfile extends React.Component {
     this.props.fetchUserBookings(this.props.currentUser.id);
   }
 
+  componentWillUnmount() {
+    
+  }
+
   deleteBooking(id) {
     return (e) => {
       e.preventDefault();
@@ -13,7 +17,7 @@ class UserProfile extends React.Component {
     };
   }
 
-  upcomingBookings () {
+  renderUpcomingBookings () {
     const { bookings, listingPhotos } = this.props;
     const currentDate = new Date().toJSON().slice(0, 10);
     const currentDateSum = parseInt(currentDate.slice(0, 4))
@@ -59,10 +63,14 @@ class UserProfile extends React.Component {
     }
   }
 
+  pastBookings() {
+
+  }
+
   render() {
     return (
     <div className="user-profile-container">
-      {this.upcomingBookings()}
+      {this.renderUpcomingBookings()}
     </div>
     );
   }

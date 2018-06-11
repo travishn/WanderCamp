@@ -17,12 +17,18 @@ class ListingsIndex extends React.Component {
           <section className="listing-filter">
             <p>FILTER GOES HERE</p>
           </section>
+
           <section className="listing-index">
             {listings.map(
               listing => <ListingsIndexItem key={listing.id}
                 photos={listingPhotos} listing={listing} />
             )}
           </section>
+
+          <section>
+            <p>GOOGLE MAP GOES HERE</p>
+          </section>
+
         </main>
       );
     }

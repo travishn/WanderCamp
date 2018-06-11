@@ -16,8 +16,9 @@ json.listingPhotos do
     #   end
     # end
     # Only want the first photo since we're using listing_id to target
+
     json.set! booking.listing.photos[0].listing_id do
-      json.extract! booking.listing.photos[0], :listing_id, :img_url
+      json.extract! booking.listing.photos[0], :id, :listing_id, :img_url
     end
   end
 end

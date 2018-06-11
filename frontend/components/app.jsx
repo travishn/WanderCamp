@@ -26,8 +26,8 @@ const App = () => (
     <ModalContainer />
 
     <Switch>
-      <Route path="/listings/:listingId" component={ ListingContainer } />
-      <ProtectedRoute path="/users/:userId" component={ UserProfileContainer } />
+      <Route exact path="/listings/:listingId" component={ ListingContainer } />
+      <ProtectedRoute exact path="/users/:userId" component={ UserProfileContainer } />
       <Route path="/discover" component={ ListingsIndexContainer } />
       <Route path="/" component={ Home } />
     </Switch>

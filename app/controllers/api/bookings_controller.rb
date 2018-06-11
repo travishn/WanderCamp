@@ -3,7 +3,6 @@ class Api::BookingsController < ApplicationController
     @user = User.find(params[:userId])
     if @user
        @bookings = @user.bookings
-      #  .order(:start_date)
        render :index
     else
       render json: ["User not found"], status: 404

@@ -8,7 +8,7 @@
 
 User.destroy_all
 demo_user = User.create({
-  first_name: 'Russel', 
+  first_name: 'Russell', 
   last_name: 'Pixar', 
   username: 'RusselTheExplorer', 
   password: 'badgecollector', 
