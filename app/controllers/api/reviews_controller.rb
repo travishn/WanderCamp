@@ -1,7 +1,8 @@
 class Api::ReviewsController < ApplicationController
   def index
     #need the if params[listingId]?
-    current_listing = Listing.find(params[:listingId]) if params[:listingId]
+    current_listing = Listing.find(params[:listingId])
+    .includes(:author) if params[:listingId]
 
     @reviews = current_listing.reviews
     render :index
