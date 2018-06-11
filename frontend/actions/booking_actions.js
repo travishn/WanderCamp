@@ -30,8 +30,8 @@ export const fetchUserBookings = (userId) => dispatch => (
     err => dispatch(receiveBookingErrors(err.responseJSON)))
 );
 
-export const deleteUserBooking = (id) => dispatch => (
-    BookingAPIUtil.deleteUserBooking(id)
+export const deleteUserBooking = (bookingId) => dispatch => (
+    BookingAPIUtil.deleteUserBooking(bookingId)
     .then(booking => dispatch(removeBooking(booking.id)),
       err => dispatch(receiveBookingErrors(err.responseJSON))
     )
