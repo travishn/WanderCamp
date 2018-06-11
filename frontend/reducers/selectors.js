@@ -9,7 +9,7 @@ export const selectListingPhotos = (state, listing) => {
   // Second bug is when you navigate back from the profile page to the discover page, you also don't have all the listingPhotos
   // from the userprofile state but you do have all the listings photoIds so when it tries to iterate over the ids of a listing
   // that is not on the bookings page, it breaks because when u key into the id, it returns undefined['imgUrl']
-  
+
   // debugger;
   if (listing.photoIds) {
     return listing.photoIds.map(id => state.entities.listingPhotos[id]['imgUrl']);

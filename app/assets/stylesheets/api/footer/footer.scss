@@ -90,8 +90,9 @@
   display: flex;
   justify-content: space-between;
   padding-right: 15%;
-
+  
   a {
+    // width: minmax(50px, auto);
     padding: 0 5px;
   }
 }

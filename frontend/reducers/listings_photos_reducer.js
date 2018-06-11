@@ -11,7 +11,7 @@ const listingsPhotoReducer = (state = {}, action) => {
     case RECEIVE_LISTING:
       return merge({}, state, action.payload.listingPhotos);
     case RECEIVE_USER_BOOKINGS:
-      return action.payload.listingPhotos;
+      return action.payload.listingPhotos || {};
     default:
       return state;
   }

@@ -39,7 +39,7 @@ class UserProfile extends React.Component {
       if (currentDateSum < bookingDateSum) upcoming.push(booking);
     });
 
-    if (upcoming.length > 0) {
+    if (upcoming.length > 0 && upcoming[0].listing !== undefined) {
       return (
         <section className="upcoming-trips-container">
           <h2 className="upcoming-header">Upcoming Trips</h2>
@@ -73,9 +73,9 @@ class UserProfile extends React.Component {
 
   render() {
     return (
-    <div className="user-profile-container">
-      {this.renderUpcomingBookings()}
-    </div>
+      <div className="user-profile-container">
+        {this.renderUpcomingBookings()}
+      </div>
     );
   }
 }
