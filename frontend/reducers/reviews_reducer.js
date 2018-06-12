@@ -4,6 +4,7 @@ import {
   REMOVE_LISTING_REVIEW,
   UPDATE_LISTING_REVIEW
 } from '../actions/review_actions';
+import { RECEIVE_LISTING } from '../actions/listing_actions';
 import merge from 'lodash/merge';
 
 const reviewsReducer = (state = {}, action) => {
@@ -19,6 +20,8 @@ const reviewsReducer = (state = {}, action) => {
       return newState;
     case UPDATE_LISTING_REVIEW:
       return merge({}, state, {[action.review.id]: action.review});
+    case RECEIVE_LISTING:
+      return action.payload.reviews;
     default:
       return state;
   }
