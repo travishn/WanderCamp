@@ -25,7 +25,7 @@ class Api::BookingsController < ApplicationController
     if @booking.destroy
       render :show
     else
-      render json: @booking.errors.full_messages, status: 422
+      render json: ["Booking doesn't exist"], status: 404
     end
   end
 

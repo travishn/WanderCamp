@@ -1,10 +1,13 @@
 class Api::ReviewsController < ApplicationController
   def index
     #need the if params[listingId]?
-    current_listing = Listing.find(params[:listingId])
-    .includes(:author) if params[:listingId]
+    @current_listing = Listing.find(params[:listingId])
+    .includes(:author)
 
-    @reviews = current_listing.reviews
+    if @current_listing
+      @reviews = current_listing.reviews
+    end
+
     render :index
   end
 
@@ -19,13 +22,12 @@ class Api::ReviewsController < ApplicationController
     if @review.save
       render :show
     else
-      render: @review.errors.full_messages, status: 422
+      render json: @review.errors.full_messages, status: 422
     end
   end
 
   def destroy
     @review = Review.find(params[:id])
-    review = Review.find(params[:id])
 
     if @review.destroy
       render :show

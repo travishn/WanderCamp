@@ -5,6 +5,12 @@ import Root from './components/root';
 import {openModal} from './actions/modal_actions';
 import { fetchListings } from './actions/listing_actions';
 import { fetchUserBookings, receiveBookings } from './actions/booking_actions';
+import { 
+  fetchListingReviews, 
+  receiveReviews, 
+  receiveReview, 
+  createListingReview 
+} from './actions/review_actions';
 
 document.addEventListener('DOMContentLoaded', () => {
   let preloadedState;
@@ -27,6 +33,8 @@ document.addEventListener('DOMContentLoaded', () => {
   window.fetchListings = fetchListings;
   window.fetchUserBookings = fetchUserBookings;
   window.receiveBookings = receiveBookings;
+  window.createListingReview = createListingReview;
+  window.receiveReview = receiveReview;
   // TEST END
 
 
