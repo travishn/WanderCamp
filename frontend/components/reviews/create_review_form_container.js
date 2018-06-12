@@ -15,6 +15,7 @@ const mapStateToProps = (state, ownProps) => {
 
   return {
     currentUser,
+    currentListing,
     review,
     errors,
     formType

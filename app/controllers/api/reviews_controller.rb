@@ -11,11 +11,6 @@ class Api::ReviewsController < ApplicationController
     render :index
   end
 
-  # def show
-  #   @review = Review.find(params[:id])
-  #   render :show
-  # end
-  
   def create
     @review = Review.new(review_params)
 
@@ -47,6 +42,6 @@ class Api::ReviewsController < ApplicationController
 
   private
   def review_params
-    params.require.(:review).permit(:lising_id, :author_id, :comment)
+    params.require(:review).permit(:listing_id, :author_id, :comment)
   end
 end

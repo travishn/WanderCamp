@@ -21,7 +21,7 @@ const reviewsReducer = (state = {}, action) => {
     case UPDATE_LISTING_REVIEW:
       return merge({}, state, {[action.review.id]: action.review});
     case RECEIVE_LISTING:
-      return action.payload.reviews;
+      return action.payload.reviews || {};
     default:
       return state;
   }
