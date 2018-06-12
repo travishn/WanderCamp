@@ -1,10 +1,10 @@
 import { connect } from 'react-redux';
 import ReviewForm from './review_form';
 import { createListingReview, 
-  updateListingReview,
   deleteListingReview, 
   receiveReviewErrors,
 } from '../../actions/review_actions';
+import { withRouter } from 'react-router';
 
 const mapStateToProps = (state, ownProps) => {
   const currentUser = state.entities.users[state.session.id];
@@ -16,7 +16,8 @@ const mapStateToProps = (state, ownProps) => {
   return {
     currentUser,
     review,
-    errors
+    errors,
+    formType
   };
 };
 
@@ -25,4 +26,4 @@ const mapDispatchToProps = (dispatch) => ({
   clearErrors: () => dispatch(receiveReviewErrors([]))
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(ReviewForm);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(ReviewForm));

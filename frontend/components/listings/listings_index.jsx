@@ -6,8 +6,17 @@ class ListingsIndex extends React.Component {
     this.props.fetchListings();
   }
 
-  render() {
+  renderListingItem() {
     const { listings, listingPhotos } = this.props;
+
+    return listings.map(
+      listing => <ListingsIndexItem key={listing.id}
+        photos={listingPhotos} listing={listing} /> 
+    );
+  }
+
+  render() {
+    const { listingPhotos } = this.props;
 
     if (listingPhotos === {}) {
       return null;
@@ -19,10 +28,7 @@ class ListingsIndex extends React.Component {
           </section>
 
           <section className="listing-index">
-            {listings.map(
-              listing => <ListingsIndexItem key={listing.id}
-                photos={listingPhotos} listing={listing} />
-            )}
+            {this.renderListingItem()}
           </section>
 
           <section>

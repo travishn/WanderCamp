@@ -3,7 +3,6 @@ import { RECEIVE_USER_BOOKINGS } from '../actions/booking_actions';
 import merge from 'lodash/merge';
 
 const listingsPhotoReducer = (state = {}, action) => {
-  // debugger;
   Object.freeze(state);
   switch (action.type) {
     case RECEIVE_LISTINGS:

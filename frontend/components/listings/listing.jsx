@@ -1,6 +1,7 @@
 import React from 'react';
 import BookingFormContainer from '../bookings/booking_form_container';
 import CreateReviewFormContainer from '../reviews/create_review_form_container';
+import ReviewsIndexContainer from '../reviews/reviews_index_container';
 import { fetchUserBookings } from '../../actions/booking_actions';
 import { Route } from 'react-router-dom';
 
@@ -18,15 +19,13 @@ class Listing extends React.Component {
   }
 
   renderReviewForm() {
-    const { currentUser } = this.props;
+    const { currentUser, listing } = this.props;
     const listingGuestIds = this.props.listing.guestIds;
-    if (currentUser) return null;
+    if (currentUser == null) return null;
 
     if (listingGuestIds.includes(currentUser.id)) {
       return (
-        <Route
-          path={`/listings/:listingId`}
-          component={CreateReviewFormContainer} /> 
+      <CreateReviewFormContainer />
       );
     } else {
       return (
@@ -40,8 +39,7 @@ class Listing extends React.Component {
   render () {
     const {listing, host, listingPhotos, petsAllowed} = this.props;
     const petFriendly = petsAllowed ? "Yes" : "No";
-    debugger;
-    if (listing === {}) {
+    if (!listing || !host) {
       return null;
     } else {
       return (
@@ -144,15 +142,13 @@ class Listing extends React.Component {
               </div>
 
               <div className="listing-reviews">
-                ???
+                <ReviewsIndexContainer />
                 {this.renderReviewForm()}
               </div>
             </div>
             
             <div className="booking-form">
-              <Route
-                path={`/listings/:listingId`}
-                component={BookingFormContainer} />
+              <BookingFormContainer />
             </div>
           </section>
         </main>

@@ -1,11 +1,11 @@
 import React from 'react';
+import merge from 'lodash/merge';
 
 class BookingForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       listing_id: this.props.match.params.listingId,
-      guest_id: this.props.currentUser.id,
       num_guests: 1,
       start_date: "",
       end_date: ""
@@ -20,11 +20,15 @@ class BookingForm extends React.Component {
     e.preventDefault();
     const { currentListing, currentUserBookings, currentUser } = this.props;
 
-    // if (currentUser) {
-      // this.setState({ guest_id: currentUser.id});
-    // }
-    this.props.createUserBooking(this.state)
-      .then(() => this.props.history.push(`/users/${currentUser.id}`));
+    if (!currentUser) {
+      this.props.openModal('login');
+    } else {
+      const booking = merge({}, this.state);
+      booking.guest_id = currentUser.id;
+
+      this.props.createUserBooking(booking)
+        .then(() => this.props.history.push(`/users/${currentUser.id}`));
+    }
   }
 
   handleNumChange(field) {
@@ -42,18 +46,18 @@ class BookingForm extends React.Component {
     const { currentUser, currentUserBookings, currentListing } = this.props;
     // const bookings = Object.values(currentUserBookings);
 
-    if (currentUser) {
-      // for (const booking of bookings) {
-      //   if (currentListing.id === booking.listingId) {
-      //     return (
-      //       <button
-      //         type="submit"
-      //         className="disabled-btn"
-      //         disabled>
-      //         Cancel Booking
-      //       </button>
-      //     );
-      //   }
+    // for (const booking of bookings) {
+    //   if (currentListing.id === booking.listingId) {
+    //     return (
+    //       <button
+    //         type="submit"
+    //         className="disabled-btn"
+    //         disabled>
+    //         Cancel Booking
+    //       </button>
+    //     );
+    //   }
+    // if (currentUser) {
       return (
         <button
           type="submit"
@@ -61,16 +65,16 @@ class BookingForm extends React.Component {
           Direct book
         </button>
       );
-    } else {
-      return (
-        <button
-          type="submit"
-          className="disabled-btn"
-          disabled>
-          Direct book
-        </button>
-      );
-    }
+    // } else {
+    //   return (
+    //     <button
+    //       type="submit"
+    //       className="disabled-btn"
+    //       disabled>
+    //       Direct book
+    //     </button>
+    //   );
+    // }
   }
 
   componentWillUnmount(){

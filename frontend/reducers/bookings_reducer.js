@@ -21,7 +21,7 @@ const bookingsReducer = (state = {}, action) => {
       delete newState[action.bookingId];
       return newState;
     case RECEIVE_LISTING:
-      return action.payload.bookings;
+      return action.payload.bookings || {};
     default:
       return state;
   }

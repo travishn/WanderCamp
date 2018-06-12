@@ -4,15 +4,18 @@
   // position: relative;
   margin-top: 98px;
   height: 92vh;
+  flex-direction: column;
+  align-items: center;
 }
 
 .home-header {
   display: flex;
   align-content: space-between;
-  padding-left: 8%;
+  padding-bottom: 15vw;
 
   div {
-    width: 500px;
+    // width: 500px;
+    width: 50%;
 
     h2 {
       padding-top: 8%;
@@ -23,13 +26,13 @@
   }
 
   figure {
+    width: 50%;
     margin-right: 0;
     padding-right: 0;
-    padding-left: 4.7%;
+    // padding-left: 4.7%;
 
     img {
-      width: 712px;
-      height: 540px;
+      width: 100%;
     }
   }
 }

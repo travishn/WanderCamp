@@ -6,10 +6,12 @@ import {
   deleteListingReview
 } from '../../actions/review_actions';
 import ReviewsIndex from './reviews_index';
+import { withRouter } from 'react-router';
+
 
 const mapStateToProps = (state, ownProps) => {
   const currentListing = state.entities.listings[ownProps.match.params.listingId];
-  const reviews = state.entities.reviews;
+  const reviews = Object.values(state.entities.reviews);
   const currentUser = state.entities.users[state.session.id];
 
   return {
@@ -24,7 +26,4 @@ const mapDispatchToProps = dispatch => ({
   deleteListingReview: (reviewId) => dispatch(deleteListingReview(reviewId))
 });
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(ReviewsIndex);
+export default withRouter(connect(mapStateToProps,mapDispatchToProps)(ReviewsIndex));

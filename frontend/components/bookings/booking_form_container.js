@@ -6,6 +6,8 @@ import {
   } from '../../actions/booking_actions';
 import { selectUserBookings } from '../../reducers/selectors';
 import BookingForm from './booking_form';
+import { withRouter } from 'react-router';
+import { openModal } from '../../actions/modal_actions';
 
 const mapStateToProps = (state, ownProps) => {
   // const currentUser = state.entities.users[state.session.id] || {};
@@ -27,7 +29,8 @@ const mapStateToProps = (state, ownProps) => {
 
 const mapDispatchToProps = (dispatch) => ({
   createUserBooking: (booking) => dispatch(createUserBooking(booking)),
-  clearErrors: () => dispatch(receiveBookingErrors([]))
+  clearErrors: () => dispatch(receiveBookingErrors([])),
+  openModal: (route) => dispatch(openModal(route))
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(BookingForm);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(BookingForm));

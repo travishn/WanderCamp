@@ -26,8 +26,9 @@ const Protected = ({ component: Component, path, loggedIn, exact, openModal }) =
     if (loggedIn) {
       return <Component {...props} />;
     } else {
-      openModal();
-      return null;
+      // openModal();
+      return <Redirect to="/" />;
+      // return null;
     }
   }} />
 );
