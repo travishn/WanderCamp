@@ -24,20 +24,21 @@ export const receiveBookingErrors = (errors) => ({
   errors
 });
 
-export const fetchUserBookings = (userId) => dispatch => (
+export const fetchUserBookings = (userId) => (dispatch) => (
   BookingAPIUtil.fetchUserBookings(userId)
   .then(payload => dispatch(receiveBookings(payload)),
     err => dispatch(receiveBookingErrors(err.responseJSON)))
 );
 
-export const deleteUserBooking = (bookingId) => dispatch => (
+export const deleteUserBooking = (bookingId) => (dispatch) => (
     BookingAPIUtil.deleteUserBooking(bookingId)
     .then(booking => dispatch(removeBooking(booking.id)),
       err => dispatch(receiveBookingErrors(err.responseJSON))
     )
   );
 
-  export const createUserBooking = (booking) => dispatch => (
+  export const createUserBooking = (booking) => (dispatch) => (
     BookingAPIUtil.createUserBooking(booking)
-    .then(dBbooking => dispatch(receiveBooking(dBbooking)))
+    .then(dBbooking => dispatch(receiveBooking(dBbooking)),
+    err => dispatch(receiveBookingErrors(err.responseJSON)))
   );
