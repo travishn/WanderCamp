@@ -142,6 +142,21 @@ Booking.create({
   end_date: Date.new(2018, 6, 22)
 })
 
+Review.destroy_all
+Review.create({
+  listing_id: starry.id,
+  author_id: demo_user.id,
+  comment: 'WoOoooOooO!!'
+})
+
+Review.create({
+  listing_id: starry.id,
+  author_id: travis.id,
+  comment: 'There were tons of visible stars in the sky! It was great bonding experience to have
+  with my brothers!'
+})
+
+
 
 
 

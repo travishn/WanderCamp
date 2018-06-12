@@ -1,5 +1,6 @@
 import React from 'react';
 import BookingFormContainer from '../bookings/booking_form_container';
+import CreateReviewFormContainer from '../reviews/create_review_form_container';
 import { fetchUserBookings } from '../../actions/booking_actions';
 import { Route } from 'react-router-dom';
 
@@ -16,10 +17,30 @@ class Listing extends React.Component {
     this.props.fetchListing(this.props.match.params.listingId);
   }
 
+  renderReviewForm() {
+    const { currentUser } = this.props;
+    const listingGuestIds = this.props.listing.guestIds;
+    if (currentUser) return null;
+
+    if (listingGuestIds.includes(currentUser.id)) {
+      return (
+        <Route
+          path={`/listings/:listingId`}
+          component={CreateReviewFormContainer} /> 
+      );
+    } else {
+      return (
+        <div className="review-message-container">
+          <p>Want to write a review? Book a trip first!</p>
+        </div>
+      );
+    }
+  }
+
   render () {
     const {listing, host, listingPhotos, petsAllowed} = this.props;
     const petFriendly = petsAllowed ? "Yes" : "No";
-
+    debugger;
     if (listing === {}) {
       return null;
     } else {
@@ -123,7 +144,8 @@ class Listing extends React.Component {
               </div>
 
               <div className="listing-reviews">
-                <p>REVIEWS GO HERE</p>
+                ???
+                {this.renderReviewForm()}
               </div>
             </div>
             

@@ -29,3 +29,11 @@ json.bookings do
     end
   end
 end
+
+json.reviews do
+  @listing.reviews.each do |review|
+    json.set! review.id do
+      json.extract! review, :id, :listing_id, :author_id, :comment, :created_at
+    end
+  end
+end

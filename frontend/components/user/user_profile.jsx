@@ -22,7 +22,6 @@ class UserProfile extends React.Component {
 
   renderUpcomingBookings () {
     const { bookings, listingPhotos } = this.props;
-
     const currentDate = new Date().toJSON().slice(0, 10);
     const currentDateSum = parseInt(currentDate.slice(0, 4))
       + parseInt(currentDate.slice(5, 7))
@@ -49,7 +48,7 @@ class UserProfile extends React.Component {
               return (
                 <li key={`booking-${booking.id}`} className="booking-item">
                   <div>
-                    {/* <img src={listingPhotos[booking.listingId]["imgUrl"]} className="booking-logo" /> */}
+                    <img src={ listingPhotos[booking.photoIds[0]]['imgUrl'] } className="booking-logo" />
                   </div>
 
                   <div className="booking-details">
@@ -74,6 +73,8 @@ class UserProfile extends React.Component {
   }
 
   render() {
+    const { listingPhotos } = this.props;
+
     return (
       <div className="user-profile-container">
         {this.renderUpcomingBookings()}

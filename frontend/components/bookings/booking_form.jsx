@@ -19,13 +19,12 @@ class BookingForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     const { currentListing, currentUserBookings, currentUser } = this.props;
-    // const { currentUser } = this.props;
 
     // if (currentUser) {
       // this.setState({ guest_id: currentUser.id});
     // }
     this.props.createUserBooking(this.state)
-    .then(() => this.props.history.push(`/users/${currentUser.id}`));
+      .then(() => this.props.history.push(`/users/${currentUser.id}`));
   }
 
   handleNumChange(field) {
@@ -90,43 +89,41 @@ class BookingForm extends React.Component {
 
   render() {
     const { minDate, currentListing } = this.props;
-    if (currentListing == null) {
-      return null;
-    } else {
-      return (
-        <aside className="booking-form-container">
-            <h3>${currentListing.price}</h3>
-            <p>per night</p>
-            <form onSubmit={(e) => this.handleSubmit(e)} >
-              
-              <input
-                type="date"
-                min={minDate}
-                max={this.state.end_date}
-                value={this.state.start_date}
-                onChange={this.handleChange("start_date")}
-                className="start_date_input"
-              />
-  
-              <input
-                type="date"
-                min={this.state.start_date}
-                value={this.state.end_date}
-                onChange={this.handleChange("end_date")}
-                className="start_date_input"
-              />
+    if (currentListing == null) return null;
 
-              {/* avoid using button bc of default behavior in forms */}
-              <a onClick={this.handleNumChange('-')}>-</a> 
-              <span>{this.state.num_guests}</span>
-              <a onClick={this.handleNumChange('+')}>+</a>
-              {this.renderSubmitButton()}
-            </form>
+    return (
+      <aside className="booking-form-container">
+          <h3>${currentListing.price}</h3>
+          <p>per night</p>
+          <form onSubmit={(e) => this.handleSubmit(e)} >
+            
+            <input
+              type="date"
+              min={minDate}
+              max={this.state.end_date}
+              value={this.state.start_date}
+              onChange={this.handleChange("start_date")}
+              className="start_date_input"
+            />
+
+            <input
+              type="date"
+              min={this.state.start_date}
+              value={this.state.end_date}
+              onChange={this.handleChange("end_date")}
+              className="start_date_input"
+            />
+
+            {/* avoid using button bc of default behavior in forms */}
+            <a onClick={this.handleNumChange('-')}>-</a> 
+            <span>{this.state.num_guests}</span>
+            <a onClick={this.handleNumChange('+')}>+</a>
+            {this.renderSubmitButton()}
+          </form>
   
         </aside>
       );
     }
-  }
 }
 
 export default BookingForm;

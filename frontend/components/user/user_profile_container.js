@@ -6,15 +6,14 @@ import {
 } from 'react-router';
 
 export const mapStateToProps = (state) => {
-  // debugger;
   const currentUser = state.entities.users[state.session.id] || {};
   const bookings = state.entities.bookings;
-  const bookingPhotos = state.entities.listingPhotos;
+  const listingPhotos = state.entities.listingPhotos;
 
   return {
     currentUser,
     bookings,
-    bookingPhotos
+    listingPhotos
   };
 };
 
