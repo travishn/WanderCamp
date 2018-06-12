@@ -64,10 +64,13 @@
   }
   
   .assigned-pic {
-    height: 50px;
-    width: 50px;
-    padding-top: 3%;
-    margin-right: 3px;
-    border-radius: 25px;
+
+    img {
+      height: 50px;
+      width: 50px;
+      margin-top: 10%;
+      margin-right: 8px;
+      border-radius: 50px;
+    }
   }
 }

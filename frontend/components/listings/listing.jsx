@@ -137,9 +137,9 @@ class Listing extends React.Component {
                 </ul>
               </div>
 
-              <div className="listing-vibe">
+              {/* <div className="listing-vibe">
                 <p>THE VIBES GO HERE</p>
-              </div>
+              </div> */}
 
               <div className="listing-reviews">
                 <ReviewsIndexContainer />

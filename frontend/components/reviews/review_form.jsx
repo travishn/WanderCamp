@@ -29,7 +29,7 @@ class ReviewForm extends React.Component {
 
     return (
       <div className="reviewer-info">
-        <img src={currentUser.imgUrl} />
+        {/* <img src={currentUser.imgUrl} /> */}
         <h5>{currentUser.firstName}</h5>
       </div>
     );

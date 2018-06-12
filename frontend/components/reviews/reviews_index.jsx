@@ -12,7 +12,7 @@ class ReviewsIndex extends React.Component {
 
   render() {
     return (
-      <section className="review=index-container">
+      <section className="review-index-container">
         <div className="review-count">
           <p># Of Reviews</p>
         </div>

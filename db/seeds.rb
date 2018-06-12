@@ -13,7 +13,7 @@ demo_user = User.create({
   username: 'RusselTheExplorer', 
   password: 'badgecollector', 
   zipcode: 92130,
-  img_url: "https://res.cloudinary.com/emanon/image/upload/v1528435548/russel.png"
+  img_url: "https://res.cloudinary.com/emanon/image/upload/v1528837179/russell_profile2.jpg"
  })
 
 travis = User.create({
