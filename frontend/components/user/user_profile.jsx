@@ -56,6 +56,8 @@ class UserProfile extends React.Component {
                     <h1>{booking.listing.title}</h1>
                     <p>Booked from {booking.startDate} to {booking.endDate}</p>
                   </div>
+
+                  <button onClick={() => this.props.deleteUserBooking(booking.id)}>Cancel Booking</button>
                 </li>
               );
             })}
