@@ -95,7 +95,7 @@ class BookingForm extends React.Component {
     } else {
       return (
         <aside className="booking-form-container">
-            <h3>{currentListing.price}</h3>
+            <h3>${currentListing.price}</h3>
             <p>per night</p>
             <form onSubmit={(e) => this.handleSubmit(e)} >
               

@@ -1,7 +1,6 @@
 import {
   RECEIVE_BOOKING_ERRORS
 } from '../actions/booking_actions';
-import merge from 'lodash/merge';
 
   const bookingErrorsReducer = (state = [], action) => {
     Object.freeze(state);
