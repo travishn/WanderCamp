@@ -5,7 +5,6 @@ import { createListingReview,
   deleteListingReview, 
   receiveReviewErrors,
 } from '../../actions/review_actions';
-import { fetchListing } from '../../actions/listing_actions';
 
 const mapStateToProps = (state, ownProps) => {
   const currentUser = state.entities.users[state.session.id];
@@ -23,8 +22,7 @@ const mapStateToProps = (state, ownProps) => {
 
 const mapDispatchToProps = (dispatch) => ({
   createListingReview: (review) => dispatch(createListingReview(review)),
-  clearErrors: () => dispatch(receiveReviewErrors([])),
-  // fetchListing: (id) => dispatch(fetchListing(id))
+  clearErrors: () => dispatch(receiveReviewErrors([]))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(ReviewForm);
