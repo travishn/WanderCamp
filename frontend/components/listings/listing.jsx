@@ -3,7 +3,7 @@ import BookingFormContainer from '../bookings/booking_form_container';
 import CreateReviewFormContainer from '../reviews/create_review_form_container';
 import ReviewsIndexContainer from '../reviews/reviews_index_container';
 import { fetchUserBookings } from '../../actions/booking_actions';
-import { Route } from 'react-router-dom';
+import ImageSlider from './image_slider';
 
 class Listing extends React.Component {
 
@@ -44,9 +44,10 @@ class Listing extends React.Component {
     } else {
       return (
         <main className="listing-container">
-          <section className="listing-photos">
+          {/* <section className="listing-photos">
             <p>PHOTOS GO HERE</p>
-          </section>
+          </section> */}
+          <ImageSlider photos={listing.photos}/>
 
           <section className="listing-box">
             <div className="listing-content">
