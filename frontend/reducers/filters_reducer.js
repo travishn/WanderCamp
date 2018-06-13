@@ -43,3 +43,5 @@ const filtersReducer = (state = defaultState, action) => {
       return state;
   }
 };
+
+export default filtersReducer;
