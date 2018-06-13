@@ -34,18 +34,25 @@ class ReviewsIndexItem extends React.Component {
     return (
     <div className = "review-form-box" >
       <div className="review-form">
-        <form onSubmit={(e) => this.handleSubmit(e)}>
-          <textarea
-            value={review.comment}
-            placeholder="Share your wanderlust experience with others!"
-            onChange={(e) => this.handleChange(e)}
-          />
 
-          <button className="btn-option">Update Review</button>
-          <a onClick={() => this.toggleEdit()}>Cancel</a>
-        </form>
+        <div className="edit-form-container">
+          <form className="review-edit-form">
+            <textarea
+              value={review.comment}
+              placeholder="Share your wanderlust experience with others!"
+              onChange={(e) => this.handleChange(e)}
+            />
+          </form>
+
+          <div className="edit-button-options">
+            <button onClick={(e) => this.handleSubmit(e)} className="btn-option">Update Review</button>
+            <button className="btn-option" onClick={() => this.toggleEdit()}>Cancel</button>
+          </div>
+        </div>
+
+        
       </div>
-      </div >
+    </div>
     );
   }
 

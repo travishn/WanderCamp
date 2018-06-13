@@ -22,8 +22,7 @@
   align-items: center;
   width: 100%;
   
-  form {
-    width: 75%;
+  .submit-review-form {
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -69,3 +68,45 @@
     padding-bottom: 25px;
   }
 }
+
+.review-form-box {
+  display: flex;
+
+  .review-form {
+    display: flex;
+    margin: 15px 0px;
+    width: 100%;
+
+    .review-edit-form {
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      border: 1px solid #ebebeb;
+
+      textarea {
+        width: 100%;
+        overflow-y: visible;
+        overflow: auto;
+        vertical-align: top;
+        resize: none;
+        height: 100px;
+      }
+    }
+  }
+}
+
+.edit-form-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.edit-button-options {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+
+

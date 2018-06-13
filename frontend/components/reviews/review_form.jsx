@@ -40,7 +40,7 @@ class ReviewForm extends React.Component {
     const { formType } = this.props;
     return (
       <div className="review-form-box">
-        <form>
+        <form className="submit-review-form">
           <textarea
             value={this.state.comment}
             placeholder="Please leave your feedback!"

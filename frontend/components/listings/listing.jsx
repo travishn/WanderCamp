@@ -52,7 +52,7 @@ class Listing extends React.Component {
             <div className="listing-content">
               <div className="listing-header">
                 <h1>{listing.title}</h1>
-                <button className="save-button">Save</button>
+                {/* <button className="save-button">Save</button> */}
               </div>
 
               <div className="listing-info">
