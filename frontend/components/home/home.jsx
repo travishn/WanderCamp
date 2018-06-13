@@ -7,7 +7,8 @@ class Home extends React.Component {
       <div className="home-container">
         <div className="home-header">
           <div>
-            <h2>Find yourself outside.</h2>
+            {/* <h2>Find yourself outside.</h2> */}
+            <h2>Experience wanderlust.</h2>
           </div>
 
           <figure>

@@ -31,7 +31,8 @@ class ReviewForm extends React.Component {
     return (
       <div className="reviewer-info">
         {/* <img src={currentUser.imgUrl} /> */}
-        <h5>{currentUser.firstName}</h5>
+        {/* <h5>{currentUser.firstName}</h5> */}
+        <h5>Share your wanderlust experiences!</h5>
       </div>
     );
   }
@@ -40,17 +41,16 @@ class ReviewForm extends React.Component {
     const { formType } = this.props;
     return (
       <div className="review-form-box">
-        <div className="review-form">
-          <form onSubmit={(e) => this.handleSubmit(e)}>
-            <textarea
-              value={this.state.comment}
-              placeholder="Share your wanderlust experience with others!"
-              required
-              onChange={this.handleChange('comment')}
-            />
-            <button className="btn-option">{formType}</button>
-          </form>
-        </div>
+        <form onSubmit={(e) => this.handleSubmit(e)}>
+          <textarea
+            value={this.state.comment}
+            placeholder="Share your wanderlust experience with others!"
+            required
+            onChange={this.handleChange('comment')}
+          />
+        </form>
+        
+        <button className="btn-option">{formType}</button>
       </div>
     );
   }

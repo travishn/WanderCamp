@@ -1,0 +1,34 @@
+.review-form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-left: 75px;
+  width: 75%;
+  margin: 0 auto;
+
+  textarea {
+    width: 100%;
+    overflow-y: visible;
+    overflow: auto;
+    vertical-align: top;
+    resize: none;
+    height: 100px;
+  }
+}
+
+.review-form-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  
+  form {
+    width: 75%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    border: 1px solid #ebebeb;
+  }
+}
