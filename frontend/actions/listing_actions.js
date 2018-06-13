@@ -22,5 +22,9 @@ export const fetchListing = (id) => (dispatch) => (
   .then( payload => dispatch(receiveListing(payload)))
 );
 
+export const searchListings = (search) => (dispatch) => (
+  ListingAPIUtil.searchListings(search).then( payload => dispatch(receiveListings(payload)))
+);
+
 
 
