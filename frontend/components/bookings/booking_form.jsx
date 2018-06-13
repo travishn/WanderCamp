@@ -97,33 +97,51 @@ class BookingForm extends React.Component {
 
     return (
       <aside className="booking-form-container">
+        
+        <div className="booking-description">
           <h3>${currentListing.price}</h3>
           <p>per night</p>
-          <form onSubmit={(e) => this.handleSubmit(e)} >
-            
-            <input
-              type="date"
-              min={minDate}
-              max={this.state.end_date}
-              value={this.state.start_date}
-              onChange={this.handleChange("start_date")}
-              className="start_date_input"
-            />
+        </div>
+        <form onSubmit={(e) => this.handleSubmit(e)} >
+          <div className="booking-input-container">
+            <div className="booking-check">
+              <h5>Check In</h5>
+              <input
+                type="date"
+                min={minDate}
+                max={this.state.end_date}
+                value={this.state.start_date}
+                onChange={this.handleChange("start_date")}
+                className="start_date_input"
+                required
+              />
+            </div>
 
-            <input
-              type="date"
-              min={this.state.start_date}
-              value={this.state.end_date}
-              onChange={this.handleChange("end_date")}
-              className="start_date_input"
-            />
+            <div className="booking-check">
+              <h5>Check Out</h5>
+              <input
+                type="date"
+                min={this.state.start_date}
+                value={this.state.end_date}
+                onChange={this.handleChange("end_date")}
+                className="start_date_input"
+                required
+              />
+            </div>
 
             {/* avoid using button bc of default behavior in forms */}
-            <a onClick={this.handleNumChange('-')}>-</a> 
-            <span>{this.state.num_guests}</span>
-            <a onClick={this.handleNumChange('+')}>+</a>
-            {this.renderSubmitButton()}
-          </form>
+            <div className="booking-count">
+              <h5>Guests</h5>
+              <div className="guest-params">
+                <a onClick={this.handleNumChange('-')}>-</a> 
+                <p>{this.state.num_guests}</p>
+                <a onClick={this.handleNumChange('+')}>+</a>
+              </div>
+            </div>
+          </div>
+
+          {this.renderSubmitButton()}
+        </form>
   
         </aside>
       );

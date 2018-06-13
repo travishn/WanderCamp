@@ -16,7 +16,6 @@ class ReviewForm extends React.Component {
 
     const { currentListing, currentUser } = this.props;
     this.props.createListingReview(this.state)
-      // .then( (review) => this.props.fetchListingReview(review.id))
       .then( () => this.setState( {listing_id: currentListing.id, 
         guest_id: currentUser.id, comment: ''}));
   }
@@ -41,16 +40,16 @@ class ReviewForm extends React.Component {
     const { formType } = this.props;
     return (
       <div className="review-form-box">
-        <form onSubmit={(e) => this.handleSubmit(e)}>
+        <form>
           <textarea
             value={this.state.comment}
-            placeholder="Share your wanderlust experience with others!"
+            placeholder="Please leave your feedback!"
             required
             onChange={this.handleChange('comment')}
           />
         </form>
         
-        <button className="btn-option">{formType}</button>
+        <button onClick={(e) => this.handleSubmit(e)} className="submit-btn">{formType}</button>
       </div>
     );
   }

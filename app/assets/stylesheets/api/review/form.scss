@@ -2,8 +2,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-left: 75px;
-  width: 75%;
+  padding-left: 50px;
+  width: 100%;
   margin: 0 auto;
 
   textarea {
@@ -30,5 +30,42 @@
     align-items: center;
     width: 100%;
     border: 1px solid #ebebeb;
+
+    ::placeholder{
+      font-size: 15px;
+    }
+
+    textarea {
+      font-size: 15px;
+      box-sizing: border-box;
+      padding: 10px;
+    }
+  }
+}
+
+.submit-btn {
+  height: 20px;
+  font-size: 12px;
+  font-weight: 300;
+  color: white;
+  background: #3cc69e;
+  padding: 8px 0px;
+  border-radius: 5px;
+  transition: all 0.5s;
+  width: 100%;
+  text-align: center;
+  font-size: 13.5px;
+}
+
+.submit-btn:hover {
+  background: #2baf88;
+}
+
+.reviewer-info {
+  h5 {
+    font-size: 26px;
+    margin: 0;
+    padding-top: 10px;
+    padding-bottom: 25px;
   }
 }
