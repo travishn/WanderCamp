@@ -13,7 +13,6 @@ class EditReviewForm extends React.Component {
 const mapStateToProps = (state, ownProps) => {
     const currentUser = state.entities.users[state.session.id];
     const currentListing = state.entities.listings[ownProps.match.params.listingId];
-    // const review = state.entities.reviews[]
     const formType = "Updates Review";
     const errors = state.errors.review;
 
@@ -21,7 +20,6 @@ const mapStateToProps = (state, ownProps) => {
       currentUser,
       currentListing,
       formType,
-      review,
       errors
     };
 };

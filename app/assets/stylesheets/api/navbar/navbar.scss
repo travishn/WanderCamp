@@ -32,19 +32,46 @@
 .right-nav-child {
   display: flex;
   z-index: 1;
+  height: 100%;
+}
+
+.home-session-div {
+  height: 100%;
+  align-items: center;
 }
 
 .home-session {
-  padding: 0 50px 0px 25px;
+  // padding: 0 50px 0px 25px;
+  margin: 0 50px 0 25px;
   line-height: 60px;
   font-size: 14px;
   font-weight: 700;
+  height: 45px;
+  width: 55px;
+}
+
+.home-session:hover {
+  border-bottom: 3px solid #3cc69e;
+}
+
+.home-session-login {
+  margin: 0 50px 0 25px;
+  line-height: 60px;
+  font-size: 14px;
+  font-weight: 600;
+  height: 45px;
+  width: 44px;
+}
+
+.home-session-login:hover {
+  border-bottom: 3px solid #3cc69e;
 }
 
 .logged-user {
   line-height: 60px;
   font-size: 14px;
   font-weight: 700;
+  height: 100%;
 }
 
 .inner-right-child-nav {
@@ -55,6 +82,7 @@
 
 .profile-pic {
   display: flex;
+  align-items: center;
 
   .default-pic {
     height: 32px;
@@ -64,6 +92,7 @@
   }
   
   .assigned-pic {
+    height: 100%;
 
     img {
       height: 50px;

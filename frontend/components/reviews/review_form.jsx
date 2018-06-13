@@ -16,6 +16,7 @@ class ReviewForm extends React.Component {
 
     const { currentListing, currentUser } = this.props;
     this.props.createListingReview(this.state)
+      // .then( (review) => this.props.fetchListingReview(review.id))
       .then( () => this.setState( {listing_id: currentListing.id, 
         guest_id: currentUser.id, comment: ''}));
   }
@@ -47,9 +48,7 @@ class ReviewForm extends React.Component {
               required
               onChange={this.handleChange('comment')}
             />
-
-            <Link to={`/listings/${this.props.match.params.listingId}`} >Cancel</Link>
-            <button>{formType}</button>
+            <button className="btn-option">{formType}</button>
           </form>
         </div>
       </div>

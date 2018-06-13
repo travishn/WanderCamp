@@ -1,4 +1,5 @@
 import * as ReviewAPIUtil from '../util/review_api_util';
+import ReviewsIndexItem from '../components/reviews/reviews_index_item';
 
 export const RECEIVE_LISTING_REVIEWS = "RECEIVE_LISTING_REVIEWS";
 export const RECEIVE_LISTING_REVIEW = "RECEIVE_LISTING_REVIEW";
@@ -34,6 +35,11 @@ export const receiveReviewErrors = errors => ({
 export const fetchListingReviews = (listingId) => (dispatch) => (
   ReviewAPIUtil.fetchListingReviews(listingId)
   .then( reviews => dispatch(receiveReviews(reviews)))
+);
+
+export const fetchListingReview = (reviewId) => (dispatch) => (
+  ReviewAPIUtil.fetchListingReview(reviewId)
+  .then( review => dispatch(receiveReview(review)))
 );
 
 export const createListingReview = (review) => (dispatch) => (

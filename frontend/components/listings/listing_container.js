@@ -6,6 +6,7 @@ import { selectListingPhotos } from '../../reducers/selectors';
 
 const mapStateToProps = (state, ownProps) => {
   const listing = state.entities.listings[ownProps.match.params.listingId];
+  const reviews = state.entities.reviews;
   const host = !listing ? undefined : state.entities.users[listing.hostId];
   const currentUser = state.entities.users[state.session.id];
 

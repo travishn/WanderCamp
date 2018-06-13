@@ -146,14 +146,13 @@ Review.destroy_all
 Review.create({
   listing_id: starry.id,
   author_id: demo_user.id,
-  comment: 'WoOoooOooO!!'
+  comment: 'There were tons of visible stars in the sky! It was great bonding experience to have with Doug! It was a shame that Mr.Fredericksen was unable to come along on this wanderful trip :('
 })
 
 Review.create({
   listing_id: starry.id,
   author_id: travis.id,
-  comment: 'There were tons of visible stars in the sky! It was great bonding experience to have
-  with my brothers!'
+  comment: 'Starry Night Camp is a great quiet little spot to camp! If your looking for a place to rest your head while visiting Landers, Yucca Valley, or Joshua Tree, this is a great spot! Beautiful place to star gaze. Barbie is an excellent host, very laid back and helpful!'
 })
 
 

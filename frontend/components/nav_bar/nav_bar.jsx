@@ -14,7 +14,9 @@ class NavBar extends React.Component {
               </Link>
               <h2 className='logged-user'>Welcome, {currentUser.firstName}</h2>
             </div>
-            <button className='home-session' onClick={logout}>Log Out</button>
+            <div className="home-session-div">
+              <button className='home-session' onClick={logout}>Log Out</button>
+            </div>
           </div>
         );
       } else {
@@ -26,14 +28,18 @@ class NavBar extends React.Component {
               </Link>
               <h2 className='logged-user'>Welcome, {currentUser.firstName}</h2>
             </div>
-            <button className='home-session' onClick={logout}>Log Out</button>
+            <div className="home-session-div">
+              <button className='home-session' onClick={logout}>Log Out</button>
+            </div>
           </div>
         );
       }
     } else {
       return (
         <div className='right-nav-child'>
-          <button className='home-session' onClick={() => this.props.openModal('login')}>Log In</button>
+          <div className="home-session-div">
+            <button className='home-session-login' onClick={() => this.props.openModal('login')}>Log In</button>
+          </div>
         </div>
       );
     }
