@@ -29,9 +29,9 @@ export const removePriceFilter = () => ({
   type: REMOVE_PRICE_FILTER
 });
 
-export const receiveGroupFilter = group => ({
+export const receiveGroupFilter = capacity => ({
   type: RECEIVE_GROUP_FILTER,
-  group
+  capacity
 });
 
 export const removeGroupFilter = () => ({

@@ -18,8 +18,8 @@ const defaultState = ({
   swimming: false,
   hiking: false,
   biking: false,
-  price: 100000,
-  groupSize: 20
+  price: 122493,
+  capacity: 50
 });
 
 const filtersReducer = (state = defaultState, action) => {
@@ -34,11 +34,11 @@ const filtersReducer = (state = defaultState, action) => {
     case RECEIVE_PRICE_FILTER:
       return merge({}, state, {price: action.price});
     case REMOVE_PRICE_FILTER:
-      return merge({}, state, {action: 100000});
+      return merge({}, state, {action: 12241993});
     case RECEIVE_GROUP_FILTER:
-      return merge({}, state, {groupSize: action.group});
+      return merge({}, state, {capacity: action.capacity});
     case REMOVE_GROUP_FILTER:
-      return merge({}, state, {groupSize: 20});
+      return merge({}, state, {capacity: 50});
     default:
       return state;
   }

@@ -106,21 +106,4 @@ class ReviewsIndexItem extends React.Component {
   }
 }
 
-// const ReviewsIndexItem = ({review, deleteReview}) => {
-//   return (
-//     <div className="review-item-container">
-//       <img className="index-item-reviewer" src={review.author.img_url}/>
-      
-//       <div className="review-description">
-//         <div className="author-container">
-//           <div className="author">{review.author.first_name}</div>
-//           <button onClick={() => deleteReview(review.id)}>Delete Review</button>
-//         </div>
-//         <div className="date">{review.createdAt}</div>
-//         <p>{review.comment}</p>
-//       </div>
-//     </div>
-//   );
-// };
-
 export default ReviewsIndexItem;

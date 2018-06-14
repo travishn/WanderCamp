@@ -1,5 +1,6 @@
 import React from 'react';
 import ListingsIndexItem from './listing_index_item';
+import FilterContainer from '../filter/filter_container';
 
 class ListingsIndex extends React.Component {
   componentDidMount() {
@@ -33,9 +34,7 @@ class ListingsIndex extends React.Component {
     } else {
       return (
         <main className="discover-container">
-          <section className="listing-filter">
-            <p>FILTER GOES HERE</p>
-          </section>
+          <FilterContainer />
 
           <section className="listing-index">
             {this.renderListingItem()}
