@@ -16,4 +16,4 @@ const mapDispatchToProps = (dispatch) => ({
   searchListings: (search) => dispatch(searchListings(search))
 });
 
-connect(mapStateToProps, mapDispatchToProps)(Search);
+export default connect(mapStateToProps, mapDispatchToProps)(Search);

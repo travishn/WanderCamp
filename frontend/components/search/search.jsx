@@ -5,17 +5,25 @@ import { Redirect } from 'react-router-dom';
 class Search extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {search: '', start_date: null, end_date: null};
+    this.state = {search: '', 
+    start_date: '', 
+    end_date: '',
+    };
   }
 
   handleChange(field) {
     return (e) => this.setState( {[field]: e.target.value} );
   }
   
+  handleSubmit() {
+    this.props.searchListings(this.state.search).then( () => this.props.history.push('/discover'));
+  }
+
   render() {
     const {minDate} = this.props;
-
+    
     return (
+      
       <form className="search-form">
         <input
           value={this.state.search}
@@ -24,32 +32,34 @@ class Search extends React.Component {
           placeholder="Finding camping near..."
         />
 
-        <div className="search-check-in">
-          <h5>Check In</h5>
-          <input
-            type="date"
-            min={minDate}
-            max={this.state.end_date}
-            value={this.state.start_date}
-            onChange={this.handleChange("start_date")}
-            className="start_date_input"
-            required
-          />
-        </div>
+        <div className="search-dates">
+          <div className="search-check-in">
+            <h5>Check In</h5>
+            <input
+              type="date"
+              min={minDate}
+              max={this.state.end_date}
+              value={this.state.start_date}
+              onChange={this.handleChange("start_date")}
+              className="start-date-input"
+              required
+            />
+          </div>
 
-        <div className="search-check-out">
-          <h5>Check Out</h5>
-          <input
-            type="date"
-            min={this.state.start_date}
-            value={this.state.end_date}
-            onChange={this.handleChange("end_date")}
-            className="start_date_input"
-            required
-          />
-        </div>
+          <div className="search-check-out">
+            <h5>Check Out</h5>
+            <input
+              type="date"
+              min={this.state.start_date}
+              value={this.state.end_date}
+              onChange={this.handleChange("end_date")}
+              className="start-date-input"
+              required
+            />
+          </div>
 
-        <button className="search-button" type="submit">Search</button>
+          <button className="search-button" type="submit">Search</button>
+        </div>
       </form>
     );
   }

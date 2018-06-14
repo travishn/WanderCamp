@@ -6,7 +6,8 @@ import { withRouter } from 'react-router';
 
 const mapStateToProps = (state, ownProps) => ({
   listings: selectAllListings(state),
-  listingPhotos: selectAllPhotos(state)
+  listingPhotos: selectAllPhotos(state),
+  searchListings: Object.values(state.entities.searchedListings)
 });
 
 const mapDispatchToProps = (dispatch) => ({

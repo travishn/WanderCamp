@@ -7,9 +7,14 @@ class ListingsIndex extends React.Component {
   }
 
   renderListingItem() {
-    const { listings, listingPhotos } = this.props;
+    const { listings, listingPhotos, searchedListings } = this.props;
+    let currentListings = listings;
 
-    return listings.map(
+    if (this.props.searchListings.length > 0 ){
+      currentListings = this.props.searchListings;
+    }
+
+    return currentListings.map(
       listing => <ListingsIndexItem key={listing.id}
         photos={listingPhotos} listing={listing} /> 
     );

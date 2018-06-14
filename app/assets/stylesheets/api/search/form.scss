@@ -1,0 +1,90 @@
+.search-container {
+  width: 50%;
+  margin: 0 auto;
+  padding: 3vw 8.5vw;
+
+  h2 {
+    font-size: 5vw;
+    font-weight: 600;
+    color: #333333;
+    line-height: 1;
+    display: block;
+    padding-right: 100px;
+  }
+
+  p {
+    padding: 20px 0px 55px 0px;
+  }
+
+  .search-form {
+    width: 90%;
+    height: 12.5vw;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    -webkit-box-shadow: 0 1px 20px #ebebeb;
+  }
+}
+
+.search-dates {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 50%;
+}
+
+.search-check-in {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 33%;
+  height: 100%;
+  border-right: 1px solid #ebebeb;
+  h5 {
+    margin: 0 auto;
+  }
+}
+
+.search-check-out {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  width: 33%;
+  border-right: 1px solid #ebebeb;
+  
+  h5 {
+    margin: 0 auto;
+  }
+}
+
+.search-button {
+  width: 33%;
+  height: 100%;
+}
+
+.search-form {
+  width: 90%;
+
+  .search-bar {
+    box-sizing: border-box;
+    height: 50%;
+    display: flex;
+    justify-content: space-between;
+    color: #333333;
+    padding: 0 15px;
+  }
+}
+
+.start-date-input {
+  padding-left: 30px;
+}
+
+.home-text {
+  width: 90%;
+  color: #a1a1a1;
+  line-height: 1.5;
+  font-weight: 300;
+}

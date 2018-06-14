@@ -1,4 +1,5 @@
 import React from 'react';
+import SearchContainer from '../search/search_container';
 
 class Home extends React.Component {
 
@@ -6,9 +7,11 @@ class Home extends React.Component {
     return (
       <div className="home-container">
         <div className="home-header">
-          <div>
-            {/* <h2>Find yourself outside.</h2> */}
-            <h2>Experience wanderlust.</h2>
+          <div className="search-container">
+            <h2>Find yourself outside.</h2>
+            <p className="home-text">Search, discover and book over 285,000 campsites, 
+              vineyards, ranches, public parks and experience wanderlust.</p>
+            <SearchContainer />
           </div>
 
           <figure>
