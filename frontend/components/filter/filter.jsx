@@ -79,8 +79,8 @@ class Filter extends React.Component {
             <input
               className='checkbox'
               type='checkbox'
-              onClick={this.togglePriceFilter(12241993)}
-              checked={filters['price'] === 12241993}
+              onClick={this.togglePriceFilter(1)}
+              checked={filters['price'] === 1}
               />
               <label>Any Price</label>
           </li>

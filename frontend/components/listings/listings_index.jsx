@@ -12,13 +12,49 @@ class ListingsIndex extends React.Component {
     this.props.clearSearchListings();
   }
 
+  applyFilters(currentListings) {
+    const { filters } = this.props;
+
+    const filteredListings = [];
+
+    for (const listing of currentListings) {
+      // debugger;
+      if (filters['camping'] && listing.category === 'camping') 
+        filteredListings.push(listing);
+      else if (filters['glamping'] && listing.category === 'glamping')
+        filteredListings.push(listing);
+      else if (filters['petFriendly'] && listing.petsAllowed)
+        filteredListings.push(listing);
+      else if (filters['beach'] && listing.terrain === 'Beach')
+        filteredListings.push(listing);
+      else if (filters['forest'] && listing.terrain === 'Forest')
+        filteredListings.push(listing);
+      else if (filters['mountain'] && listing.terrain === 'Mountain')
+        filteredListings.push(listing);
+      else if (filters['desert'] && listing.terrain === 'Desert')
+        filteredListings.push(listing);
+      // else if (filters['capacity'] > listing.capacity)
+        // filteredListings.push(listing);
+      else if (filters['price'] < listing.price)
+        filteredListings.push(listing);
+      // if (filters['swimming'])
+      // if (filters['hiking'])
+      // if (filters['biking'])
+    }
+
+    return filteredListings;
+  }
+
   renderListingItem() {
     const { listings, listingPhotos, searchedListings } = this.props;
     let currentListings = listings;
-
+    
     if (this.props.searchListings.length > 0 ){
       currentListings = this.props.searchListings;
     }
+    
+    currentListings = this.applyFilters(currentListings);
+    // debugger;
 
     return currentListings.map(
       listing => <ListingsIndexItem key={listing.id}
