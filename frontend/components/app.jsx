@@ -9,6 +9,7 @@ import UserProfileContainer from './user/user_profile_container';
 import Home from '../components/home/home';
 import Footer from '../components/footer';
 import { ProtectedRoute } from '../util/route_util';
+import MapSearchContainer from './map/map_search_container';
 
 import {
   Route,
@@ -28,7 +29,7 @@ const App = () => (
     <Switch>
       <Route exact path="/listings/:listingId" component={ ListingContainer } />
       <ProtectedRoute exact path="/users/:userId" component={ UserProfileContainer } />
-      <Route path="/discover" component={ ListingsIndexContainer } />
+      <Route path="/discover" component={ MapSearchContainer } />
       <Route path="/" component={ Home } />
     </Switch>
 

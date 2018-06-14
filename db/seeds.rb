@@ -24,7 +24,7 @@ end
 location_hash = {}
 
 4.times do |n|
-  location_hash[n] = random_location(37.754734, -122.440653, 2000)
+  location_hash[n] = random_location(-122.440653, 37.754734, 2000)
 end
 
 User.destroy_all

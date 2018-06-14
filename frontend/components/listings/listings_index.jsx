@@ -76,10 +76,6 @@ class ListingsIndex extends React.Component {
             {this.renderListingItem()}
           </section>
 
-          <section>
-            <p>GOOGLE MAP GOES HERE</p>
-          </section>
-
         </main>
       );
     }

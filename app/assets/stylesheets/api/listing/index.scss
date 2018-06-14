@@ -17,7 +17,7 @@
 .discover-container {
   display: flex;
   // width: 100vw;
-  height: 92vh;
+  height: 850px;
   justify-content: flex-end;
   position: relative;
   padding-top: 70px;
@@ -27,4 +27,8 @@
     overflow-y: auto;
     width: 194px;
   }
+}
+
+.index-map-container {
+  display: flex;
 }
