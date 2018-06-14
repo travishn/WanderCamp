@@ -24,7 +24,7 @@ end
 location_hash = {}
 
 4.times do |n|
-  location_hash[n] = random_location(37.754734, -122.440653, 5000)
+  location_hash[n] = random_location(37.754734, -122.440653, 2000)
 end
 
 User.destroy_all
@@ -121,8 +121,8 @@ casita = Listing.create({
   pets_allowed: false,
   terrain: 'Mountain',
   price: 150,
-  lon: 37.877037,
-  lat: -122.273152
+  lon: 37.309737,
+  lat: -122.307413
 })
 
 ListingPhoto.destroy_all
