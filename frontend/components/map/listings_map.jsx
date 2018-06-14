@@ -17,7 +17,6 @@ class ListingsMap extends React.Component {
   }
   
   componentDidUpdate() {
-    debugger;
     this.MarkerManager.updateMarkers(this.props.listings);
   }
 

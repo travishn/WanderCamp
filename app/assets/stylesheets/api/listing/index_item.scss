@@ -15,9 +15,10 @@
 .listing-index-figure {
   border-radius: 4px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
 
   img {
-    width: 100%;
+    height: 200px;
     border-radius: 4px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     }
@@ -29,7 +30,6 @@
   flex-direction: column;
   margin-top: 8px;
   padding-right: 5%;
-  padding-left: 7%;
 
   .listing-index-title {
     font-size: 20px;

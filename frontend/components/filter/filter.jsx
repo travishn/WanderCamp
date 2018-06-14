@@ -49,7 +49,7 @@ class Filter extends React.Component {
               className='checkbox'
               type='checkbox'
               onClick={this.toggleBoolean('camping')}
-              checked={filters['camping'] === true}
+              defaultChecked={filters['camping'] === true}
               />
               <label>Camping</label>
           </li>
@@ -58,7 +58,7 @@ class Filter extends React.Component {
               className='checkbox'
               type='checkbox'
               onClick={this.toggleBoolean('glamping')}
-              checked={filters['glamping'] === true}
+              defaultChecked={filters['glamping'] === true}
               />
               <label>Glamping</label>
           </li>
@@ -67,7 +67,7 @@ class Filter extends React.Component {
               className='checkbox'
               type='checkbox'
               onClick={this.toggleBoolean('petFriendly')}
-              checked={filters['petFriendly'] === true}
+              defaultChecked={filters['petFriendly'] === true}
               />
               <label>Pet Friendly</label>
           </li>
@@ -80,7 +80,7 @@ class Filter extends React.Component {
               className='checkbox'
               type='checkbox'
               onClick={this.togglePriceFilter(1)}
-              checked={filters['price'] === 1}
+              defaultChecked={filters['price'] === 1}
               />
               <label>Any Price</label>
           </li>
@@ -89,7 +89,7 @@ class Filter extends React.Component {
               className='checkbox'
               type='checkbox'
               onClick={this.togglePriceFilter(25)}
-              checked={filters['price'] === 25}
+              defaultChecked={filters['price'] === 25}
               />
               <label>Under $25</label>
           </li>
@@ -98,7 +98,7 @@ class Filter extends React.Component {
               className='checkbox'
               type='checkbox'
               onClick={this.togglePriceFilter(50)}
-              checked={filters['price'] === 50}
+              defaultChecked={filters['price'] === 50}
               />
               <label>Under $50</label>
           </li>
@@ -107,7 +107,7 @@ class Filter extends React.Component {
               className='checkbox'
               type='checkbox'
               onClick={this.togglePriceFilter(75)}
-              checked={filters['price'] === 75}
+              defaultChecked={filters['price'] === 75}
               />
               <label>Under $75</label>
           </li>
@@ -120,7 +120,7 @@ class Filter extends React.Component {
               className='checkbox'
               type='checkbox'
               onClick={this.toggleCapacityFilter(50)}
-              checked={filters['capacity'] === 50}
+              defaultChecked={filters['capacity'] === 50}
               />
               <label>Any Size</label>
           </li>
@@ -129,7 +129,7 @@ class Filter extends React.Component {
               className='checkbox'
               type='checkbox'
               onClick={this.toggleCapacityFilter(10)}
-              checked={filters['capacity'] === 10}
+              defaultChecked={filters['capacity'] === 10}
               />
               <label>10 or more</label>
           </li>
@@ -138,7 +138,7 @@ class Filter extends React.Component {
               className='checkbox'
               type='checkbox'
               onClick={this.toggleCapacityFilter(15)}
-              checked={filters['capacity'] === 15}
+              defaultChecked={filters['capacity'] === 15}
               />
               <label>15 or more</label>
           </li>
@@ -147,7 +147,7 @@ class Filter extends React.Component {
               className='checkbox'
               type='checkbox'
               onClick={this.toggleCapacityFilter(20)}
-              checked={filters['capacity'] === 20}
+              defaultChecked={filters['capacity'] === 20}
               />
               <label>20 or more</label>
           </li>
@@ -160,7 +160,7 @@ class Filter extends React.Component {
               className='checkbox'
               type='checkbox'
               onClick={this.toggleBoolean('biking')}
-              checked={filters['biking'] === true}
+              defaultChecked={filters['biking'] === true}
               />
               <label>Biking</label>
           </li>
@@ -169,7 +169,7 @@ class Filter extends React.Component {
               className='checkbox'
               type='checkbox'
               onClick={this.toggleBoolean('hiking')}
-              checked={filters['hiking'] === true}
+              defaultChecked={filters['hiking'] === true}
               />
               <label>Hiking</label>
           </li>
@@ -178,7 +178,7 @@ class Filter extends React.Component {
               className='checkbox'
               type='checkbox'
               onClick={this.toggleBoolean('swimming')}
-              checked={filters['swimming'] === true}
+              defaultChecked={filters['swimming'] === true}
               />
               <label>Swimming</label>
           </li>
@@ -191,7 +191,7 @@ class Filter extends React.Component {
               className='checkbox'
               type='checkbox'
               onClick={this.toggleBoolean('beach')}
-              checked={filters['beach'] === true}
+              defaultChecked={filters['beach'] === true}
               />
               <label>Beach</label>
           </li>
@@ -200,7 +200,7 @@ class Filter extends React.Component {
               className='checkbox'
               type='checkbox'
               onClick={this.toggleBoolean('forest')}
-              checked={filters['forest'] === true}
+              defaultChecked={filters['forest'] === true}
               />
               <label>Forest</label>
           </li>
@@ -209,7 +209,7 @@ class Filter extends React.Component {
               className='checkbox'
               type='checkbox'
               onClick={this.toggleBoolean('mountain')}
-              checked={filters['mountain'] === true}
+              defaultChecked={filters['mountain'] === true}
               />
               <label>Mountain</label>
           </li>
@@ -218,7 +218,7 @@ class Filter extends React.Component {
               className='checkbox'
               type='checkbox'
               onClick={this.toggleBoolean('desert')}
-              checked={filters['desert'] === true}
+              defaultChecked={filters['desert'] === true}
               />
               <label>Desert</label>
           </li>
