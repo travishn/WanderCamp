@@ -1,0 +1,31 @@
+
+.filters-container {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  background: #f9f9f9;
+  padding-left: 30px;
+  padding-top: 24px;
+  color: #333333; 
+
+  h2 {
+    font-size: 19px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+  }
+
+  h3 {
+    font-size: 13px;
+    font-weight: 600;
+  }
+}
+
+.filter-item {
+  display: flex;
+
+  label {
+    padding-left: 7px;
+    font-size: 13px;
+    letter-spacing: 0.3px;
+  }
+}

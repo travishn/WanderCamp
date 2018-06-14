@@ -4,7 +4,8 @@ import { Link } from 'react-router-dom';
 const ListingsIndexItem = ({ listing, photos }) => {
   
   if (Object.values(photos).length === 0) return null;
-  
+  // debugger;
+
   return (
     <ul className="listing-index-container">
       <Link to={`/listings/${listing.id}`}>

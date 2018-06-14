@@ -108,7 +108,7 @@ ocean_view = Listing.create({
 
 casita = Listing.create({
   host_id: demo_user.id,
-  title: 'Mountain View Casita UP-Style',
+  title: 'Mountain View Casita',
   description: 'Come and breathe the fresh mountain air in our brand new Casita in the redwood forest. 
   Glamping in style, our Casita is situated on a ridge overlooking the summit of the Santa Cruz Mountains; 
   The Casita is completely private and separate from the main house.  Enjoy the view with a glass of wine 

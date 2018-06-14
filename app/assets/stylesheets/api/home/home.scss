@@ -1,3 +1,9 @@
+.global-main {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
 .home-container {
   display: flex;
   // justify-content: flex-end;

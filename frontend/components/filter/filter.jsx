@@ -45,182 +45,182 @@ class Filter extends React.Component {
         <h3>Camping Type</h3>
         <ul>
           <li className='filter-item'>
-            <label>Camping</label>
             <input 
               className='checkbox'
-              type='radio'
+              type='checkbox'
               onClick={this.toggleBoolean('camping')}
               checked={filters['camping'] === true}
-            />
+              />
+              <label>Camping</label>
           </li>
           <li className='filter-item'>
-            <label>Glamping</label>
             <input 
               className='checkbox'
-              type='radio'
+              type='checkbox'
               onClick={this.toggleBoolean('glamping')}
               checked={filters['glamping'] === true}
-            />
+              />
+              <label>Glamping</label>
           </li>
           <li className='filter-item'>
-            <label>Pet Friendly</label>
             <input 
               className='checkbox'
-              type='radio'
+              type='checkbox'
               onClick={this.toggleBoolean('petFriendly')}
               checked={filters['petFriendly'] === true}
-            />
+              />
+              <label>Pet Friendly</label>
           </li>
         </ul>
 
         <h3>Pricing</h3>
         <ul>
           <li className='filter-item'>
-            <label>Any Price</label>
             <input
               className='checkbox'
-              type='radio'
+              type='checkbox'
               onClick={this.togglePriceFilter(12241993)}
               checked={filters['price'] === 12241993}
-            />
+              />
+              <label>Any Price</label>
           </li>
           <li className='filter-item'>
-            <label>Under $25</label>
             <input
               className='checkbox'
-              type='radio'
+              type='checkbox'
               onClick={this.togglePriceFilter(25)}
               checked={filters['price'] === 25}
-            />
+              />
+              <label>Under $25</label>
           </li>
           <li className='filter-item'>
-            <label>Under $50</label>
             <input
               className='checkbox'
-              type='radio'
+              type='checkbox'
               onClick={this.togglePriceFilter(50)}
               checked={filters['price'] === 50}
-            />
+              />
+              <label>Under $50</label>
           </li>
           <li className='filter-item'>
-            <label>Under $75</label>
             <input
               className='checkbox'
-              type='radio'
+              type='checkbox'
               onClick={this.togglePriceFilter(75)}
               checked={filters['price'] === 75}
-            />
+              />
+              <label>Under $75</label>
           </li>
         </ul>
 
         <h3>Group Size</h3>
         <ul>
           <li className='filter-item'>
-            <label>Any Size</label>
             <input
               className='checkbox'
-              type='radio'
+              type='checkbox'
               onClick={this.toggleCapacityFilter(50)}
               checked={filters['capacity'] === 50}
-            />
+              />
+              <label>Any Size</label>
           </li>
           <li className='filter-item'>
-            <label>10 or more</label>
             <input
               className='checkbox'
-              type='radio'
+              type='checkbox'
               onClick={this.toggleCapacityFilter(10)}
               checked={filters['capacity'] === 10}
-            />
+              />
+              <label>10 or more</label>
           </li>
           <li className='filter-item'>
-            <label>15 or more</label>
             <input
               className='checkbox'
-              type='radio'
+              type='checkbox'
               onClick={this.toggleCapacityFilter(15)}
               checked={filters['capacity'] === 15}
-            />
+              />
+              <label>15 or more</label>
           </li>
           <li className='filter-item'>
-            <label>20 or more</label>
             <input
               className='checkbox'
-              type='radio'
+              type='checkbox'
               onClick={this.toggleCapacityFilter(20)}
               checked={filters['capacity'] === 20}
-            />
+              />
+              <label>20 or more</label>
           </li>
         </ul>
 
         <h3>Activities</h3>
         <ul>
           <li className='filter-item'>
-            <label>Biking</label>
             <input
               className='checkbox'
-              type='radio'
+              type='checkbox'
               onClick={this.toggleBoolean('biking')}
               checked={filters['biking'] === true}
-            />
+              />
+              <label>Biking</label>
           </li>
           <li className='filter-item'>
-            <label>Hiking</label>
             <input
               className='checkbox'
-              type='radio'
+              type='checkbox'
               onClick={this.toggleBoolean('hiking')}
               checked={filters['hiking'] === true}
-            />
+              />
+              <label>Hiking</label>
           </li>
           <li className='filter-item'>
-            <label>Swimming</label>
             <input
               className='checkbox'
-              type='radio'
+              type='checkbox'
               onClick={this.toggleBoolean('swimming')}
               checked={filters['swimming'] === true}
-            />
+              />
+              <label>Swimming</label>
           </li>
         </ul>
 
         <h3>Terrain</h3>
         <ul>
           <li className='filter-item'>
-            <label>Beach</label>
             <input
               className='checkbox'
-              type='radio'
+              type='checkbox'
               onClick={this.toggleBoolean('beach')}
               checked={filters['beach'] === true}
-            />
+              />
+              <label>Beach</label>
           </li>
           <li className='filter-item'>
-            <label>Forest</label>
             <input
               className='checkbox'
-              type='radio'
+              type='checkbox'
               onClick={this.toggleBoolean('forest')}
               checked={filters['forest'] === true}
-            />
+              />
+              <label>Forest</label>
           </li>
           <li className='filter-item'>
-            <label>Mountain</label>
             <input
               className='checkbox'
-              type='radio'
+              type='checkbox'
               onClick={this.toggleBoolean('mountain')}
               checked={filters['mountain'] === true}
-            />
+              />
+              <label>Mountain</label>
           </li>
           <li className='filter-item'>
-            <label>Desert</label>
             <input
               className='checkbox'
-              type='radio'
+              type='checkbox'
               onClick={this.toggleBoolean('desert')}
               checked={filters['desert'] === true}
-            />
+              />
+              <label>Desert</label>
           </li>
         </ul>
       </div>

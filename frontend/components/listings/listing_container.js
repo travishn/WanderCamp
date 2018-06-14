@@ -1,7 +1,6 @@
 import { connect } from 'react-redux';
 import Listing from './listing';
-import { fetchListing } from '../../actions/listing_actions';
-// import { fetchUsers } from '../../actions/user_actions';
+import { fetchListing, clearPhotos } from '../../actions/listing_actions';
 import { selectListingPhotos } from '../../reducers/selectors';
 
 const mapStateToProps = (state, ownProps) => {
@@ -20,7 +19,7 @@ const mapStateToProps = (state, ownProps) => {
 
 const mapDispatchToProps = (dispatch) => ({
   fetchListing: (id) => dispatch(fetchListing(id)),
-  // fetchUsers: () => dispatch(fetchUsers())
+  clearPhotos: () => dispatch(clearPhotos())
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Listing);

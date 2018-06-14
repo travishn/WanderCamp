@@ -18,6 +18,10 @@ class Listing extends React.Component {
     this.props.fetchListing(this.props.match.params.listingId);
   }
 
+  // componentWillUnmount() {
+  //   this.props.clearPhotos();
+  // }
+
   renderReviewForm() {
     const { currentUser, listing } = this.props;
     const listingGuestIds = this.props.listing.guestIds;

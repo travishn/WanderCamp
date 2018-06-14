@@ -2,7 +2,7 @@ class Api::BookingsController < ApplicationController
   def index
     @user = User.find(params[:userId])
     if @user
-       @bookings = @user.bookings
+       @bookings = @user.bookings.includes(:listing)
        render :index
     else
       render json: ["User not found"], status: 404

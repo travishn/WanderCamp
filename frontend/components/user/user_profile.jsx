@@ -10,8 +10,13 @@ class UserProfile extends React.Component {
 
 
   componentDidMount() {
+    window.scrollTo(0, 0);
     this.props.fetchUserBookings(this.props.currentUser.id);
   }
+
+  // componentWillUnmount() {
+  //   this.props.clearPhotos();
+  // }
 
   deleteBooking(id) {
     return (e) => {
@@ -31,7 +36,7 @@ class UserProfile extends React.Component {
         + parseInt(bookingDate.slice(5, 7))
         + parseInt(bookingDate.slice(8, 10));
 
-      if (currentDateSum < bookingDateSum) upcoming.push(booking);
+      if (currentDateSum <= bookingDateSum) upcoming.push(booking);
     });
 
     if (upcoming.length > 0 && upcoming[0].listing !== undefined) {

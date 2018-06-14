@@ -3,6 +3,7 @@ export const RECEIVE_LISTINGS = 'RECEIVE_LISTINGS';
 export const RECEIVE_LISTING = 'RECEIVE_LISTING';
 export const RECEIVE_SEARCH_LISTINGS = 'RECEIVE_SEARCH_LISTINGS';
 export const CLEAR_SEARCH_LISTINGS = 'CLEAR_SEARCH_LISTINGS';
+export const CLEAR_PHOTOS = 'CLEAR_PHOTOS';
 
 export const receiveListings = (payload) => ({
   type: RECEIVE_LISTINGS,
@@ -21,6 +22,10 @@ export const receiveSearchListings = (payload) => ({
 
 export const clearSearchListings = () => ({
   type: CLEAR_SEARCH_LISTINGS
+});
+
+export const clearPhotos = () => ({
+  type: CLEAR_PHOTOS
 });
 
 export const fetchListings = () => (dispatch) => (

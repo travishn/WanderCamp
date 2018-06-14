@@ -1,11 +1,10 @@
 class Api::ReviewsController < ApplicationController
   def index
-    #need the if params[listingId]?
     @current_listing = Listing.find(params[:listingId])
     .includes(:author)
 
     if @current_listing
-      @reviews = current_listing.reviews
+      @reviews = current_listing.reviews.includes(:author)
     end
 
     render :index
@@ -16,6 +15,7 @@ class Api::ReviewsController < ApplicationController
     @review = Review.find(params[:id])
     render :show
   end
+  
   def create
     @review = Review.new(review_params)
 

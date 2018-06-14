@@ -8,7 +8,7 @@ class ListingsIndex extends React.Component {
     this.props.fetchListings();
   }
   
-  componentWillUnMount() {
+  componentWillUnmount() {
     this.props.clearSearchListings();
   }
 
