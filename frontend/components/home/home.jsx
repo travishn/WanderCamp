@@ -1,7 +1,12 @@
 import React from 'react';
 import SearchContainer from '../search/search_container';
+import { Link } from 'react-router-dom';
 
 class Home extends React.Component {
+
+  componentDidMount() {
+    window.scrollTo(0, 0);
+  }
 
   render() {
     return (
@@ -12,6 +17,12 @@ class Home extends React.Component {
             <p className="home-text">Search, discover and book over 285,000 campsites, 
               vineyards, ranches, public parks and experience wanderlust.</p>
             <SearchContainer />
+
+            <div className="sub-search">
+              <Link className="or-text" to="/discover">Not sure where to look? Discover some camps!</Link>
+              {/* <p className="or-text">Not sure where to look? Discover some camps!</p> */}
+              <span>&#8594;</span>
+            </div>
           </div>
 
           <figure>

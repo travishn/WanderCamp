@@ -39,3 +39,29 @@
     }
   }
 }
+
+.or-text {
+  text-align: center;
+  padding-top: 30px;
+  padding-right: 5px;
+  font-size: 15px;
+  color: #333333;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+.or-text:hover {
+  text-decoration: underline;
+}
+
+.sub-search {
+  display: flex;
+  justify-content: center;
+  padding-right: 60px;
+
+  span {
+    padding-top: 24px;
+    font-size: 24px;
+    font-weight: 700;
+  }
+}

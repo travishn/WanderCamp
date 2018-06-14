@@ -1,7 +1,8 @@
 import * as ListingAPIUtil from '../util/listing_api_util';
 export const RECEIVE_LISTINGS = 'RECEIVE_LISTINGS';
-export const RECEIVE_SEARCH_LISTINGS = 'RECEIVE_SEARCH_LISTINGS';
 export const RECEIVE_LISTING = 'RECEIVE_LISTING';
+export const RECEIVE_SEARCH_LISTINGS = 'RECEIVE_SEARCH_LISTINGS';
+export const CLEAR_SEARCH_LISTINGS = 'CLEAR_SEARCH_LISTINGS';
 
 export const receiveListings = (payload) => ({
   type: RECEIVE_LISTINGS,
@@ -18,6 +19,10 @@ export const receiveSearchListings = (payload) => ({
   payload
 });
 
+export const clearSearchListings = () => ({
+  type: CLEAR_SEARCH_LISTINGS
+});
+
 export const fetchListings = () => (dispatch) => (
   ListingAPIUtil.fetchListings()
   .then( payload => dispatch(receiveListings(payload)))
@@ -31,6 +36,7 @@ export const fetchListing = (id) => (dispatch) => (
 export const searchListings = (search) => (dispatch) => (
   ListingAPIUtil.searchListings(search).then( payload => dispatch(receiveSearchListings(payload)))
 );
+
 
 
 

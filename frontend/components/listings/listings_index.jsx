@@ -3,7 +3,12 @@ import ListingsIndexItem from './listing_index_item';
 
 class ListingsIndex extends React.Component {
   componentDidMount() {
+    window.scrollTo(0, 0);
     this.props.fetchListings();
+  }
+  
+  componentWillUnMount() {
+    this.props.clearSearchListings();
   }
 
   renderListingItem() {
