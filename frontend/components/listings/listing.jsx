@@ -36,6 +36,23 @@ class Listing extends React.Component {
     }
   }
 
+  renderPhotos() {
+    const { listingPhotos, listing } = this.props;
+
+    if (listingPhotos.length === 0) return null;
+
+    return (
+      <ul className="photos-container">
+        {listingPhotos.map( photoUrl => (
+          <li className="photo-li" key={`listing-photo-${photoUrl}`}>
+            <img className="photo-slider" src={photoUrl}/>
+          </li>
+        ))}
+      </ul>
+    );
+    
+  }
+
   render () {
     const {listing, host, listingPhotos, petsAllowed} = this.props;
     const petFriendly = petsAllowed ? "Yes" : "No";
@@ -44,10 +61,10 @@ class Listing extends React.Component {
     } else {
       return (
         <main className="listing-container">
-          {/* <section className="listing-photos">
-            <p>PHOTOS GO HERE</p>
-          </section> */}
-          <ImageSlider photos={listing.photos}/>
+          {/* <section className="listing-photos"> */}
+            {this.renderPhotos()}
+          {/* </section> */}
+          {/* <ImageSlider photos={listing.photos}/> */}
 
           <section className="listing-box">
             <div className="listing-content">

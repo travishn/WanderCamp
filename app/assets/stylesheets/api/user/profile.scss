@@ -1,0 +1,59 @@
+.upcoming-trips-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 98px;
+  height: 92vh;
+  align-items: center;
+}
+
+.bookings-container {
+  display: grid;
+  width: 1080px;
+  -webkit-flex-grow: 1;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  flex-grow: 1;
+  overflow-y: auto;
+  line-height: 1.42;
+  color: #333333;
+  box-sizing: border-box;
+  height: 100%;
+  padding-top: 3%;
+  display: grid;
+  // grid-template-columns: 50% 50%;
+  grid-template-columns: 33% 33% 33%;
+}
+
+.booking-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 25px;
+
+  div {
+    width: 80%;
+    text-align: center;
+
+  }
+}
+
+.booking-logo {
+  position: relative;
+  box-sizing: border-box;
+  border-radius: 25px;
+}
+
+.cancel-btn {
+  font-weight: 300;
+  color: white;
+  background: #3cc69e;
+  padding: 8px 8px;
+  border-radius: 5px;
+  transition: all 0.5s;
+  text-align: center;
+  font-size: 13.5px;
+}
+
+.cancel-btn:hover {
+  background: #2baf88;
+}

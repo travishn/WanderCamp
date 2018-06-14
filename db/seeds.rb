@@ -132,6 +132,16 @@ ListingPhoto.create({
 })
 
 ListingPhoto.create({
+  listing_id: starry.id,
+  img_url: "https://res.cloudinary.com/emanon/image/upload/v1528957582/photo-1482355347028-ff60443f60fe.jpg"
+})
+
+ListingPhoto.create({
+  listing_id: starry.id,
+  img_url: "https://res.cloudinary.com/emanon/image/upload/v1528957645/photo-1473445145893-cee4ea284d29.jpg"
+})
+
+ListingPhoto.create({
   listing_id: ocean_view.id,
   img_url: "http://res.cloudinary.com/emanon/image/upload/ar_16:9,c_fill,e_sharpen,g_auto,w_720/v1528489179/photo-1465865523598-a834aac5d3fa.jpg"
 })

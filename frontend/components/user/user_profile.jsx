@@ -21,11 +21,7 @@ class UserProfile extends React.Component {
   }
 
   renderUpcomingBookings () {
-    const { bookings, listingPhotos } = this.props;
-    const currentDate = new Date().toJSON().slice(0, 10);
-    const currentDateSum = parseInt(currentDate.slice(0, 4))
-      + parseInt(currentDate.slice(5, 7))
-      + parseInt(currentDate.slice(8, 10));
+    const { bookings, listingPhotos, currentDateSum } = this.props;
     const bookingsInfo = Object.values(bookings);
     const upcoming = [];
 
@@ -56,7 +52,7 @@ class UserProfile extends React.Component {
                     <p>Booked from {booking.startDate} to {booking.endDate}</p>
                   </div>
 
-                  <button onClick={() => this.props.deleteUserBooking(booking.id)}>Cancel Booking</button>
+                  <button className="cancel-btn"onClick={() => this.props.deleteUserBooking(booking.id)}>Cancel Booking</button>
                 </li>
               );
             })}
@@ -68,7 +64,49 @@ class UserProfile extends React.Component {
     }
   }
 
-  pastBookings() {
+  renderPastBookings() {
+    const { bookings, listingPhotos, currentDateSum } = this.props;
+    const bookingsInfo = Object.values(bookings);
+    const past = [];
+
+    bookingsInfo.forEach(booking => {
+      const bookingDate = booking.startDate;
+      const bookingDateSum = parseInt(bookingDate.slice(0, 4))
+        + parseInt(bookingDate.slice(5, 7))
+        + parseInt(bookingDate.slice(8, 10));
+
+      if (currentDateSum > bookingDateSum) past.push(booking);
+
+      if (past.length > 0 && past[0].listing !== undefined) {
+        return (
+          <section className="past-trips-container">
+            <h2 className="past-header">Upcoming Trips</h2>
+
+            <ul className="bookings-container">
+              {past.map( pastBooking => {
+                return (
+                  <li key={`booking-${pastBooking.id}`} className="booking-item">
+                    <div>
+                      <img src={listingPhotos[pastBooking.photoIds[0]]['imgUrl']} className="booking-logo" />
+                    </div>
+
+                    <div className="booking-details">
+                      <h1>{pastBooking.listing.title}</h1>
+                      <p>Booked from {pastBooking.startDate} to {pastBooking.endDate}</p>
+                    </div>
+
+                    <button onClick={() => this.props.deleteUserBooking(pastBooking.id)}>Cancel Booking</button>
+                  </li>
+                );
+              })}
+            </ul>
+          </section>
+        );
+      } else {
+        return <p>You don't have any past trips. Let's go camping!</p>;
+      }
+    });
+
 
   }
 
@@ -78,6 +116,7 @@ class UserProfile extends React.Component {
     return (
       <div className="user-profile-container">
         {this.renderUpcomingBookings()}
+        {this.renderPastBookings()}
       </div>
     );
   }

@@ -19,12 +19,6 @@ json.users do
     json.extract! @listing.host, :id, :username, :first_name,
       :last_name, :img_url
   end
-
-  # @listing.reviews.each do |review|
-  #   json.set! review.author_id do
-  #     json.extract! review.author, :id, :username, :first_name
-  #   end
-  # end
 end
 
 json.bookings do

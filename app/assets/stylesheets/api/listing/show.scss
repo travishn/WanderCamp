@@ -122,3 +122,27 @@
     font-weight: 300;
   }
 }
+
+
+
+.photo-li {
+  width: 33%;
+  padding: 5px 5px 20px;
+}
+
+.photo-slider {
+  width: 100%;
+}
+
+.photos-container {
+  display: flex;
+  justify-content: space-around;
+  height: 400px;
+  // justify-content: space-around;
+}
+
+.photo-slider {
+  height: 100%;
+  width: 100%;
+}
+

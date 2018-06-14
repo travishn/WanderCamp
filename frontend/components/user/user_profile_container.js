@@ -9,11 +9,16 @@ export const mapStateToProps = (state) => {
   const currentUser = state.entities.users[state.session.id] || {};
   const bookings = state.entities.bookings;
   const listingPhotos = state.entities.listingPhotos;
+  const currentDate = new Date().toJSON().slice(0, 10);
+  const currentDateSum = parseInt(currentDate.slice(0, 4)) +
+    parseInt(currentDate.slice(5, 7)) +
+    parseInt(currentDate.slice(8, 10));
 
   return {
     currentUser,
     bookings,
-    listingPhotos
+    listingPhotos,
+    currentDateSum
   };
 };
 
