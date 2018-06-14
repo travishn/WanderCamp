@@ -18,13 +18,13 @@ class ReviewsIndex extends React.Component {
   }
 
   render() {
-    const { currentListing, currentUser } = this.props;
+    const { currentListing, currentUser, reviews } = this.props;
 
     if (!currentListing) return null;
     return (
       <section className="review-index-container">
         <div className="review-count">
-          <p>6 Reviews</p>
+          <p>{reviews.length} Reviews</p>
         </div>
 
         <div className="review-list-container">

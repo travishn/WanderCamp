@@ -12,16 +12,18 @@ class Home extends React.Component {
     return (
       <div className="home-container">
         <div className="home-header">
-          <div className="search-container">
-            <h2>Find yourself outside.</h2>
-            <p className="home-text">Search, discover and book over 285,000 campsites, 
-              vineyards, ranches, public parks and experience wanderlust.</p>
-            <SearchContainer />
+          <div className="home-left">
+            <div className="search-container">
+              <h2>Find yourself outside.</h2>
+              <p className="home-text">Search, discover and book over 285,000 campsites, 
+                vineyards, ranches, public parks and experience wanderlust.</p>
+              <SearchContainer />
 
-            <div className="sub-search">
-              <Link className="or-text" to="/discover">Not sure where to look? Discover some camps!</Link>
-              {/* <p className="or-text">Not sure where to look? Discover some camps!</p> */}
-              <span>&#8594;</span>
+              <div className="sub-search">
+                <Link className="or-text" to="/discover">Not sure where to look? Discover some camps!</Link>
+                {/* <p className="or-text">Not sure where to look? Discover some camps!</p> */}
+                <span>&#8594;</span>
+              </div>
             </div>
           </div>
 

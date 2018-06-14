@@ -18,7 +18,6 @@ class ListingsIndex extends React.Component {
     const filteredListings = [];
 
     for (const listing of currentListings) {
-      // debugger;
       if (filters['camping'] && listing.category === 'camping') 
         filteredListings.push(listing);
       else if (filters['glamping'] && listing.category === 'glamping')
@@ -33,13 +32,10 @@ class ListingsIndex extends React.Component {
         filteredListings.push(listing);
       else if (filters['desert'] && listing.terrain === 'Desert')
         filteredListings.push(listing);
-      // else if (filters['capacity'] > listing.capacity)
-        // filteredListings.push(listing);
-      else if (filters['price'] < listing.price)
+      else if (filters['capacity'] <= listing.capacity)
         filteredListings.push(listing);
-      // if (filters['swimming'])
-      // if (filters['hiking'])
-      // if (filters['biking'])
+      else if (filters['price'] > listing.price)
+        filteredListings.push(listing);
     }
 
     return filteredListings;
