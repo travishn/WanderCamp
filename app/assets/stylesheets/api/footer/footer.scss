@@ -56,9 +56,9 @@ body {
 .footer-description {
   display: flex;
   flex-direction: column;
-  width: 500px;
+  width: 550px;
   // box-sizing: border-box;
-  padding-right: 6%;
+  padding-right: 50px;
 
   h5 {
     color: rgb(127, 107, 155);
@@ -75,8 +75,9 @@ body {
 .footer-link-container {
   display: flex;
   justify-content: space-between;
-  width: 450px;
-  padding-right: 3%;
+  width: 500px;
+  padding-left: 50px;
+  padding-right: 50px;
 
   h5 {
     color: rgb(127, 107, 155);
@@ -109,12 +110,14 @@ body {
   
   a {
     // width: minmax(50px, auto);
+    width: 150px;
     padding: 0 5px;
   }
 }
 
 .made-at {
-  padding-left: 22%;
+  min-width: 300px;
+  margin-left: 250px;
 }
 
 .links-header {
