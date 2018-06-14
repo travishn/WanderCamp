@@ -1,6 +1,7 @@
 import { connect } from 'react-redux';
 import { searchListings } from '../../actions/listing_actions';
 import Search from './search';
+import { withRouter } from 'react-router';
 
 
 const mapStateToProps = (state) => {
@@ -16,4 +17,4 @@ const mapDispatchToProps = (dispatch) => ({
   searchListings: (search) => dispatch(searchListings(search))
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(Search);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Search));

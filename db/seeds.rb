@@ -5,6 +5,27 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+def random_point_in_disk(max_radius)
+  r = max_radius * rand**0.5
+  theta = rand * 2 * Math::PI
+  [r * Math.cos(theta), r * Math.sin(theta)]
+end
+
+EarthRadius = 6371 # km
+OneDegree = EarthRadius * 2 * Math::PI / 360 * 1000 # 1° latitude in meters
+
+def random_location(lon, lat, max_radius)
+  dx, dy = random_point_in_disk(max_radius)
+  random_lat = lat + dy / OneDegree
+  random_lon = lon + dx / ( OneDegree * Math::cos(lat * Math::PI / 180) )
+  [random_lon, random_lat]
+end
+
+location_hash = {}
+
+4.times do |n|
+  location_hash[n] = random_location(37.754734, -122.440653, 5000)
+end
 
 User.destroy_all
 demo_user = User.create({
@@ -47,7 +68,9 @@ starry = Listing.create({
    street from the Gubler Orchid Farm, which has daily tours.',
    pets_allowed: false,
    terrain: 'Desert',
-   price: 50
+   price: 50,
+   lon: location_hash[1][0],
+   lat: location_hash[1][1]
 })
 
 crystal = Listing.create({
@@ -64,7 +87,9 @@ crystal = Listing.create({
   Circle. Each have restrooms, coin showers and several accessible sites.',
   pets_allowed: true,
   terrain: 'Beach',
-  price: 35
+  price: 35,
+  lon: location_hash[2][0],
+  lat: location_hash[2][1]
 })
 
 ocean_view = Listing.create({
@@ -76,7 +101,9 @@ ocean_view = Listing.create({
   SweepingViews for more amenities, such as RV, kitchen and large fire ring for groups.',
   pets_allowed: true,
   terrain: 'Beach',
-  price: 110
+  price: 110,
+  lon: location_hash[3][0],
+  lat: location_hash[3][1]
 })
 
 casita = Listing.create({
@@ -93,7 +120,9 @@ casita = Listing.create({
   and Henry Cowell State Park with miles of single track running and mountain biking trails.',
   pets_allowed: false,
   terrain: 'Mountain',
-  price: 150
+  price: 150,
+  lon: 37.877037,
+  lat: -122.273152
 })
 
 ListingPhoto.destroy_all

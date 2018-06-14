@@ -15,7 +15,7 @@ class Home extends React.Component {
           </div>
 
           <figure>
-            <img src="http://res.cloudinary.com/emanon/image/upload/c_scale,h_540,w_712/v1528489573/photo-1484960055659-a39d25adcb3c.jpg" />
+            <img className="home-picture"src="https://res.cloudinary.com/emanon/image/upload/v1528938749/dbpwvyn3mr8nidsplivk.jpg" />
           </figure>
         </div>
 

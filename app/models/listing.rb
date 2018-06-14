@@ -74,10 +74,10 @@ class Listing < ApplicationRecord
     self.capacity ||= 4
   end
 
-  # def self.in_bounds(bounds) 
-  #   self.where('latitude < ?', bounds[:northEast][:lat])
-  #     .where('latitude > ?', bounds[:southWest][:lat])
-  #     .where('longitude < ?' bounds[:northEast][:lon])
-  #     .where('longitude > ?', bounds[:southEast][:lon])
-  # end
+  def self.in_bounds(bounds) 
+    self.where('lat < ?', bounds[:northEast][:lat])
+      .where('lat > ?', bounds[:southWest][:lat])
+      .where('lon < ?', bounds[:northEast][:lon])
+      .where('lon > ?', bounds[:southWest][:lon])
+  end
 end

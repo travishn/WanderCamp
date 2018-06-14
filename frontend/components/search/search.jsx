@@ -24,7 +24,7 @@ class Search extends React.Component {
     
     return (
       
-      <form className="search-form">
+      <form onSubmit={() => this.handleSubmit()} className="search-form">
         <input
           value={this.state.search}
           onChange={this.handleChange('search')}
@@ -42,7 +42,6 @@ class Search extends React.Component {
               value={this.state.start_date}
               onChange={this.handleChange("start_date")}
               className="start-date-input"
-              required
             />
           </div>
 
@@ -54,7 +53,6 @@ class Search extends React.Component {
               value={this.state.end_date}
               onChange={this.handleChange("end_date")}
               className="start-date-input"
-              required
             />
           </div>
 

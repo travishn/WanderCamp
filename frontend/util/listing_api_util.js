@@ -22,7 +22,7 @@ export const createReview = (review) => (
 export const searchListings = (search) => (
   $.ajax({
     method: 'GET',
-    url: '/api/listings',
+    url: '/api/search',
     data: { search }
   })
 );

@@ -12,9 +12,9 @@
   display: flex;
   align-content: space-between;
   padding-bottom: 15vw;
+  height: 600px;
 
   .search-container {
-    // width: 500px;
     width: 50%;
 
     h2 {
@@ -26,9 +26,12 @@
   }
 
   figure {
-    width: 50%;
+    width: 70%;
     margin-right: 0;
     padding-right: 0;
+    margin-left: 0;
+    margin-top: 26px;
+    margin-bottom: 0;
     // padding-left: 4.7%;
 
     img {

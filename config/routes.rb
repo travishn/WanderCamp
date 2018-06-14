@@ -6,5 +6,7 @@ Rails.application.routes.draw do
     resources :listings, only: [:index, :show]
     resources :bookings, only: [:index, :create, :destroy]
     resources :reviews, only: [:index, :create, :destroy, :update]
+
+    get 'search', to: 'listings#search'
   end
 end

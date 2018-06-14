@@ -1,7 +1,7 @@
 .search-container {
   width: 50%;
   margin: 0 auto;
-  padding: 3vw 8.5vw;
+  padding: 30px 60px 0px 140px;
 
   h2 {
     font-size: 5vw;
@@ -41,6 +41,9 @@
   justify-content: center;
   width: 33%;
   height: 100%;
+  font-size: 18px;
+  font-weight: 100;
+  color: #a1a1a1;
   border-right: 1px solid #ebebeb;
   h5 {
     margin: 0 auto;
@@ -54,6 +57,9 @@
   height: 100%;
   width: 33%;
   border-right: 1px solid #ebebeb;
+  color: #a1a1a1;
+  font-size: 18px;
+  font-weight: 100;
   
   h5 {
     margin: 0 auto;
@@ -63,6 +69,16 @@
 .search-button {
   width: 33%;
   height: 100%;
+  color: white;
+  // background: #00CD9E;
+  background: #00d3a2;
+  font-size: 16px;
+  font-weight: 500;
+  transition: all 0.5s;
+}
+
+.search-button:hover {
+  background: #00bc8a
 }
 
 .search-form {
@@ -74,7 +90,10 @@
     display: flex;
     justify-content: space-between;
     color: #333333;
+    letter-spacing: 0.7px;
     padding: 0 15px;
+    font-size: 16px;
+    font-weight: 500;
   }
 }
 
@@ -87,4 +106,8 @@
   color: #a1a1a1;
   line-height: 1.5;
   font-weight: 300;
+}
+
+.home-picture {
+  height: 100%;
 }
