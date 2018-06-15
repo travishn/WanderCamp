@@ -120,7 +120,7 @@ class Home extends React.Component {
             </Link>
             
             <Link className="home-category"to={`/listings/${listings[5].id}`}>
-              <img className="category-image"src={listings[5].photos[0]["img_url"]}></img>
+              <img className="category-image"src={listings[5].photos[1]["img_url"]}></img>
 
                 <div className="home-text-container">
                   <p className="home-category-title">Canvas Safari</p>
@@ -129,7 +129,7 @@ class Home extends React.Component {
             </Link>
 
             <Link className="home-category" to={`/listings/${listings[3].id}`}>
-              <img className="category-image" src={listings[3].photos[1]["img_url"]}></img>
+              <img className="category-image" src={listings[3].photos[0]["img_url"]}></img>
 
               <div className="home-text-container">
                 <p className="home-category-title">Winter Paradise</p>
