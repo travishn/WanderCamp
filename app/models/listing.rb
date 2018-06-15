@@ -71,7 +71,7 @@ class Listing < ApplicationRecord
   end
 
   def ensure_capacity
-    self.capacity ||= 4
+    self.capacity ||= 10
   end
 
   def self.in_bounds(bounds) 

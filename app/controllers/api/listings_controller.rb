@@ -5,7 +5,7 @@ class Api::ListingsController < ApplicationController
   
   def index
     if params[:category]
-      @listings = Listing.all.first(5)
+      @listings = Listing.all.first(6)
       render :index
       # Change this to a different render jbuilder in the future for faster querying
     else

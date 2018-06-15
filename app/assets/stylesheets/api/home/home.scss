@@ -77,6 +77,9 @@
 
 .home-categories {
   padding-bottom: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .category-grid {
@@ -101,6 +104,8 @@
 .category-wrapper {
   display: flex;
   justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 .category-image {
@@ -135,4 +140,12 @@
   font-size: 15px;
   font-weight: 300;
   color: #a1a1a1;
+}
+
+.grid-row {
+  display: grid;
+  grid-gap: 15px;
+  width: 70%;
+  margin-top: 90px;
+  grid-template-columns: repeat(3, 1fr);
 }

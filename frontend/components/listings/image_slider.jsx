@@ -3,6 +3,7 @@ import Slider from 'react-slick';
 
 class ImageSlider extends React.Component {
   render() {
+    const { photos } = this.props;
     const settings = {
       dots: false,
       infinite: true,
@@ -11,8 +12,6 @@ class ImageSlider extends React.Component {
       centerMode: true,
       variableWidth: true
     };
-
-    const { photos } = this.props;
     
     return (
       <section className="listing-photos">

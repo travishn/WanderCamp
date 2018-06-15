@@ -99,21 +99,44 @@ class Home extends React.Component {
             </Link>
 
           <Link className="home-category"to={`/listings/${listings[2].id}`}>
-            <img className="category-image"src={listings[2].photos[1]["img_url"]}></img>
+            <img className="category-image"src={listings[2].photos[0]["img_url"]}></img>
 
               <div className="home-text-container">
                 <p className="home-category-title">Wild tipi camp</p>
                 <p className="options-near-me">California</p>
               </div>
           </Link>
-            
-            <img src=""></img>
-            
-            <img src=""></img>
-            
-            <img src=""></img>
+
           </div>
         </div>
+          <div className='grid-row'>
+            <Link className="home-category"to={`/listings/${listings[3].id}`}>
+              <img className="category-image"src={listings[3].photos[0]["img_url"]}></img>
+
+                <div className="home-text-container">
+                  <p className="home-category-title">Winter paradise</p>
+                  <p className="options-near-me">California</p>
+                </div>
+            </Link>
+            
+            <Link className="home-category"to={`/listings/${listings[4].id}`}>
+              <img className="category-image"src={listings[4].photos[0]["img_url"]}></img>
+
+                <div className="home-text-container">
+                  <p className="home-category-title">Above the clouds</p>
+                  <p className="options-near-me">California</p>
+                </div>
+            </Link>
+            
+            <Link className="home-category"to={`/listings/${listings[5].id}`}>
+              <img className="category-image"src={listings[5].photos[0]["img_url"]}></img>
+
+                <div className="home-text-container">
+                  <p className="home-category-title">Canvas safari</p>
+                  <p className="options-near-me">California</p>
+                </div>
+            </Link>
+            </div>
       </div>
     </div>
     );

@@ -1,7 +1,8 @@
 .listing-index {
   height: min-content;
   width: 660px;
-  overflow-y: auto;
+  overflow-y: scroll;
+  height: 850px;
   line-height: 1.42;
   color: #333333;
   box-sizing: border-box;

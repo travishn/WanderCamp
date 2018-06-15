@@ -27,7 +27,7 @@ end
 
 location_hash = {}
 
-4.times do |n|
+6.times do |n|
   location_hash[n] = random_location(-122.440653, 37.754734, 2000)
 end
 
@@ -60,23 +60,6 @@ national_park = User.create ({
 })
 
 Listing.destroy_all
-starry = Listing.create({
-  host_id: travis.id,
-  title: 'Starry Night Camp',
-  description: 'Space Magic Camp is located 2.2 miles (3 min drive) from the world famous
-   Integratron. Landers is know for its starry skies and miles of smiles. If you want a 
-   retreat from the fast vibration of the city, come enjoy vortex energy at Space Magic. 
-   The light pollution is less than most of Joshua Tree and the view of the night sky and 
-   sunrise is second to none. Space Magic Camp is also walking distance from the Lander Brewing 
-   Co., where you may want to check out a band or enjoy a local brew. We are also just down the 
-   street from the Gubler Orchid Farm, which has daily tours.',
-   pets_allowed: false,
-   terrain: 'Desert',
-   price: 50,
-   lon: location_hash[1][0],
-   lat: location_hash[1][1]
-})
-
 crystal = Listing.create({
   host_id: travis.id,
   title: 'Crystal Cove Camp',
@@ -124,12 +107,117 @@ casita = Listing.create({
   and Henry Cowell State Park with miles of single track running and mountain biking trails.',
   pets_allowed: false,
   terrain: 'Mountain',
-  price: 150,
+  price: 70,
   lon: -122.307413,
   lat: 37.309737
 })
 
+igloo = Listing.create({
+  host_id: travis.id,
+  title: 'Winter Paradise',
+  description: 'Been waiting for that one in a lifetime deal to come along? This sure is it, 
+  and it is one of my favourite deals of all time. Don’t be put off by the price however, 
+  wait ’til you see what is included! Enjoy a beautiful and unique experience in snowy Lapland, 
+  Finland, where you can watch the Northern Lights from the comfort of your bed, These fabulous 
+  one of a kind igloos are carved out of snow and ice every year, meaning it’s completely unique 
+  every time!',
+  pets_allowed: false,
+  terrain: "Mountain",
+  price: 300,
+  lon: location_hash[0][0],
+  lat: location_hash[0][1],
+  capacity: 25,
+  category: "glamping"
+})
+
+sky = Listing.create({
+  host_id: travis.id,
+  title: 'Above the Clouds',
+  description: "Enjoy the breath-taking views at Above the Clouds camp. If you're hesitant about heights,
+   and are afraid of being thrown in the the wilderness of camping, there is a city for you to escape to located
+   only a few miles away. Be sure to book as soon as possible as this location is usually booked a month in advance.",
+  pets_allowed: true,
+  terrain: "Mountain",
+  price: 80,
+  capacity: 5,
+  category: 'camping',
+  lon: location_hash[4][0],
+  lat: location_hash[4][1]
+})
+
+safari = Listing.create({
+  host_id: travis.id,
+  title: 'Canvas Safari',
+  description: "Our canvas tents sleep two and boasts queen-size 
+  beds with plush linens, lights, electrical outlets, and electric blankets for warmth at night. A ramped pathway 
+  leads to your tent's entrance, and your patio holds lounge chairs and a campfire-style fire pit and grill. Three 
+  roasting logs are provided for roasting s'mores or cooking food over your fire pit.
+  
+  During your stay, you'll also have access to our mid-century modern clubhouse, which includes ultra-modern bathrooms 
+  and showers (including Malin + Goetz bath products). You're also welcome to enjoy free coffee and juice every morning in 
+  the clubhouse, and local wine, beer, and snacks are available for purchase in our Canteen.
+
+  The town of Guerneville is only a five minute bike ride away (bicycles are provided!), with restaurants, bars, ice cream 
+  shops, antiques, and wine tasting. Hikes and outdoor excursions abound in the area, and there's nothing like a leisurely 
+  float down the Russian River.",
+  pets_allowed: false,
+  terrain: "Forest",
+  price: 150,
+  capacity: 2,
+  category: 'glamping',
+  lon: location_hash[5][0],
+  lat: location_hash[5][1]
+})
+
+starry = Listing.create({
+  host_id: travis.id,
+  title: 'Starry Night Camp',
+  description: 'Space Magic Camp is located 2.2 miles (3 min drive) from the world famous
+   Integratron. Landers is know for its starry skies and miles of smiles. If you want a 
+   retreat from the fast vibration of the city, come enjoy vortex energy at Space Magic. 
+   The light pollution is less than most of Joshua Tree and the view of the night sky and 
+   sunrise is second to none. Space Magic Camp is also walking distance from the Lander Brewing 
+   Co., where you may want to check out a band or enjoy a local brew. We are also just down the 
+   street from the Gubler Orchid Farm, which has daily tours.',
+   pets_allowed: true,
+   terrain: 'Desert',
+   price: 50,
+   lon: location_hash[1][0],
+   lat: location_hash[1][1]
+})
+
 ListingPhoto.destroy_all
+
+ListingPhoto.create({
+  listing_id: safari.id,
+  img_url: "https://res.cloudinary.com/emanon/image/upload/v1529082895/frti4vfgktbfvjssc0ce.jpg"
+})
+
+ListingPhoto.create({
+  listing_id: safari.id,
+  img_url: "https://res.cloudinary.com/emanon/image/upload/v1529082949/ovwfnhgeuevjf9ohmc2i.jpg"
+})
+
+ListingPhoto.create({
+  listing_id: safari.id,
+  img_url: "https://res.cloudinary.com/emanon/image/upload/v1529083175/qfpwxfv5lqhwjkltvoxz.jpg"
+})
+
+ListingPhoto.create({
+  listing_id: sky.id,
+  img_url: "https://res.cloudinary.com/emanon/image/upload/v1529081853/8EHGA.jpg"
+})
+
+ListingPhoto.create({
+  listing_id: sky.id,
+  img_url: "https://res.cloudinary.com/emanon/image/upload/v1529081923/v2.jpg"
+})
+
+ListingPhoto.create({
+  listing_id: sky.id,
+  img_url: "https://res.cloudinary.com/emanon/image/upload/v1529082120/winter_20-nachtaufnahme.jpg"
+})
+
 ListingPhoto.create({
   listing_id: starry.id,
   img_url: "http://res.cloudinary.com/emanon/image/upload/c_scale,h_480,w_720/v1528483203/rico-larroque-528914-unsplash.jpg"
@@ -145,6 +233,20 @@ ListingPhoto.create({
   img_url: "https://res.cloudinary.com/emanon/image/upload/v1528957645/photo-1473445145893-cee4ea284d29.jpg"
 })
 
+ListingPhoto.create({
+  listing_id: igloo.id,
+  img_url: "https://res.cloudinary.com/emanon/image/upload/v1529079291/maxresdefault.jpg"
+})
+
+ListingPhoto.create({
+  listing_id: igloo.id,
+  img_url: "https://res.cloudinary.com/emanon/image/upload/v1529080185/1498232128568.jpg"
+})
+
+ListingPhoto.create({
+  listing_id: igloo.id,
+  img_url: "https://res.cloudinary.com/emanon/image/upload/v1529079764/photo-1483347756197-71ef80e95f73.jpg"
+})
 
 ListingPhoto.create({
   listing_id: ocean_view.id,

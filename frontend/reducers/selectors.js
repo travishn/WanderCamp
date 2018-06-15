@@ -20,7 +20,13 @@ export const selectListingPhotos = (state, listing) => {
 
 export const selectAllPhotos = (state) => {
   let photos = {};
-  let listings = Object.values(state.entities.listings);
+  let listings;
+
+  if (Object.values(state.entities.searchedListings).length === 0) {
+    listings = Object.values(state.entities.listings);
+  } else {
+    listings = Object.values(state.entities.searchedListings);
+  }
 
   listings.forEach( (listing) => {
     photos[listing.id] = selectListingPhotos(state, listing);

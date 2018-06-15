@@ -7,7 +7,7 @@ class ListingsMap extends React.Component {
     // set the map to show SF
     const mapOptions = {
       center: { lat: 37.7758, lng: -122.435 }, // this is SF
-      zoom: 13
+      zoom: 11
     };
 
     const map = this.refs.map;
