@@ -98,7 +98,7 @@ crystal = Listing.create({
 
 ocean_view = Listing.create({
   host_id: demo_user.id,
-  title: 'Wild Tender Tipi Ocean View',
+  title: 'Wild Tipi Ocean View',
   description: 'Very peaceful and private immersion into the beautiful wild lands of the Coast. 
   Amazing views of the ocean and coastal mountains. Great smells, lots of wildlife and star gazing! 
   Enjoy a private sanctuary get away! We hope you find great restoration! Check out our other great site 
