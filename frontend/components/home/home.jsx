@@ -102,7 +102,7 @@ class Home extends React.Component {
             <img className="category-image"src={listings[2].photos[1]["img_url"]}></img>
 
               <div className="home-text-container">
-                <p className="home-category-title">Starry night camp</p>
+                <p className="home-category-title">Wild tipi camp</p>
                 <p className="options-near-me">California</p>
               </div>
           </Link>
