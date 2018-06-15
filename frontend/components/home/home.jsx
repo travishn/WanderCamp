@@ -33,8 +33,8 @@ class Home extends React.Component {
           <div className="home-left">
             <div className="search-container">
               <h2>Find yourself outside.</h2>
-              <p className="home-text">Search, discover and book over 285,000 campsites, 
-                vineyards, ranches, public parks and experience wanderlust.</p>
+              <p className="home-text">Search, discover and book unique experiences
+              around the world and cure your wanderlust.</p>
               <SearchContainer />
 
               <div className="sub-search">
