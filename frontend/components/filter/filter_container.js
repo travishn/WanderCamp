@@ -15,8 +15,8 @@ const mapStateToProps = (state) => ({
 const mapDispatchToProps = (dispatch) => ({
     receiveFilter: filter => dispatch(receiveFilter(filter)),
     removeFilter: filter => dispatch(removeFilter(filter)),
-    receivePriceFilter: amount => dispatch(receivePriceFilter(amount)),
-    removePriceFilter: amount => dispatch(removePriceFilter(amount)),
+    receivePriceFilter: price => dispatch(receivePriceFilter(price)),
+    removePriceFilter: price => dispatch(removePriceFilter(price)),
     receiveGroupFilter: capacity => dispatch(receiveGroupFilter(capacity)),
     removeGroupFilter: capacity => dispatch(removeGroupFilter(capacity)),
     clearAllFilters: () => dispatch(clearAllFilters()),
