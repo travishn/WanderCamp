@@ -1,6 +1,6 @@
 export const RECEIVE_FILTER = "RECEIVE_FILTER";
 export const REMOVE_FILTER = "REMOVE_FILTER";
-export const CLEAR_ALL_FILTERS = "CLEAR_ALL_FILTERS";
+export const CLEAR_FILTERS = "CLEAR_FILTERS";
 export const RECEIVE_PRICE_FILTER = "RECEIVE_PRICE_FILTER";
 export const REMOVE_PRICE_FILTER = "REMOVE_PRICE_FILTER";
 export const RECEIVE_GROUP_FILTER = "RECEIVE_GROUP_FILTER";
@@ -16,8 +16,8 @@ export const removeFilter = filter => ({
   filter
 });
 
-export const clearAllFilters = () => ({
-  type: CLEAR_ALL_FILTERS
+export const clearFilters = () => ({
+  type: CLEAR_FILTERS
 });
 
 export const receivePriceFilter = price => ({

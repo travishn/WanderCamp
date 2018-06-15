@@ -10,8 +10,10 @@ class Home extends React.Component {
   }
 
   handleCategory(field) {
-    return (e) => this.props.receiveFilter(field)
-      .then( () => this.props.history.push('/discover'));
+    return (e) => {
+      this.props.receiveFilter(field);
+      this.props.history.push('/discover');
+    };
   }
 
   handleGroup(capacity) {

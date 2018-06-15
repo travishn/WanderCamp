@@ -10,34 +10,23 @@ class ListingsIndex extends React.Component {
   
   componentWillUnmount() {
     this.props.clearSearchListings();
+    this.props.clearFilters();
   }
 
-  applyFilters(currentListings) {
+  applyFilters(listings) {
     const { filters } = this.props;
+    let filteredListings = listings;
 
-    const filteredListings = [];
+    if (filters['camping']) filteredListings = filteredListings.filter(listing => listing.category === "camping");
+    if (filters['glamping']) filteredListings = filteredListings.filter(listing => listing.category === "glamping");
+    if (filters['petFriendly']) filteredListings = filteredListings.filter(listing => listing.petsAllowed === true);
+    if (filters['beach']) filteredListings = filteredListings.filter(listing => listing.terrain === 'Beach');
+    if (filters['mountain']) filteredListings = filteredListings.filter(listing => listing.terrain === 'Mountain');
+    if (filters['forest']) filteredListings = filteredListings.filter(listing => listing.terrain === 'Forest');
+    if (filters['desert']) filteredListings = filteredListings.filter(listing => listing.terrain === 'Desert');
 
-    for (const listing of currentListings) {
-      if (filters['camping'] && listing.category === 'camping') 
-        filteredListings.push(listing);
-      else if (filters['glamping'] && listing.category === 'glamping')
-        filteredListings.push(listing);
-      else if (filters['petFriendly'] && listing.petsAllowed)
-        filteredListings.push(listing);
-      else if (filters['beach'] && listing.terrain === 'Beach')
-        filteredListings.push(listing);
-      else if (filters['forest'] && listing.terrain === 'Forest')
-        filteredListings.push(listing);
-      else if (filters['mountain'] && listing.terrain === 'Mountain')
-        filteredListings.push(listing);
-      else if (filters['desert'] && listing.terrain === 'Desert')
-        filteredListings.push(listing);
-      else if (filters['capacity'] <= listing.capacity)
-        filteredListings.push(listing);
-      else if (filters['price'] > listing.price)
-        filteredListings.push(listing);
-    }
-
+    filteredListings = filteredListings.filter(listing => listing.price <= filters['price']);
+    filteredListings = filteredListings.filter(listing => listing.capacity > filters['capacity']);
     return filteredListings;
   }
 

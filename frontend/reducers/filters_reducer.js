@@ -1,6 +1,6 @@
 import {RECEIVE_FILTER, 
   REMOVE_FILTER, 
-  CLEAR_ALL_FILTERS,
+  CLEAR_FILTERS,
   RECEIVE_PRICE_FILTER,
   REMOVE_PRICE_FILTER,
   RECEIVE_GROUP_FILTER,
@@ -11,15 +11,15 @@ const defaultState = ({
   camping: false,
   glamping: false,
   petFriendly: false,
-  beach: false,
-  desert: false,
-  mountain: false,
-  forest: false,
+  price: 122493,
+  capacity: 1,
   swimming: false,
   hiking: false,
   biking: false,
-  price: 122493,
-  capacity: 50
+  beach: false,
+  desert: false,
+  mountain: false,
+  forest: false
 });
 
 const filtersReducer = (state = defaultState, action) => {
@@ -29,7 +29,7 @@ const filtersReducer = (state = defaultState, action) => {
       return merge({}, state, {[action.filter]: true});
     case REMOVE_FILTER:
       return merge({}, state, {[action.filter]: false});
-    case CLEAR_ALL_FILTERS:
+    case CLEAR_FILTERS:
       return defaultState;
     case RECEIVE_PRICE_FILTER:
       return merge({}, state, {price: action.price});
@@ -38,7 +38,7 @@ const filtersReducer = (state = defaultState, action) => {
     case RECEIVE_GROUP_FILTER:
       return merge({}, state, {capacity: action.capacity});
     case REMOVE_GROUP_FILTER:
-      return merge({}, state, {capacity: 50});
+      return merge({}, state, {capacity: 1});
     default:
       return state;
   }

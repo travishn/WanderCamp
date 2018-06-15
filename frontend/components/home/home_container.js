@@ -1,4 +1,5 @@
 import { connect } from 'react-redux';
+import { withRouter } from 'react-router';
 import {
   receiveFilter,
   receiveGroupFilter,
@@ -20,4 +21,4 @@ const mapDispatchToProps = (dispatch) => ({
   fetchCategoryListings: () => dispatch(fetchCategoryListings())
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(Home);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Home));

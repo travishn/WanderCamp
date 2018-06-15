@@ -119,8 +119,8 @@ class Filter extends React.Component {
             <input
               className='checkbox'
               type='checkbox'
-              onClick={this.toggleCapacityFilter(50)}
-              checked={filters['capacity'] === 50}
+              onClick={this.toggleCapacityFilter(1)}
+              checked={filters['capacity'] === 1}
               />
               <label>Any Size</label>
           </li>

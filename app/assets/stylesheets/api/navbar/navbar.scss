@@ -87,17 +87,17 @@
   .default-pic {
     height: 32px;
     width: 32px;
-    padding-top: 8%;
-    margin-right: 6px;
+    margin-right: 8px;
+    padding-bottom: 5px;
   }
   
   .assigned-pic {
     height: 100%;
 
     img {
-      height: 50px;
-      width: 50px;
-      margin-top: 10%;
+      // height: 50px;
+      width: 45px;
+      margin-top: 9.5px;
       margin-right: 8px;
       border-radius: 50px;
     }
