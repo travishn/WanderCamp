@@ -4,8 +4,14 @@ class Api::ListingsController < ApplicationController
   }
   
   def index
-    @listings = Listing.all.includes(:photos)
-    render :index
+    if params[:category]
+      @listings = Listing.all.first(5)
+      render :index
+      # Change this to a different render jbuilder in the future for faster querying
+    else
+      @listings = Listing.all.includes(:photos)
+      render :index
+    end
   end
 
   def show

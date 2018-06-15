@@ -1,26 +1,24 @@
 import { connect } from 'react-redux';
 import {
   receiveFilter,
-  removeFilter,
-  receivePriceFilter,
-  removePriceFilter,
   receiveGroupFilter,
-  removeGroupFilter
 } from '../../actions/filter_actions';
+import {
+  fetchCategoryListings
+} from '../../actions/listing_actions';
 import Home from './home';
 
 
 const mapStateToProps = (state) => ({
-  filters: state.ui.filters
+  filters: state.ui.filters,
+  listings: Object.values(state.entities.listings)
 });
 
 const mapDispatchToProps = (dispatch) => ({
   receiveFilter: filter => dispatch(receiveFilter(filter)),
-  removeFilter: filter => dispatch(removeFilter(filter)),
-  receivePriceFilter: amount => dispatch(receivePriceFilter(amount)),
-  removePriceFilter: amount => dispatch(removePriceFilter(amount)),
   receiveGroupFilter: capacity => dispatch(receiveGroupFilter(capacity)),
-  removeGroupFilter: capacity => dispatch(removeGroupFilter(capacity))
+  fetchCategoryListings: () => dispatch(fetchCategoryListings())
+
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Home);

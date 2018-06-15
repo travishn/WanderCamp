@@ -42,6 +42,10 @@ export const searchListings = (search) => (dispatch) => (
   ListingAPIUtil.searchListings(search).then( payload => dispatch(receiveSearchListings(payload)))
 );
 
+export const fetchCategoryListings = () => (dispatch) => (
+  ListingAPIUtil.fetchCategoryListings().then( payload => dispatch(receiveListings(payload)))
+);
+
 
 
 

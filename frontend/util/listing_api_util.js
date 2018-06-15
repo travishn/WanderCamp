@@ -27,3 +27,11 @@ export const searchListings = (search) => (
   })
 );
 
+export const fetchCategoryListings = () => (
+  $.ajax({
+    method: 'GET',
+    url: '/api/listings',
+    data: { category: true}
+  })
+);
+
