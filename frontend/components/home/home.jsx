@@ -110,15 +110,6 @@ class Home extends React.Component {
           </div>
         </div>
           <div className='grid-row'>
-            <Link className="home-category"to={`/listings/${listings[3].id}`}>
-              <img className="category-image"src={listings[3].photos[1]["img_url"]}></img>
-
-                <div className="home-text-container">
-                  <p className="home-category-title">Winter Paradise</p>
-                  <p className="options-near-me">California</p>
-                </div>
-            </Link>
-            
             <Link className="home-category"to={`/listings/${listings[4].id}`}>
               <img className="category-image"src={listings[4].photos[0]["img_url"]}></img>
 
@@ -136,7 +127,16 @@ class Home extends React.Component {
                   <p className="options-near-me">California</p>
                 </div>
             </Link>
-            </div>
+
+            <Link className="home-category" to={`/listings/${listings[3].id}`}>
+              <img className="category-image" src={listings[3].photos[1]["img_url"]}></img>
+
+              <div className="home-text-container">
+                <p className="home-category-title">Winter Paradise</p>
+                <p className="options-near-me">California</p>
+              </div>
+            </Link>
+          </div>
       </div>
     </div>
     );
