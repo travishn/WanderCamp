@@ -25,7 +25,7 @@ class Home extends React.Component {
 
   render() {
     const { listings } = this.props;
-    if (listings.length === 0) return null;
+    if (listings.length <= 1) return null;
 
     return (
       <div className="home-container">
@@ -84,7 +84,7 @@ class Home extends React.Component {
               <img className="category-image"src={listings[0].photos[0]["img_url"]}></img>
 
               <div className="home-text-container">
-                <p className="home-category-title">Starry night camp</p>
+                <p className="home-category-title">Crystal Cove</p>
                 <p className="options-near-me">California</p>
               </div>
             </Link>
@@ -93,7 +93,7 @@ class Home extends React.Component {
               <img className="category-image" src={listings[1].photos[1]["img_url"]}></img>
 
               <div className="home-text-container">
-                <p className="home-category-title">Crystal cove camp</p>
+                <p className="home-category-title">Wild Tipi</p>
                 <p className="options-near-me">California</p>
               </div>
             </Link>
@@ -102,7 +102,7 @@ class Home extends React.Component {
             <img className="category-image"src={listings[2].photos[0]["img_url"]}></img>
 
               <div className="home-text-container">
-                <p className="home-category-title">Wild tipi camp</p>
+                <p className="home-category-title">Mountain Casita</p>
                 <p className="options-near-me">California</p>
               </div>
           </Link>
@@ -111,10 +111,10 @@ class Home extends React.Component {
         </div>
           <div className='grid-row'>
             <Link className="home-category"to={`/listings/${listings[3].id}`}>
-              <img className="category-image"src={listings[3].photos[0]["img_url"]}></img>
+              <img className="category-image"src={listings[3].photos[1]["img_url"]}></img>
 
                 <div className="home-text-container">
-                  <p className="home-category-title">Winter paradise</p>
+                  <p className="home-category-title">Winter Paradise</p>
                   <p className="options-near-me">California</p>
                 </div>
             </Link>
@@ -123,7 +123,7 @@ class Home extends React.Component {
               <img className="category-image"src={listings[4].photos[0]["img_url"]}></img>
 
                 <div className="home-text-container">
-                  <p className="home-category-title">Above the clouds</p>
+                  <p className="home-category-title">Above the Clouds</p>
                   <p className="options-near-me">California</p>
                 </div>
             </Link>
@@ -132,7 +132,7 @@ class Home extends React.Component {
               <img className="category-image"src={listings[5].photos[0]["img_url"]}></img>
 
                 <div className="home-text-container">
-                  <p className="home-category-title">Canvas safari</p>
+                  <p className="home-category-title">Canvas Safari</p>
                   <p className="options-near-me">California</p>
                 </div>
             </Link>

@@ -18,9 +18,9 @@ class Listing extends React.Component {
     this.props.fetchListing(this.props.match.params.listingId);
   }
 
-  // componentWillUnmount() {
-  //   this.props.clearPhotos();
-  // }
+  componentWillUnmount() {
+    this.props.clearListings();
+  }
 
   renderReviewForm() {
     const { currentUser, listing } = this.props;
