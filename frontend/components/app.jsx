@@ -6,7 +6,7 @@ import NavBarContainer from './nav_bar/nav_bar_container';
 import ListingsIndexContainer from './listings/listings_index_container';
 import ListingContainer from './listings/listing_container';
 import UserProfileContainer from './user/user_profile_container';
-import Home from '../components/home/home';
+import HomeContainer from '../components/home/home_container';
 import Footer from '../components/footer';
 import { ProtectedRoute } from '../util/route_util';
 import MapSearchContainer from './map/map_search_container';
@@ -30,7 +30,7 @@ const App = () => (
       <Route exact path="/listings/:listingId" component={ ListingContainer } />
       <ProtectedRoute exact path="/users/:userId" component={ UserProfileContainer } />
       <Route path="/discover" component={ MapSearchContainer } />
-      <Route path="/" component={ Home } />
+      <Route path="/" component={ HomeContainer } />
     </Switch>
 
     <Footer />

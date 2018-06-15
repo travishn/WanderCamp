@@ -8,6 +8,18 @@ class Home extends React.Component {
     window.scrollTo(0, 0);
   }
 
+  handleCategory(field) {
+    return (e) => this.props.receiveFilter(field)
+      .then( () => this.props.history.push('/discover'));
+  }
+
+  handleGroup(capacity) {
+    return (e) => this.props.receiveGroupFilter(20)
+      .then( () => this.props.history.push('/discover'));
+  }
+
+
+
   render() {
     return (
       <div className="home-container">
@@ -21,7 +33,7 @@ class Home extends React.Component {
 
               <div className="sub-search">
                 <Link className="or-text" to="/discover">Not sure where to look? Discover some camps!</Link>
-                {/* <p className="or-text">Not sure where to look? Discover some camps!</p> */}
+
                 <span>&#8594;</span>
               </div>
             </div>
@@ -34,6 +46,45 @@ class Home extends React.Component {
 
 
         <div className="home-categories">
+          <h2>Discover now...</h2>
+
+          <ul className="category-grid">
+            <li className="home-category">
+              <img src="" onClick={this.handleGroup(20)}></img>
+            </li>
+
+            <li className="home-category">
+              <img src="" onClick={this.handleCategory('glamping')}></img>
+            </li>
+
+            <li className="home-category">
+              <img src="" onClick={this.handleCategory('petFriendly')}></img>
+            </li>
+
+            <li className="home-category">
+              <img src=""></img>
+            </li>
+
+            <li className="home-category">
+              <img src=""></img>
+            </li>
+
+            <li className="home-category">
+              <img src=""></img>
+            </li>
+
+            <li className="home-category">
+              <img src=""></img>
+            </li>
+
+            <li className="home-category">
+              <img src=""></img>
+            </li>
+
+            <li className="home-category">
+              <img src=""></img>
+            </li>
+          </ul>
         </div>
       </div>
     );

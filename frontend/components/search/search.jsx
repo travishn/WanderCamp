@@ -16,7 +16,8 @@ class Search extends React.Component {
   }
   
   handleSubmit() {
-    this.props.searchListings(this.state.search).then( () => this.props.history.push('/discover'));
+    this.props.searchListings(this.state.search)
+      .then( () => this.props.history.push('/discover'));
   }
 
   render() {
