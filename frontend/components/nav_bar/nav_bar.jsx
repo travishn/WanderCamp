@@ -12,7 +12,7 @@ class NavBar extends React.Component {
               <Link className="default-pic" to={`/users/${currentUser.id}`}>
                 <img src={currentUser.imgUrl} />
               </Link>
-              <h2 className='logged-user'>Welcome, {currentUser.firstName}</h2>
+                <h2 className='logged-user'>Welcome, {currentUser.firstName}</h2>
             </div>
             <div className="home-session-div">
               <button className='home-session' onClick={logout}>Log Out</button>

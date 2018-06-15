@@ -55,11 +55,10 @@ class ListingsIndex extends React.Component {
       return (
         <main className="discover-container">
           <FilterContainer />
-
+          
           <section className="listing-index">
             {this.renderListingItem()}
           </section>
-
         </main>
       );
     }

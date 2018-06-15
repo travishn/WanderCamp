@@ -56,21 +56,56 @@ class Home extends React.Component {
           
           <div className="category-wrapper">
           <div className="category-grid">
-            <img className="home-category" src="https://res.cloudinary.com/emanon/image/upload/v1529029915/forest_building-31644.jpg" onClick={this.handleCategory('glamping')}></img>
-            <img className="home-category" src="https://res.cloudinary.com/emanon/image/upload/v1529031267/photo-1503088414719-16a89b27b122.jpg" onClick={this.handleCategory('beach')}></img>
-            <img className="home-category" src="https://res.cloudinary.com/emanon/image/upload/v1529027571/samuel-thompson-501755-unsplash.jpg" onClick={this.handleCategory('petFriendly')}></img>
+            <div className="category-holder">
+              <img className="home-category" src="https://res.cloudinary.com/emanon/image/upload/v1529029915/forest_building-31644.jpg" onClick={this.handleCategory('glamping')}></img>
+              <div className="home-text-container">
+                <p className="home-category-title" onClick={this.handleCategory('glamping')} className="home-category-title">Glamping</p>
+                <p className="options-near-me">Best options near me</p>
+              </div>
+            </div>
+
+            <div className="category-holder">
+              <img className="home-category" src="https://res.cloudinary.com/emanon/image/upload/v1529031267/photo-1503088414719-16a89b27b122.jpg" onClick={this.handleCategory('beach')}></img>
+              <div className="home-text-container">
+                <p className="home-category-title" onClick={this.handleCategory('beach')}>Beach camping</p>
+                <p className="options-near-me">Best options near me</p>
+              </div>
+            </div>
+
+            <div className="category-holder">
+              <img className="home-category" src="https://res.cloudinary.com/emanon/image/upload/v1529027571/samuel-thompson-501755-unsplash.jpg" onClick={this.handleCategory('petFriendly')}></img>
+              <div className="home-text-container">
+                <p className="home-category-title" onClick={this.handleCategory('petFriendly')}>Pet friendly camping</p>
+                <p className="options-near-me">Best options near me</p>
+              </div>
+            </div>
 
             <Link className="home-category" to={`/listings/${listings[0].id}`}>
               <img className="category-image"src={listings[0].photos[0]["img_url"]}></img>
-              <h3></h3>
+
+              <div className="home-text-container">
+                <p className="home-category-title">Starry night camp</p>
+                <p className="options-near-me">California</p>
+              </div>
             </Link>
+
             <Link className="home-category"to={`/listings/${listings[1].id}`}>
-              <img className="category-image"src={listings[1].photos[0]["img_url"]}></img>
+              <img className="category-image" src={listings[1].photos[1]["img_url"]}></img>
+
+              <div className="home-text-container">
+                <p className="home-category-title">Crystal cove camp</p>
+                <p className="options-near-me">California</p>
+              </div>
             </Link>
-            
-            <Link className="home-category"to={`/listings/${listings[2].id}`}>
-              <img className="category-image"src={listings[2].photos[0]["img_url"]}></img>
-            </Link>
+
+          <Link className="home-category"to={`/listings/${listings[2].id}`}>
+            <img className="category-image"src={listings[2].photos[1]["img_url"]}></img>
+
+              <div className="home-text-container">
+                <p className="home-category-title">Starry night camp</p>
+                <p className="options-near-me">California</p>
+              </div>
+          </Link>
             
             <img src=""></img>
             

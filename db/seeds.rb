@@ -121,8 +121,8 @@ casita = Listing.create({
   pets_allowed: false,
   terrain: 'Mountain',
   price: 150,
-  lon: 37.309737,
-  lat: -122.307413
+  lon: -122.307413,
+  lat: 37.309737
 })
 
 ListingPhoto.destroy_all
@@ -141,19 +141,49 @@ ListingPhoto.create({
   img_url: "https://res.cloudinary.com/emanon/image/upload/v1528957645/photo-1473445145893-cee4ea284d29.jpg"
 })
 
+
 ListingPhoto.create({
   listing_id: ocean_view.id,
-  img_url: "http://res.cloudinary.com/emanon/image/upload/ar_16:9,c_fill,e_sharpen,g_auto,w_720/v1528489179/photo-1465865523598-a834aac5d3fa.jpg"
+  img_url: "https://res.cloudinary.com/emanon/image/upload/v1529049089/ymhadalnx2ddqnj6ox2a.jpg"
+})
+
+ListingPhoto.create({
+  listing_id: ocean_view.id,
+  img_url: "https://res.cloudinary.com/emanon/image/upload/v1529052158/s3pognfc4j0eujfmoo8z.jpg"
+})
+
+ListingPhoto.create({
+  listing_id: ocean_view.id,
+  img_url: "https://res.cloudinary.com/emanon/image/upload/v1529048988/z6021gbgx75efgpqawqh.jpg"
+})
+
+
+ListingPhoto.create({
+  listing_id: crystal.id,
+  img_url: "https://res.cloudinary.com/emanon/image/upload/v1529049328/photo-1460500063983-994d4c27756c.jpg"
 })
 
 ListingPhoto.create({
   listing_id: crystal.id,
-  img_url: "http://res.cloudinary.com/emanon/image/upload/c_scale,h_480,w_720/v1528483745/eyaifnjbn1cwphxlad8j.jpg"
+  img_url: "https://res.cloudinary.com/emanon/image/upload/v1529049431/photo-1478296025124-90b11a7a36ee.jpg"
+})
+
+ListingPhoto.create({
+  listing_id: crystal.id,
+  img_url: "https://res.cloudinary.com/emanon/image/upload/v1529049273/photo-1495131717858-2d2e62c41fe7.jpg"
 })
 
 ListingPhoto.create({
   listing_id: casita.id,
-  img_url: "http://res.cloudinary.com/emanon/image/upload/c_scale,h_480,w_720/v1528489573/photo-1484960055659-a39d25adcb3c.jpg"
+  img_url: "https://res.cloudinary.com/emanon/image/upload/v1529050752/photo-1508098295130-7fed82579ab1.jpg"
+})
+ListingPhoto.create({
+  listing_id: casita.id,
+  img_url: "https://res.cloudinary.com/emanon/image/upload/v1529030814/photo-1414016642750-7fdd78dc33d9.jpg"
+})
+ListingPhoto.create({
+  listing_id: casita.id,
+  img_url: "https://res.cloudinary.com/emanon/image/upload/v1529049785/photo-1477951324676-cd9dab85abd5.jpg"
 })
 
 Booking.destroy_all
