@@ -18,7 +18,6 @@ const mapDispatchToProps = (dispatch) => ({
   receiveFilter: filter => dispatch(receiveFilter(filter)),
   receiveGroupFilter: capacity => dispatch(receiveGroupFilter(capacity)),
   fetchCategoryListings: () => dispatch(fetchCategoryListings())
-
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Home);

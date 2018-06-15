@@ -22,7 +22,9 @@ class Home extends React.Component {
 
 
   render() {
-    debugger;
+    const { listings } = this.props;
+    if (listings.length === 0) return null;
+
     return (
       <div className="home-container">
         <div className="home-header">
@@ -48,45 +50,32 @@ class Home extends React.Component {
 
 
         <div className="home-categories">
-          <h2>Discover now...</h2>
+          <h2 className="discover-camping">Discover camping...</h2>
 
-          <ul className="category-grid">
-            <li className="home-category">
-              <img src="" onClick={this.handleGroup(20)}></img>
-            </li>
+          <div className="category-grid">
+              {/* <img className="home-category" src="" onClick={this.handleGroup(20)}></img>
+              <img className="home-category" src="" onClick={this.handleCategory('glamping')}></img>
+              <img className="home-category" src="" onClick={this.handleCategory('petFriendly')}></img> */}
 
-            <li className="home-category">
-              <img src="" onClick={this.handleCategory('glamping')}></img>
-            </li>
-
-            <li className="home-category">
-              <img src="" onClick={this.handleCategory('petFriendly')}></img>
-            </li>
-
-            <li className="home-category">
+              <Link className="home-category" to={`/listings/${listings[0].id}`}>
+                <img src={listings[0].photos[0]["img_url"]}></img>
+                <h3></h3>
+              </Link>
+              <Link className="home-category"to={`/listings/${listings[1].id}`}>
+                <img src={listings[1].photos[0]["img_url"]}></img>
+              </Link>
+              
+              <Link className="home-category"to={`/listings/${listings[2].id}`}>
+                <img src={listings[2].photos[0]["img_url"]}></img>
+              </Link>
+              
               <img src=""></img>
-            </li>
-
-            <li className="home-category">
+              
               <img src=""></img>
-            </li>
-
-            <li className="home-category">
+              
               <img src=""></img>
-            </li>
-
-            <li className="home-category">
-              <img src=""></img>
-            </li>
-
-            <li className="home-category">
-              <img src=""></img>
-            </li>
-
-            <li className="home-category">
-              <img src=""></img>
-            </li>
-          </ul>
+              
+          </div>
         </div>
       </div>
     );

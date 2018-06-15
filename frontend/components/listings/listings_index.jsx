@@ -50,7 +50,6 @@ class ListingsIndex extends React.Component {
     }
     
     currentListings = this.applyFilters(currentListings);
-    // debugger;
 
     return currentListings.map(
       listing => <ListingsIndexItem key={listing.id}
