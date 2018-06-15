@@ -51,35 +51,35 @@ class Home extends React.Component {
 
         <div className="home-categories">
           <h2 className="discover-camping">Discover camping...</h2>
-
+          
+          <div className="category-wrapper">
           <div className="category-grid">
-              {/* <img className="home-category" src="" onClick={this.handleGroup(20)}></img>
-              <img className="home-category" src="" onClick={this.handleCategory('glamping')}></img>
-              <img className="home-category" src="" onClick={this.handleCategory('petFriendly')}></img> */}
+            <img className="home-category" src="https://res.cloudinary.com/emanon/image/upload/v1529029915/forest_building-31644.jpg" onClick={this.handleCategory('glamping')}></img>
+            <img className="home-category" src="https://res.cloudinary.com/emanon/image/upload/v1529031267/photo-1503088414719-16a89b27b122.jpg" onClick={this.handleCategory('beach')}></img>
+            <img className="home-category" src="https://res.cloudinary.com/emanon/image/upload/v1529027571/samuel-thompson-501755-unsplash.jpg" onClick={this.handleCategory('petFriendly')}></img>
 
-              <Link className="home-category" to={`/listings/${listings[0].id}`}>
-                <img src={listings[0].photos[0]["img_url"]}></img>
-                <h3></h3>
-              </Link>
-              <Link className="home-category"to={`/listings/${listings[1].id}`}>
-                <img src={listings[1].photos[0]["img_url"]}></img>
-              </Link>
-              
-              <Link className="home-category"to={`/listings/${listings[2].id}`}>
-                <img src={listings[2].photos[0]["img_url"]}></img>
-              </Link>
-              
-              <img src=""></img>
-              
-              <img src=""></img>
-              
-              <img src=""></img>
-              
+            <Link className="home-category" to={`/listings/${listings[0].id}`}>
+              <img className="category-image"src={listings[0].photos[0]["img_url"]}></img>
+              <h3></h3>
+            </Link>
+            <Link className="home-category"to={`/listings/${listings[1].id}`}>
+              <img className="category-image"src={listings[1].photos[0]["img_url"]}></img>
+            </Link>
+            
+            <Link className="home-category"to={`/listings/${listings[2].id}`}>
+              <img className="category-image"src={listings[2].photos[0]["img_url"]}></img>
+            </Link>
+            
+            <img src=""></img>
+            
+            <img src=""></img>
+            
+            <img src=""></img>
           </div>
         </div>
       </div>
+    </div>
     );
-
   }
 }
 
