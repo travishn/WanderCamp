@@ -5,6 +5,10 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+# CREDIT FOR RANDOM RADIUS LAT/LON GENERATOR:
+# https://stackoverflow.com/questions/43195899/how-to-generate-random-coordinates-within-a-circle-with-specified-radius
+
 def random_point_in_disk(max_radius)
   r = max_radius * rand**0.5
   theta = rand * 2 * Math::PI
