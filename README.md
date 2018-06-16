@@ -25,7 +25,7 @@ I plan to continue making improvements over time.
 ### Reviews
 ![index](https://res.cloudinary.com/emanon/image/upload/v1529103018/Screen_Shot_2018-06-15_at_3.48.14_PM.png)
 * Users can only create reviews for listings that they have previously booked
-* Users who are not logged in are restricted for creating a review
+* Users who are not logged in are restricted from creating a review
 * Reviews can be updated and deleted based on whether the review belongs to the user
 
 
@@ -63,18 +63,31 @@ class Modal extends React.Component {
 
 ### Edit Form and Review Toggle
 ```javascript
-constructor(props) {
-    super(props);
-    this.state = { selected: false, review: {
-      id: props.review.id, listing_id: props.currentListing.id, 
-      author_id: props.currentUser.id, comment: props.review.comment
-      } 
-    };
+  handleSubmit() {
+    this.props.searchListings(this.state.search)
+      .then(this.props.history.push('/discover'));
   }
+```
 
-  toggleEdit() {
-    this.setState( {selected: !this.state.selected} );
-  }
+```ruby
+  def self.in_bounds(bounds) 
+    self.where('lat < ?', bounds[:northEast][:lat])
+      .where('lat > ?', bounds[:southWest][:lat])
+      .where('lon < ?', bounds[:northEast][:lon])
+      .where('lon > ?', bounds[:southWest][:lon])
+  end
+```
+```javascript
+def search
+    bounds = CITY_HASH[params[:search].to_sym]
+    @listings = bounds ? Listing.in_bounds(bounds) : Listing.all.includes(:photos)
+
+    if @listings
+      render :index
+    else
+      render json: ['Please try another city']
+    end
+  end
 ```
 
 ## Technologies
