@@ -77,7 +77,7 @@ class Modal extends React.Component {
       .where('lon > ?', bounds[:southWest][:lon])
   end
 ```
-```javascript
+```ruby
 def search
     bounds = CITY_HASH[params[:search].to_sym]
     @listings = bounds ? Listing.in_bounds(bounds) : Listing.all.includes(:photos)
