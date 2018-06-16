@@ -13,7 +13,7 @@ class ReviewForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-
+    
     const { currentListing, currentUser } = this.props;
     this.props.createListingReview(this.state)
       .then( () => this.setState( {listing_id: currentListing.id, 

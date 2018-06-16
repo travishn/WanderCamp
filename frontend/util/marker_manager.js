@@ -20,8 +20,6 @@ class MarkerManager {
 
     listings.filter( listing => !this.markers[listing.id])
       .forEach(newListing => this.createMarkerFromListing(newListing));
-
-    console.log(this.markers);
   }
 }
 

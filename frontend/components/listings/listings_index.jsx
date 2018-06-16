@@ -26,7 +26,7 @@ class ListingsIndex extends React.Component {
     if (filters['desert']) filteredListings = filteredListings.filter(listing => listing.terrain === 'Desert');
 
     filteredListings = filteredListings.filter(listing => listing.price <= filters['price']);
-    filteredListings = filteredListings.filter(listing => listing.capacity > filters['capacity']);
+    filteredListings = filteredListings.filter(listing => listing.capacity >= filters['capacity']);
     return filteredListings;
   }
 

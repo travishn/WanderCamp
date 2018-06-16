@@ -6,7 +6,7 @@ class ReviewsIndexItem extends React.Component {
     super(props);
     this.state = { selected: false, review: {
       id: props.review.id, listing_id: props.currentListing.id, 
-      author_id: props.currentUser.id, comment: props.review.comment
+      author_id: props.review.authorId, comment: props.review.comment
       } 
     };
   }
