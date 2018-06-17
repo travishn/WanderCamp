@@ -28,7 +28,7 @@ end
 location_hash = {}
 
 6.times do |n|
-  location_hash[n] = random_location(-122.440653, 37.754734, 2000)
+  location_hash[n] = random_location(-122.440653, 37.754734, 4000)
 end
 
 User.destroy_all
@@ -297,8 +297,8 @@ Booking.create({
   listing_id: starry.id,
   guest_id: demo_user.id,
   num_guests: 4,
-  start_date: Date.new(2018, 6, 10),
-  end_date: Date.new(2018, 6, 12)
+  start_date: Date.new(2018, 4, 10),
+  end_date: Date.new(2018, 4, 12)
 })
 
 Booking.create({

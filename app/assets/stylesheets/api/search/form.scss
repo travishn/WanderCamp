@@ -13,6 +13,7 @@
   .home-text {
     padding: 20px 0px 55px 0px;
     width: 80%;
+    font-size: 18px;
   }
 
   .search-form {
@@ -69,15 +70,17 @@
   width: 33%;
   height: 100%;
   color: white;
-  // background: #00CD9E;
-  background: #00d3a2;
-  font-size: 16px;
+  // background: #00d3a2;
+  background: #40d9ac;
+  font-size: 18px;
   font-weight: 500;
+  letter-spacing: 0.5px;
   transition: all 0.5s;
 }
 
 .search-button:hover {
-  background: #00bc8a
+  // background: #00bc8a
+  background: #37c697;
 }
 
 .search-form {

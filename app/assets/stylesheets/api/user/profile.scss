@@ -1,8 +1,24 @@
-.upcoming-trips-container {
+.user-profile-container {
   display: flex;
   flex-direction: column;
   margin-top: 98px;
+  justify-content: center;
+}
+
+.upcoming-trips-container {
+  display: flex;
+  flex-direction: column;
   align-items: center;
+}
+
+.past-trips-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.no-trips-container {
+  height: 600px;
 }
 
 .bookings-container {
@@ -11,7 +27,20 @@
   line-height: 1.42;
   color: #333333;
   box-sizing: border-box;
-  height: 100%;
+  height: 50%;
+  display: grid;
+  // grid-template-columns: 50% 50%;
+  grid-template-columns: 33% 33% 33%;
+  padding-bottom: 50px;
+}
+
+.past-bookings-container {
+  display: grid;
+  width: 1080px;
+  line-height: 1.42;
+  color: #333333;
+  box-sizing: border-box;
+  height: 50%;
   display: grid;
   // grid-template-columns: 50% 50%;
   grid-template-columns: 33% 33% 33%;
@@ -53,6 +82,27 @@
 }
 
 .upcoming-header {
-  font-size: 36px;
+  font-size: 30px;
   padding-bottom: 10px;
+  font-weight: 500;
+  color: #333333;
+}
+
+.no-trips-text {
+  font-size: 24px;
+  font-weight: 600;
+  margin-left: 28px;
+  text-align: center;
+  color: #333333;
+  width: 40%;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #a1a1a1;
+}
+
+.booking-details {
+
+  p {
+    padding-bottom: 10px;
+  }
 }

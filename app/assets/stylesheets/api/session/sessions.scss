@@ -59,6 +59,11 @@
   background: #40d9ac;
   color: white;
   font-size: 16px;
+  transition: all 0.5s;
+}
+
+.session-submit:hover {
+  background: #3ac99e;
 }
 
 .change-form {
