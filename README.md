@@ -32,6 +32,8 @@ I plan to continue making improvements over time.
 ## Code Highlights
 ### Modal Display
 
+A single modal component was used for all session-related tasks. Based on whether the global state's modal value was 'login', 'signup', or null, a render of the login form, sign up form, or an empty div would be rendered. We change this value via modal dispatch actions to its dedicated reducer.
+
 ```javascript
 class Modal extends React.Component {
   render() {
@@ -61,7 +63,9 @@ class Modal extends React.Component {
 }
 ```
 
-### Edit Form and Review Toggle
+### Search within Radius
+The search bar utilizes two coordinates that determines the city's radius and queries for all of the listings within that radius. It then updates the searchedListings slice of state and is utilized in the listings index to display only the searched listings.
+
 ```javascript
   handleSubmit() {
     this.props.searchListings(this.state.search)
@@ -91,14 +95,22 @@ def search
 ```
 
 ## Technologies
- * Ruby on Rails
- * React
- * Redux
- * jQuery
- * jBuilder
- * BCrypt
+Because this project was a smaller-scale portfolio piece being built in a relatively short timeframe, convenience and speed were prioritized over scalability. For this reason, the following technologies were determined to be suitable for the predicted load.
+
+React was used on the front-end in combination with the state management library/pattern, Redux, to create a singe-page web application that simply renders specific components on the page that have changed. This brings about a much better UX as the entire page does not need to render every time something changes.
+
+### Frontend
+ * Framework: React/Redux (v16.4.0/4.0.0)
+ * Styling: SCSS
+ ### Backend
+ * Framework: Ruby on Rails (v5.2.0)
+ * Database: PostgreSQL (v10.3)
+ * User Authentication: Created using BCrypt (v3.1.12)
+ * Other: Google Maps API
+
  
 ## Future Additions
 * Implement photo slider utilizing react carousel slick for listings
-* Implement more interactive google map api
+* Implement filters that change google map markers
 * Implement booking form that slides with browser
+* Implement CSS animations

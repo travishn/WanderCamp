@@ -3,6 +3,7 @@ import ListingsIndexContainer from '../listings/listings_index_container';
 import ListingsMap from './listings_map';
 
 class MapSearch extends React.Component {
+  
 
   render() {
     const { listings, fetchListings } = this.props;

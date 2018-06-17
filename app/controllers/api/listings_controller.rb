@@ -26,7 +26,7 @@ class Api::ListingsController < ApplicationController
     if @listings
       render :index
     else
-      render json: ['Please try another city']
+      render json: ['No search results', 'Please try another location']
     end
   end
 end
