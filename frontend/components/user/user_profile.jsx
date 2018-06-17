@@ -38,7 +38,9 @@ class UserProfile extends React.Component {
               return (
                 <li key={`booking-${booking.id}`} className="booking-item">
                   <div>
-                    <img src={ listingPhotos[booking.photoIds[0]]['imgUrl'] } className="booking-logo" />
+                    <Link to={`/listings/${booking.listingId}`}>
+                      <img src={ listingPhotos[booking.photoIds[0]]['imgUrl'] } className="booking-logo" />
+                    </Link>
                   </div>
 
                   <div className="booking-details">
@@ -77,7 +79,9 @@ class UserProfile extends React.Component {
               return (
                 <li key={`booking-${pastBooking.id}`} className="booking-item">
                   <div>
-                    <img src={listingPhotos[pastBooking.photoIds[0]]['imgUrl']} className="booking-logo" />
+                    <Link to={`/listings/${pastBooking.listingId}`}>
+                      <img src={listingPhotos[pastBooking.photoIds[0]]['imgUrl']} className="booking-logo" />
+                    </Link>
                   </div>
 
                   <div className="booking-details">
