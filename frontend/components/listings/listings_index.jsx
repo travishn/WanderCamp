@@ -48,20 +48,15 @@ class ListingsIndex extends React.Component {
 
   render() {
     const { listingPhotos } = this.props;
-
-    if (listingPhotos === {}) {
-      return null;
-    } else {
-      return (
-        <main className="discover-container">
-          <FilterContainer />
-          
-          <section className="listing-index">
-            {this.renderListingItem()}
-          </section>
-        </main>
-      );
-    }
+    return (
+      <main className="discover-container">
+        <FilterContainer />
+        
+        <section className="listing-index">
+          {this.renderListingItem()}
+        </section>
+      </main>
+    );
   }
 }
 

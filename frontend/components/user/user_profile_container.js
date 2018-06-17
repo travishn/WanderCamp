@@ -11,6 +11,7 @@ export const mapStateToProps = (state) => {
   const bookings = state.entities.bookings;
   const listingPhotos = state.entities.listingPhotos;
   const currentDate = new Date().getTime();
+  
   return {
     currentUser,
     bookings,
