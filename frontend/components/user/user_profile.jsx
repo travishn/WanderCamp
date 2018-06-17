@@ -100,18 +100,15 @@ class UserProfile extends React.Component {
   }
 
   render() {
-    const { bookings, listingPhotos, currentDateSum } = this.props;
+    const { bookings, listingPhotos, currentDate } = this.props;
     const bookingsInfo = Object.values(bookings);
     const upcoming = [];
     const past = [];
 
     bookingsInfo.forEach(booking => {
-      const bookingDate = booking.startDate;
-      const bookingDateSum = parseInt(bookingDate.slice(0, 4))
-        + parseInt(bookingDate.slice(5, 7))
-        + parseInt(bookingDate.slice(8, 10));
+      const bookingDate = new Date(booking.startDate).getTime();
 
-      if (currentDateSum <= bookingDateSum) upcoming.push(booking);
+      if (currentDate <= bookingDate) upcoming.push(booking);
       else past.push(booking);
     });
 
