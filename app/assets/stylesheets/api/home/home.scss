@@ -16,7 +16,7 @@
 .home-header {
   display: flex;
   align-content: space-between;
-  padding-bottom: 175px;
+  padding-bottom: 2.8em;
   height: 580px;
 
   .search-container {
@@ -148,4 +148,23 @@
   width: 70%;
   margin-top: 90px;
   grid-template-columns: repeat(3, 1fr);
+}
+
+#figure-text {
+  color: #333333;
+  font-weight: 600;
+  font-size: 14px;
+  padding-right: 5px;
+}
+
+#figure-text-container {
+  padding-top: 7px;
+  display: flex;
+  justify-content: flex-end;
+
+  span {
+    font-size: 14px;
+    padding-right: 7px;
+    color: #a1a1a1;
+  }
 }

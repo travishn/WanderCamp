@@ -48,6 +48,9 @@ class Home extends React.Component {
 
           <figure>
             <img className="home-picture"src="https://res.cloudinary.com/emanon/image/upload/v1528938749/dbpwvyn3mr8nidsplivk.jpg" />
+            <div id="figure-text-container">
+              <p id="figure-text">The Rose Garden</p><span>hosted by Sol in Washington</span>
+            </div>
           </figure>
         </div>
 
