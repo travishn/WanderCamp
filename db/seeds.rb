@@ -220,7 +220,7 @@ ListingPhoto.create({
 
 ListingPhoto.create({
   listing_id: starry.id,
-  img_url: "http://res.cloudinary.com/emanon/image/upload/c_scale,h_480,w_720/v1528483203/rico-larroque-528914-unsplash.jpg"
+  img_url: "https://res.cloudinary.com/emanon/image/upload/c_scale,h_480,w_720/v1528483203/rico-larroque-528914-unsplash.jpg"
 })
 
 ListingPhoto.create({
