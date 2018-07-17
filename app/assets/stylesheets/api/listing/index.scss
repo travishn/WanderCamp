@@ -1,8 +1,8 @@
 .listing-index {
   height: min-content;
-  width: 660px;
+  width: 720px;
   overflow-y: scroll;
-  height: 850px;
+  height:750px;
   line-height: 1.42;
   color: #333333;
   box-sizing: border-box;
@@ -14,11 +14,9 @@
 .discover-container {
   display: flex;
   // width: 100vw;
-  height: 850px;
   justify-content: flex-end;
-  position: relative;
+  // position: relative;
   padding-top: 70px;
-  padding-bottom: 100px;
 
   .listing-filter {
     overflow-y: auto;

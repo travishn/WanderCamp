@@ -33,7 +33,7 @@ const App = () => (
       <Route path="/" component={ HomeContainer } />
     </Switch>
 
-    <Footer />
+    {/* <Footer /> */}
   </main>
 );
 
