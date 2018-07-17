@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Footer from '../../components/footer';
 
 class UserProfile extends React.Component {
   componentWillReceiveProps(nextProps) {
@@ -116,7 +117,9 @@ class UserProfile extends React.Component {
       <div className="user-profile-container">
         {this.renderUpcomingBookings(upcoming)}
         {this.renderPastBookings(past)}
+        <Footer />
       </div>
+
     );
   }
 }

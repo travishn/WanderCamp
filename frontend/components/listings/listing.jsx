@@ -4,6 +4,7 @@ import CreateReviewFormContainer from '../reviews/create_review_form_container';
 import ReviewsIndexContainer from '../reviews/reviews_index_container';
 import { fetchUserBookings } from '../../actions/booking_actions';
 import ImageSlider from './image_slider';
+import Footer from '../../components/footer';
 
 class Listing extends React.Component {
 
@@ -173,6 +174,8 @@ class Listing extends React.Component {
               <BookingFormContainer />
             </div>
           </section>
+
+          <Footer />
         </main>
       );
     }

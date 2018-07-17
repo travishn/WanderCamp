@@ -1,7 +1,7 @@
 .listing-container {
   display: flex;
   flex-direction: column;
-  padding: 80px 0px;
+  padding: 80px 0 0 0;
   color: #333333;
   // height: 92vh;
 }
@@ -11,6 +11,7 @@
   position: relative;
   width: 65vw;
   margin: 0 auto;
+  padding-bottom: 80px;
 
   .listing-content {
     width: 70%;
