@@ -9,7 +9,6 @@ import {
 } from '../../actions/listing_actions';
 import Home from './home';
 
-
 const mapStateToProps = (state) => ({
   filters: state.ui.filters,
   listings: Object.values(state.entities.listings)
