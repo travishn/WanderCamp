@@ -2,12 +2,11 @@
 
 [WanderCamp Live](https://wandercamp.herokuapp.com/)
 
-WanderCamp is a full-stack web application inspired by HipCamp. The application allows users to book unique 
-experiences all over the world to satisfy their wanderlust. 
+WanderCamp is a full-stack web application inspired by HipCamp. The application allows users to discover and book unique camping experiences all over the world to satisfy their wanderlust. 
 
-WanderCamp is built on Ruby on Rails and is managed with a PostgreSQL database. It utilizes React and Redux
+WanderCamp is built on Ruby on Rails, managed with a PostgreSQL database, and utilizes a React and Redux
 architecture for the frontend. The application was built within a two-week timeframe, though 
-I plan to continue making improvements over time.
+I plan to continue adding features over time.
 
 ## Features
 ### Search
