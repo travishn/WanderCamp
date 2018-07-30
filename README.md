@@ -111,5 +111,5 @@ React was used on the front-end in combination with the state management library
 ## Future Additions
 * Implement photo slider utilizing react carousel slick for listings
 * Implement filters that change google map markers
-* Implement booking form that slides with browser
-* Implement CSS animations
+* Implement media queries to ensure optimal user experience for various screen sizes
+* Implement CSS animations for page loading and modal
