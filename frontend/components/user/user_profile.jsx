@@ -105,9 +105,9 @@ class UserProfile extends React.Component {
     const past = [];
 
     bookingsInfo.forEach(booking => {
-      const bookingDate = new Date(booking.startDate).getTime();
+      const bookingDate = new Date(booking.startDate).toJSON();
 
-      if (currentDate <= bookingDate) upcoming.push(booking);
+      if (Date.parse(currentDate.slice(0, 10)) <= Date.parse(bookingDate.slice(0, 10))) upcoming.push(booking);
       else past.push(booking);
     });
 

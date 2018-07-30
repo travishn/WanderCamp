@@ -10,7 +10,7 @@ export const mapStateToProps = (state) => {
   const currentUser = state.entities.users[state.session.id] || {};
   const bookings = state.entities.bookings;
   const listingPhotos = state.entities.listingPhotos;
-  const currentDate = new Date().getTime();
+  const currentDate = new Date().toJSON();
   
   return {
     currentUser,
