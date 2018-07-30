@@ -10,15 +10,15 @@
   width: 95%;
   margin: 0 auto;
   background: white;
-  height: 50vh;
+  height: 45vh;
 
   // // Height of the carousel and Changes position of arrow of react-slick
   .slick-list, .slick-slider {
-    height: 50vh;
+    height: 45vh;
   }
 
   .slick-list {
-    height: 50vh;
+    height: 45vh;
   }
 
   // Slider photo containers
@@ -30,7 +30,7 @@
   img {
     // width set to auto to occupy all available horizontal space within its containing block
     width: auto;
-    height: 50vh;
+    height: 45vh;
   }
 
   .slick-prev:before,
