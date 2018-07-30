@@ -15,7 +15,8 @@ class Search extends React.Component {
     return (e) => this.setState( {[field]: e.target.value} );
   }
   
-  handleSubmit() {
+  handleSubmit(e) {
+    e.preventDefault();
     this.props.searchListings(this.state.search)
       .then(this.props.history.push('/discover'));
   }
@@ -25,7 +26,7 @@ class Search extends React.Component {
     
     return (
       
-      <form onSubmit={() => this.handleSubmit()} className="search-form">
+      <form onSubmit={(e) => this.handleSubmit(e)} className="search-form">
         <input
           value={this.state.search}
           onChange={this.handleChange('search')}
