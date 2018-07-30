@@ -66,10 +66,8 @@ class Listing extends React.Component {
     } else {
       return (
         <main className="listing-container">
-          {/* <section className="listing-photos"> */}
-            {this.renderPhotos()}
-          {/* </section> */}
-          {/* <ImageSlider photos={listing.photos}/> */}
+          {/* {this.renderPhotos()} */}
+          <ImageSlider photos={listing.photos}/>
 
           <section className="listing-box">
             <div className="listing-content">

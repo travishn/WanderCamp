@@ -3,7 +3,47 @@
   flex-direction: column;
   padding: 80px 0 0 0;
   color: #333333;
-  // height: 92vh;
+}
+
+// Carousel container
+.slider-container {
+  width: 95%;
+  margin: 0 auto;
+  background: white;
+  height: 50vh;
+
+  // // Height of the carousel and Changes position of arrow of react-slick
+  .slick-list, .slick-slider {
+    height: 50vh;
+  }
+
+  .slick-list {
+    height: 50vh;
+  }
+
+  // Slider photo containers
+  .slick-slide {
+    padding: 6px;
+  }
+
+  // The actual listing images
+  img {
+    // width set to auto to occupy all available horizontal space within its containing block
+    width: auto;
+    height: 50vh;
+  }
+
+  .slick-prev:before,
+  .slick-next:before {
+    color: #333333;
+    font-size: 24px;
+    font-family: 'slick';
+  }
+  
+  .slick-prev:hover:before,
+  .slick-next:hover:before {
+    color: #40d9ac;
+  }
 }
 
 .listing-box {
@@ -12,6 +52,7 @@
   width: 65vw;
   margin: 0 auto;
   padding-bottom: 80px;
+  padding-top: 25px;
 
   .listing-content {
     width: 70%;
