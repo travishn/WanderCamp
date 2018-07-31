@@ -6,8 +6,7 @@ class Modal extends React.Component {
   animateOut() {
     const { closeModal } = this.props;
     const targetEl = document.querySelector('.modal-child')
-    targetEl.classList.remove('slideInDown');
-    targetEl.classList.add('fadeOutUp');
+    targetEl.className = 'modal-child animated fadeOutUp'
 
     window.setTimeout(() => {
       closeModal();

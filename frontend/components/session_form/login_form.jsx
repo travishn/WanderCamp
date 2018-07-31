@@ -9,6 +9,7 @@ class LoginForm extends React.Component {
     };
 
     this.animateOut = this.animateOut.bind(this);
+    this.animateForm = this.animateForm.bind(this);
   }
 
   handleChange(field) {
@@ -22,8 +23,6 @@ class LoginForm extends React.Component {
       this.animateOut();
     }), (err) => {return});
   }
-
-
 
   handleDemoLogin(e) {
     e.preventDefault();
@@ -52,12 +51,19 @@ class LoginForm extends React.Component {
   animateOut() {
     const { closeModal } = this.props;
     const targetEl = document.querySelector(".modal-child");
-    targetEl.classList.remove("slideInDown");
-    targetEl.classList.add("fadeOutUp");
+    targetEl.className = "modal-child animated fadeOutUp";
 
     window.setTimeout(() => {
       closeModal();
     }, 500);
+  }
+
+  animateForm(e) {
+    e.preventDefault();
+    const { openModal } = this.props;
+    const targetEl = document.querySelector('.modal-child')
+    targetEl.className = 'modal-child animated flipInY';
+    openModal('signup');
   }
 
   componentWillUnmount() {
@@ -103,7 +109,10 @@ class LoginForm extends React.Component {
           <p className="change-form">Don't have a Wandercamp account?</p>
 
           <div className="form-options-container">
-            {this.props.changeForm}
+            {/* {this.props.changeForm} */}
+            <button className="form-option" onClick={(e) => this.animateForm(e)}>
+              Sign Up
+            </button>
             <p className="in-between">|</p>
             <button
               className="form-option"

@@ -10,12 +10,22 @@ class SignUpForm extends React.Component {
       password: '',
       zipcode: ''
       };
+
+    this.animateForm = this.animateForm.bind(this);
     
   }
 
   handleSubmit(e) {
     e.preventDefault();
     this.props.signup(this.state).then((payload) => this.props.closeModal());
+  }
+
+  animateForm(e) {
+    e.preventDefault();
+    const { openModal } = this.props;
+    const targetEl = document.querySelector('.modal-child')
+    targetEl.className = 'modal-child animated flipInX'
+    openModal('login');
   }
 
   
@@ -83,7 +93,9 @@ class SignUpForm extends React.Component {
 
           <button type="submit" className="session-submit">Join WanderCamp</button>
           <p className="change-form">Already have a Wandercamp account?</p>
-          {this.props.changeForm}
+          <button className='form-option' onClick={(e) => this.animateForm(e)}>
+            Log In
+          </button>
         </form>
       </div>
     );
