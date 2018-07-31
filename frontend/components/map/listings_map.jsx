@@ -38,7 +38,6 @@ class ListingsMap extends React.Component {
 
   componentDidUpdate() {
     const filteredListings = this.applyFilters(this.props.listings);
-    console.log(filteredListings);
     this.MarkerManager.updateMarkers(filteredListings);
   }
 
