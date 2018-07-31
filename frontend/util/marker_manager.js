@@ -15,11 +15,22 @@ class MarkerManager {
   }
 
   updateMarkers(listings) {
-    // const listingsObject = {};
-    // listings.forEach( listing => listingsObject[listing.id] = listing);
+    // Instantiate an obj that holds all of the filtered listings (passed from listings map)
+    const listingsObject = {};
+    listings.forEach( listing => listingsObject[listing.id] = listing);
 
+    //Check whether any new filtered listings have a marker or not - if not, create one for them
     listings.filter( listing => !this.markers[listing.id])
       .forEach(newListing => this.createMarkerFromListing(newListing));
+
+    // Filters out all the markers that are not apart of listingsObject and removes them from markers state
+    Object.keys(this.markers).filter(listingId => !listingsObject[listingId])
+      .forEach((listingId) => this.removeMarker(this.markers[listingId]))
+  }
+
+  removeMarker(marker) {
+    this.markers[marker.listingId].setMap(null);
+    delete this.markers[marker.listingId];
   }
 }
 

@@ -3,7 +3,8 @@ import { fetchListings } from '../../actions/listing_actions';
 import MapSearch from './map_search';
 
 const mapStateToProps = (state) => ({
-  listings: Object.values(state.entities.listings)
+  listings: Object.values(state.entities.listings),
+  filters: state.ui.filters
 });
 
 const mapDispatchToprops = (dispatch) => ({
