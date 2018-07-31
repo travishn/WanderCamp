@@ -2,7 +2,7 @@ class MarkerManager {
   constructor(map) {
     this.map = map;
     this.markers = {};
-    this.renderInfo = this.renderInfo.bind(this);
+    // this.createMarkerFromListing = this.createMarkerFromListing.bind(this);
   }
 
   renderInfo(listing) {
@@ -24,7 +24,8 @@ class MarkerManager {
       listingId: listing.id,
       clicked: false,
       infoWindow: markerInfo,
-      icon: 'http://res.cloudinary.com/emanon/image/upload/c_scale,w_50/v1533004096/tent-marker.png'
+      icon: 'http://res.cloudinary.com/emanon/image/upload/c_scale,w_50/v1533004096/tent-marker.png',
+      animation: google.maps.Animation.DROP
     });
 
     this.markers[marker.listingId] = marker;
@@ -66,7 +67,10 @@ class MarkerManager {
 
     //Check whether any new filtered listings have a marker or not - if not, create one for them
     listings.filter( listing => !this.markers[listing.id])
-      .forEach(newListing => this.createMarkerFromListing(newListing));
+      .forEach(newListing => {
+        this.createMarkerFromListing(newListing)
+        // window.setTimeout(() => this.createMarkerFromListing(newListing), 200);
+      });
 
     // Filters out all the markers that are not apart of listingsObject and removes them from markers state
     Object.keys(this.markers).filter(listingId => !listingsObject[listingId])
