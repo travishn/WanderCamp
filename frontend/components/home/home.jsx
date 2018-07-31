@@ -22,7 +22,9 @@ class Home extends React.Component {
       .then( () => this.props.history.push('/discover'));
   }
 
-
+  // handleClick() {
+  //   this.props.searchListings('discover').then( () => this.props.history.push('/discover'));
+  // }
 
   render() {
     const { listings } = this.props;
@@ -40,6 +42,7 @@ class Home extends React.Component {
 
               <div className="sub-search">
                 <Link className="or-text" to="/discover">Not sure where to look? Discover some camps!</Link>
+                {/* <a className='or-text' onClick={() => this.handleClick()}>Not sure where to look? Discover some camps!</a> */}
 
                 <span>&#8594;</span>
               </div>

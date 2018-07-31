@@ -22,6 +22,7 @@ class Api::ListingsController < ApplicationController
   def search
     bounds = CITY_HASH[params[:search].to_sym]
     @listings = bounds ? Listing.in_bounds(bounds) : Listing.all.includes(:photos)
+  # @listings = Listing.all.includes(:photos) if params[:search] == 'discover'
 
     if @listings
       render :index

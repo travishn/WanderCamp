@@ -31,11 +31,11 @@ class ListingsIndex extends React.Component {
   }
 
   renderListingItem() {
-    const { listings, listingPhotos, searchedListings } = this.props;
+    const { listings, listingPhotos, searchListings } = this.props;
     let currentListings = listings;
     
-    if (this.props.searchListings.length > 0 ){
-      currentListings = this.props.searchListings;
+    if (searchListings.length > 0 ){
+      currentListings = searchListings;
     }
     
     currentListings = this.applyFilters(currentListings);
