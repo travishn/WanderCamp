@@ -18,18 +18,9 @@ class LoginForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     const { errors } = this.props;
-    if (errors) {
-      this.props.login(this.state);
-    } else {
-      // this.animateOut();
-      // window.setTimeout(() => {
-      //   this.props.login(this.state);
-      // }, 500);
-
-      this.props.login({ username: username, password: password }).then((payload) => {
-        this.animateOut()
-      });
-    }
+    this.props.login(this.state).then((payload => {
+      this.animateOut();
+    }), (err) => {return});
   }
 
 
