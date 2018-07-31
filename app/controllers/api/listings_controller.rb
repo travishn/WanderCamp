@@ -1,6 +1,6 @@
 class Api::ListingsController < ApplicationController
   CITY_HASH = {
-    "San Francisco": {northEast: {lat: 37.800273, lon:-122.409974}, southWest: {lat: 37.704918042928995, lon: -122.46325339987186}}
+    "San Francisco": {northEast: {lat: 37.815173, lon:-122.385187}, southWest: {lat: 37.708688, lon: -122.506505}}
   }
   
   def index
