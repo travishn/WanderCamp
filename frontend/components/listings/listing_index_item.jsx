@@ -5,7 +5,7 @@ const ListingsIndexItem = ({ listing, photos }) => {
   
   if (Object.values(photos).length === 0) return null;
   return (
-    <ul className="listing-index-container">
+    <ul data-key={listing.id} className="listing-index-container">
       <Link to={`/listings/${listing.id}`}>
         <li className="listing-index-picture">
           <figure className="listing-index-figure">
