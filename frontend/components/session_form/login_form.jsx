@@ -20,7 +20,23 @@ class LoginForm extends React.Component {
 
   handleDemoLogin(e) {
     e.preventDefault();
-    this.props.login({username: 'RusselTheExplorer', password: 'badgecollector'}).then((payload) => this.props.closeModal());
+    const username = 'RusselTheExplorer';
+    const password = 'badgecollector';
+    username.split('').forEach( (letter, i) => {
+      setTimeout(() => {
+        this.setState({username: this.state.username + letter});
+      }, 75*i);
+    });
+
+    password.split('').forEach( (letter, i) => {
+      setTimeout(() => {
+        this.setState({password: this.state.password + letter});
+      }, 75*i + (75 * username.length));
+    });
+
+    setTimeout(() => {
+      this.props.login({username: username, password: password}).then((payload) => this.props.closeModal());
+    }, (75 * password.length) + (75 * username.length));
   }
 
   componentWillUnmount() {
