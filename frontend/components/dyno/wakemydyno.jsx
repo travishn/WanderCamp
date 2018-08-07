@@ -7,4 +7,4 @@ class WakeMyDyno extends React.Component {
   }
 };
 
-export default WakeMyDyno
+export default WakeMyDyno;

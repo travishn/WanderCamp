@@ -9,7 +9,7 @@ import UserProfileContainer from './user/user_profile_container';
 import HomeContainer from '../components/home/home_container';
 import { ProtectedRoute } from '../util/route_util';
 import MapSearchContainer from './map/map_search_container';
-import '../components/dyno/wakemydyno';
+import WakeMyDyno from '../components/dyno/wakemydyno';
 
 import {
   Route,
@@ -29,7 +29,7 @@ const App = () => (
     <Switch>
       <Route exact path="/listings/:listingId" component={ ListingContainer } />
       <ProtectedRoute exact path="/users/:userId" component={ UserProfileContainer } />
-      <Route path="/wakemydyno.txt" compoennt= {WakeMyDyno} />
+      <Route path="/wakemydyno.txt" compoennt= { WakeMyDyno } />
       <Route path="/discover" component={ MapSearchContainer } />
       <Route path="/" component={ HomeContainer } />
     </Switch>
