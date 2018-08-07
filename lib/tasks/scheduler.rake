@@ -4,3 +4,8 @@ task :ping_site => :environment do
   `curl https://wandercamp.herokuapp.com/`
   puts "done."
 end
+
+task :set_ping => :environment do
+  puts "Pinging site..."
+  `*/20 6-22 * * * /usr/bin/curl https://wandercamp.herokuapp.com/ &> /dev/null`
+end
