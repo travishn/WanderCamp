@@ -9,7 +9,6 @@ import UserProfileContainer from './user/user_profile_container';
 import HomeContainer from '../components/home/home_container';
 import { ProtectedRoute } from '../util/route_util';
 import MapSearchContainer from './map/map_search_container';
-import WakeMyDyno from '../components/dyno/wakemydyno';
 
 import {
   Route,
