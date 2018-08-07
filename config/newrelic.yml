@@ -30,7 +30,7 @@ common: &default_settings
 # If your application has other named environments, configure them here.
 development:
   <<: *default_settings
-  app_name: WanderCamp (Development)
+  app_name: wandercamp (Development)
 
 test:
   <<: *default_settings
@@ -39,7 +39,7 @@ test:
 
 staging:
   <<: *default_settings
-  app_name: WanderCamp (Staging)
+  app_name: wandercamp (Staging)
 
 production:
   <<: *default_settings
