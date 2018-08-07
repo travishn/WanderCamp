@@ -29,7 +29,6 @@ const App = () => (
     <Switch>
       <Route exact path="/listings/:listingId" component={ ListingContainer } />
       <ProtectedRoute exact path="/users/:userId" component={ UserProfileContainer } />
-      <Route path="/wakemydyno.txt" compoennt= { WakeMyDyno } />
       <Route path="/discover" component={ MapSearchContainer } />
       <Route path="/" component={ HomeContainer } />
     </Switch>
